@@ -1,0 +1,37 @@
+Ko reikia norint pradeti naudotis Latex?
+
+
+1. Pasiskaitymui pradziai - "Latex Tutorial - A Primer.pdf", nemazai
+   informacijos http://en.wikibooks.org/wiki/LaTeX
+
+2. Editoriaus. Parsisiunciam MikTex (patogus, nes automatiskai surenka
+   trukstamas bibliotekas) ir patogesni editoriu, pvz. LEd (Latex Editor)
+   arba mokama WinEdt.
+
+3. Bibliografijos editoriu (jei reikia, bet nebutina), neblogas JabRef, tik
+   jis is naujo generuoja "literatura.bib" faila ir visi komentrai ir kita
+   informacija isnyksta, rekomenduotina pasidaryti atsargine kopija
+
+4. Keletas Latex paprastu funkciju pavyzdziu pateikta VU_template faileuose
+5. Jei neveikia lietuviskos raides paskaitom http://ims.mii.lt/~lauras/latexlt/ 
+
+-----------------
+
+
+Eiga:
+
+1. Pries rasant galima pasikeisti pavadinima VU_template i kursinis/bakalaurinis
+   /bakis ir t.t.
+
+2. Bibliografines nuorodos dedamos i literatura.bib faila pagal standarta (kaip
+   parodyta pavyzdziuose) arba automatiskai is straipsniu duomenu baziu
+   (pasirinkus duomenu bazeje "export bibtex")
+
+3. Titulinis puslapis iterpiamas automatiskai pagal uzpildyta informacija, bet prisireikus
+   galima paredaguoti title.tex faila
+4. VU_template.pdf parodyta kaip atrodo sugeneruojamas PDF
+
+----------------
+
+Visa trukstama ir papildoma informacija - http://www.google.com arba klausti draugu
+

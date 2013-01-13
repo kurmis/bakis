@@ -1,0 +1,347 @@
+\documentclass[a4paper, 12pt]{article} %--< dokumento nustatymai >--%
+%\usepackage[T1]{fontenc} %--< reikia kuomet norima naudoti komanda \k{a} - a raide bus parasyta su nosine >--%
+\usepackage{graphicx} %--< reikalinga paveiksliuku ikelimui >--%
+\usepackage[left=1.18in,top=0.79in,right=0.39in,bottom=0.79in]{geometry} %--< parasciu nustatymai >--%
+\usepackage{color} %--< spalvoto srifto nustatymai >--%
+\usepackage{setspace} %--< setspace.sty failas turi buti toje pacioje direktorijoje kaip ir winedt failas >--%
+\usepackage{caption} %--< leidzia rasyti komentarus po objektais >--%
+\usepackage{cite} %-< reikalinga citavimui >--%
+\usepackage{verbatim} %--< leidzia naudoti \begin{comment}...\end{comment} funkcijas>--%
+
+\usepackage[utf8]{inputenc} %--< kad butu galima rasyti lietuviskai >--%
+\usepackage[L7x]{fontenc}
+\usepackage[lithuanian]{babel}
+%\usepackage{lmodern}
+
+%\usepackage[english]{babel}
+\usepackage{array}
+\usepackage[titles]{tocloft}
+\usepackage{amsmath} %--< formuliu rasymui >--%
+\usepackage{indentfirst} %--< pirmas paragrafas prasideda su tab'u >--%
+\usepackage{enumitem} %--< tarpu tarp eiluciu sarase redagavimui >--%
+%\usepackage{numline} %--< eiluciu numeravimas, sio paketo naudojimas panaikina section pavadinimus >--%
+\usepackage{xfrac}
+\usepackage{float}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage[]{SIunits}
+
+
+\makeatletter
+\let\c@lofdepth\relax
+\let\c@lotdepth\relax
+\makeatother
+\usepackage{subfigure}
+
+\setlength{\cftaftertoctitleskip}{-10pt}
+\setlength{\cftbeforetoctitleskip}{-10pt}
+%\setlength{\parskip}{6pt} %--< kiek tekstas nutoles nuo paragrafo pavadinimo >--%
+\parindent=36pt %--< tab'o dydis 1 inch = 72 pt >--%
+
+%-----------< kaip atrodo paveiksleliu ir lenteliu tesktas >-----------------%
+\DeclareCaptionLabelFormat{numbfirst}{#2\bothIfSecond{\nobreakspace}{pav}} % -< paveiksliukai vadinami "pav" >- %
+\DeclareCaptionLabelFormat{numbtwo}{#2\bothIfSecond{\nobreakspace}{lentel\.{e}}} % -< lenteles vadinamos "lentele" >- %
+\DeclareCaptionLabelSeparator{tarpas}{. } % -< po pav taskas ir tarpas >- %
+\captionsetup{justification=centering, font=normalsize, labelfont={}, textfont={it}}
+
+
+
+%-----------------------------< keletas naudingu komandu >------------------------------------------%
+\begin{comment}
+
+-----< Lietuviskos raides, jei neveikia rasymas lietuviskai >--------
+\k{a} = ą
+\v{z} = ž
+\v{s} = š
+\.{e} = ė 
+\k{e} = ę
+\={u} = ū
+\k{u} = ų
+\k{i} = į
+\v{c} = č
+----------------------------------------
+
+\textbf{padaro teksta bold}
+\textit{Padaro teksta italic}
+\cite{ka cituojam}
+\newpage naujas puslapis
+
+Jei norim tekste formuliu rasom ja tarp $formule$, jei numeruotai, tai pagal
+\begin{equation}
+formule
+label{formules_label}
+\end{equation}
+ir naudojam formules citavimui \ref{formule_label}
+
+\noindent pritaukia eilute prie krasto
+
+-------< paveiksliukams patogu susikurti atskira folderi takim paveiksliukai ar pav >--------
+-------< vienas paveiksliukas >---------
+\begin{figure}[H] %--< nustatymai kur bus paveiksliukas h - kaip tekste, t - puslapio virsuje, b - puslapio apacioje, H - tiksliai kaip tekste, p - atskiram paveiksleliu pslapy >--%
+\centering %--< lygiavimas >--%
+\includegraphics[scale=0.44]{pav/SPP_dispersijos_kreive} %--< scale - dydis, {aplankas/pav.pavadinimas} >--%
+\captionsetup{labelformat=numbfirst} %--< pries tai apibrezem kaip turi atrodyti tekstas po paveiksleliu >--%
+ \captionsetup{labelseparator=tarpas}
+ \caption{Tesktas po paveiksleliu}
+ \label{vienas}
+ \end{figure}
+
+-------< du paveiksliukai ir t.t. >---------
+\begin{figure}[h]
+\centering
+\subfigure[]{ %--< pirmas paveiksliukas, jei [] tusti tai numeruojama raidemis >--%
+\includegraphics[scale=0.3]{pav/pirmas}
+\label{pirmas}
+}
+\centering
+\subfigure[]{ %--< antras paveiksliukas >--%
+\includegraphics[scale=0.27]{antras}
+ \label{antras}
+ }
+\captionsetup{labelformat=numbfirst}
+\captionsetup{labelseparator=tarpas}
+\caption{Kas paveikslikuose (a) ir (b), tesktas po paveiksliuku}
+\label{dupaveiksliukai}
+\end{figure}
+
+----------< numeruojam teksta >-------
+\begin{enumerate}[itemsep=12pt, parsep=-10pt]
+ \item[a)]  %--< jei [] nieko arba be [], tai numeruos skaiciais
+\item[b)] 
+\item[c)]      
+\end{enumerate}
+
+\end{comment}
+
+%=================================================================%
+%--< dalis kuria reikia uzpildyti, bet tam tikrais atvejais gali tekti pagal poreikius paredaguoti title.tex faila >--%
+%=================================================================%
+
+\newcommand{\studentas}{Vardas Pavard\.{e}} %--< cia irasyti savo varda pavarde (toliau kitus duomenis) ir nebereikes tekste >--%
+\newcommand{\vadovas}{dr. Vadovas}
+\newcommand{\recenzentas}{dr. Recenzentas}
+\newcommand{\vedejas}{prof. Ved\.{e}jas}
+\newcommand{\pavadinimas}{Darbo pavadinimas} %--< cia irasyti darbo pavadinima >--%
+
+\newcommand{\katedra}{\kek} %--< irasyti savo, nebutinai komanda >--%
+%=======%
+\newcommand{\kkek}{Kieto k\={u}no elektronikos katedra}
+\newcommand{\kek}{Kvantin\.{e}s elektronikos katedra}
+\newcommand{\pfk}{Puslaidininki\k{u} fizikos katedra}
+\newcommand{\rfk}{Radiofizikos katedra}
+\newcommand{\tfk}{Teorin\.{e}s fizikos katedra}
+\newcommand{\bfsk}{Bendrosios fizikos ir spektroskopijos katedra}
+%==========%
+
+\newcommand{\darbas}{\magikurs} %--< irasyti savo >--%
+%=========%
+\newcommand{\bakikurs}{Pagrindini\={u} studij\={u} kursinis darbas}
+\newcommand{\bakis}{Pagrindini\={u} studij\={u} baigiamasis darbas}
+\newcommand{\magikurs}{Magistrant\={u}ros studij\k{u} kursinis darbas}
+\newcommand{\magis}{Magistrant\={u}ros studij\k{u} baigiamasis darbas}
+%==========%
+
+\newcommand{\studprog}{\laztech} %--< irasyti savo, nebutinai komanda >--%
+%==========%
+%--< besimokantiems fizfake studiju programos >--%
+\newcommand{\fiz}{Fizika}
+\newcommand{\tf}{Taikomoji fizika}
+\newcommand{\tfe}{Telekomunikacij\={u} fizika ir elektronika}
+\newcommand{\kf}{Kompiuterin\.{e} fizika}
+\newcommand{\mtfv}{Moderni\k{u}j\k{u} technologij\k{u} fizika ir vadyba}
+\newcommand{\bef}{Branduolin\.{e}s energetikos fizika}
+\newcommand{\apchef}{Aplinkos ir chemin\.{e} fizika}
+\newcommand{\bio}{Biofizika}
+\newcommand{\laztech}{Lazerin\.{e}s technologijos}
+\newcommand{\fiztech}{Fizikin\.{e}s technologijos ir j\k{u} vadyba}
+\newcommand{\lazfiz}{Lazerin\.{e} fizika ir optin\.{e}s technologijos}
+\newcommand{\mpf}{Med\v{z}iagotyra ir puslaidininki\k{u} fizika}
+\newcommand{\optel}{Optoelektronikos med\v{z}iagos ir technologijos}
+\newcommand{\tfem}{Telekomunikacij\k{u} fizika ir elektronika}
+\newcommand{\tfa}{Teorin\.{e} fizika ir astrofizika}
+%=================================================================%
+%=================================================================%
+
+
+%--------------------------------------< nuo cia prasideda dokumento tekstas >-------------------------------------%
+
+
+\begin{document} % visas tekstas turi buti tarp begin{document} ir end{document} komandu
+
+
+\input{./title.tex} % itraukiam titulini lapa i visa dokumenta
+
+\newpage
+
+\pagenumbering{arabic}
+\setcounter{page}{2} % nuo kurio skaitmens pradeda numeruoti puslapius
+
+%\tocloftpagestyle{abbrv}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}} % turinio isvaizdos koregavimas
+
+\renewcommand{\multirowsetup}{\centering}
+
+\renewcommand{\contentsname}{Turinys}
+\renewcommand\refname{Literat\={u}ros s\k{a}ra\v{s}as} % pakeicia "references" i "literaturos sarasas"
+\tableofcontents
+
+\newpage
+
+\begin{onehalfspacing}
+
+\section*{\k{I}vadas} % * nurodo nenumeruoti sitos dalies
+
+\addcontentsline{toc}{section}{\k{I}vadas} % prideda prie turinio
+
+\v{C}ia yra \k{i}vado tekstas!
+
+\begin{enumerate}[itemsep=12pt, parsep=-12pt] %% Jei reikia numeruoti tikslus ir uzdavinius
+\item Pirmas
+\item Antras
+\end{enumerate}
+\newpage
+
+\section{Pirmas skyrius}
+
+\v{C}ia yra pirmo skyriaus tekstas
+
+    \subsection{Pirmo skyriaus poskyris}
+
+ \v{C}ia yra pirmo poskyrio tekstas
+
+    \subsection{Pirmojo skyriaus antras poskyris ir t.t.}
+
+     \v{C}ia yra pirmo skyriaus antro poskyrio tesktas
+  
+        \subsubsection{Pirmo skyriaus antro poskyrio pirmas poskyris}
+
+           \v{C}ia yra pirmo skyriaus antro poskyrio pirmo poskyrio tesktas
+   
+        \subsubsection{Pirmojo skyriaus antro poskyrio antras poskyris}
+
+             \v{C}ia yra pirmo skyriaus antro poskyrio antro poskyrio tesktas
+
+   \subsection{Pirmojo skyriaus trecias poskyris}
+
+      \v{C}ia yra pirmo skyriaus antro poskyrio tesktas
+
+\newpage %perkelia testa i nauja lapa
+
+\section{Antras skyrius}
+
+  \v{C}ia yra antro skyriaus tesktas
+
+\newpage
+   
+\section{Pagrindiniai rezultatai ir i\v{s}vados}
+
+
+\begin{enumerate}
+\item Pirmas
+\item Antras 
+\item Tre\v{c}ias
+\item Ketvirtas
+\end{enumerate}
+
+\newpage
+
+\section{Priedai}
+
+Bet kokia reikalinga papildoma informacija: paveiksl\.{e}liai, grafikai ir t.t.
+
+\end{onehalfspacing}
+
+\newpage
+
+\section*{Mokslin\.{e}s publikacijos ir konferencij\k{u} prane\v{s}imai}
+
+\addcontentsline{toc}{section}{Mokslin\.{e}s publikacijos ir konferencij\k{u} prane\v{s}imai}
+
+\begin{onehalfspacing}
+
+\v{S}iame skyriuje pateikiamos mokslin\.{e}s publikacijos bei \v{z}odiniai ir stendiniai prane\v{s}imai konferencijose, kurie yra susij\k{e} su "mano darbo pavadinimas".\\
+
+\begin{center}
+\textbf{Mokslini\k{u} publikacij\k{u}, \k{i}traukt\k{u} \k{i} mokslin\.{e}s informacijos instituto (ISI) pagrindini\k{u} \v{z}urnal\k{u} duomen\k{u} baz\k{e}, s\k{a}rašas\\}
+\end{center}
+
+1. 
+
+2. 
+
+\newpage
+
+\begin{center}
+\textbf{Kitos mokslin\.{e}s publikacijos\\}
+\end{center}
+
+1. 
+
+2. 
+
+\begin{center}
+\textbf{\v{Z}odiniai prane\v{s}imai konferencijose}\\
+\end{center}
+
+1. 
+
+2. 
+
+\begin{center}
+\textbf{Stendiniai prane\v{s}imai konferencijose}\\
+\end{center}
+
+1. 
+
+2. 
+
+
+\end{onehalfspacing}
+
+\newpage
+
+%%-----====literaturos sarasas====------%%
+
+\addcontentsline{toc}{section}{Literat\={u}ros s\k{a}ra\v{s}as}
+\bibliography{literatura} %--< skliausteliuose turi buti nurodamas literaturos saraso failo pavadinimas >--%
+\bibliographystyle{nature} %--< literaturos stilius >--%
+
+\newpage
+
+\section*{Santrauka}
+
+
+\addcontentsline{toc}{section}{Santrauka}
+
+\begin{onehalfspacing}
+
+\begin{center}
+
+\studentas \\[12pt]
+
+\MakeUppercase{,,\pavadinimas''}\\
+
+\end{center}
+
+Tekstas
+
+\newpage
+
+\section*{Summary}
+
+\addcontentsline{toc}{section}{Summary}
+
+\begin{center}
+
+\studentas \\[12pt]
+
+\MakeUppercase{,,Title''}\\
+
+
+\end{center}
+
+Text
+
+\end{onehalfspacing}
+
+\end{document} 
