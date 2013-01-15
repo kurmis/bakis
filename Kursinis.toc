@@ -1,11 +1,11 @@
 \select@language {lithuanian}
 \contentsline {section}{\k {I}vadas}{3}
 \contentsline {section}{\numberline {1}Pirmas skyrius}{4}
-\contentsline {section}{\numberline {2}Praktin\.{e}\ dalis}{5}
+\contentsline {section}{\numberline {2}Naudoti testavimo algoritmai}{5}
 \contentsline {subsection}{\numberline {2.1}Naudoti algoritmai}{5}
-\contentsline {section}{\numberline {3}Pagrindiniai rezultatai ir i\v {s}vados}{6}
-\contentsline {section}{\numberline {4}Priedai}{7}
-\contentsline {section}{Mokslin\.{e}s publikacijos ir konferencij\k {u} prane\v {s}imai}{8}
-\contentsline {section}{Literat\={u}ros s\k {a}ra\v {s}as}{10}
-\contentsline {section}{Santrauka}{10}
-\contentsline {section}{Summary}{11}
+\contentsline {section}{\numberline {3}Pagrindiniai rezultatai ir i\v {s}vados}{7}
+\contentsline {section}{\numberline {4}Priedai}{8}
+\contentsline {section}{Mokslin\.{e}s publikacijos ir konferencij\k {u} prane\v {s}imai}{9}
+\contentsline {section}{Literat\={u}ros s\k {a}ra\v {s}as}{11}
+\contentsline {section}{Santrauka}{11}
+\contentsline {section}{Summary}{12}

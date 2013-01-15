@@ -210,11 +210,11 @@ ir naudojam formules citavimui \ref{formule_label}
 
 \newpage %perkelia testa i nauja lapa
 
-\section{Praktin\.{e}\ dalis}
+\section{Naudoti testavimo algoritmai}
 %\addcontentsline{toc}{section}{Praktin\.{e}\ dalis} % prideda
 Buvo pasirinktas Cortex R4 mikrovaldilis
 
-\subsection{Naudoti algoritmai}
+\subsection{Slankaus kablelio algoritmai}
 Slankaus kablelio Gauss Legendre algoritmas:
 \begin{equation*}\label{xx}
 a_{0}=1\;b_{0}=\frac{1}{\sqrt{2}}\;t_{0}=\frac{1}{4}\;p_{0}=1\\
@@ -234,15 +234,89 @@ p_{n+1} = 2p_n.
 \begin{equation}
 \pi \approx \frac{(a_n+b_n)^2}{4t_n}
 \end{equation}
-
-Naudojant dvigubo tikslumo kintam\k{u}j\k{u} test\k{a} buvo ie\v{s}komas 1000 narys, suskai\v{c}tas  
-tiksumas nuo konstantos skiriasi . Naudojant viengubo tikslumo slankaus kablelio kintamuosius buvo ie\v{s}
-komas 120 narys. Taip pasirinkta d\.el kintam\k{u}j\k{u} maksimalaus palaikomo tikslumo. 
-
-\textcolor{gray}{
-  kodas
+Naudojant dvigubo tikslumo kintam\k{u}j\k{u} test\k{a} buvo ie\v{s}komas 1000 narys, suskai\v{c}iuota  
+konstanta nuo tikrosios skiriasi $\pm3.55271 * 10^{-15}$. 
+%\textcolor{gray}{\\
+\begin{verbatim}
+  int doubleTest() { 
+    volatile int i; 
+    volatile double an,bn,tn,pi; 
+    volatile double a,b,t,p;  
+    a = 1.0; b = 1/sqrt(2); 
+    t = 1/4; p = 1.0; 
+    for (i = 0; i < 1000; i++) { 
+      an = (a+b)/2;  
+      bn = sqrt(a*b); 
+      tn = t - p*(a-an)*(a-an);  
+      p *= 2; 
+      pi = (an+bn)*(an+bn)/(4*tn);  
+      a = an; b = bn; t = tn; 
+    }
+    if ((pi - 3.14159265358979) <= 3.55271e-15) 
+      return 1; //testas atliktas sekmingai
+    return 0;  //teste ivyko klaida
+  } 
+\end{verbatim}
+%}
+Naudojant viengubo tikslumo slankaus kablelio kintamuosius buvo ie\v{s}komas 120 narys. Konstanta nuo tikrosios skiriasi $\pm8.74228* 10{^-8}s$
+\begin{verbatim}
+int floatTest() {
+  volatile int i;
+  volatile float an,bn,tn,pi;
+  volatile float a,b,t,p;
+  for(volatile int j = 0; j <9; j++) {
+    a = 1.0; b = sqrt(0.5);
+    t = 0.25; p = 1.0;
+    for (i = 0; i < 120; i++) {
+      an = (a+b)/2;
+      bn = sqrt(a*b);
+      tn = t - (p*(a-an)*(a-an));
+      p *= 2;
+      pi = (an+bn)*(an+bn)/(4*tn);
+      a = an; b = bn; t = tn;
+    } 
+  }
+  if ((pi - 3.14159265358979) <= 8.74228e-8)
+    return 1; //testas atliktas sekmingai
+  return 0; //teste ivyko klaida
 }
+\end{verbatim}
+\subsection{Fiksuoto tiklsumo algoritmas}
+Fiksuoto tikslumo algoritmas:
+\begin{equation}
+b = \sum_{i=0}^{100000} (i * (-1)^{i+1})
+\end{equation}
 
+\begin{verbatim}
+void intTest() {
+  volatile int a,b;
+  a = 1;
+  b = 0;
+  for(volatile int i = 0; i < 100000; i++) {
+    b += i * a;
+    a *= -1;
+  }
+}
+\end{verbatim}
+\subsection{Bitu testavimo algoritmas}
+\begin{verbatim}
+short test_bits() {
+  volatile unsigned sum = 0x55555555; // 0101 0101  0101 0101  0101 0101  0101 0101  
+  for (volatile int i = 0; i < 0x020000; i++) {
+    sum = sum << 1;          /// sum = 0xAAAAAAAA 
+    sum &= 0x0000FFFF;       /// sum = 0x0000AAAA
+    sum ^= 0xFFFFFFFF;       /// sum = 0xFFFF5555
+    sum = sum << 16;         /// sum = 0x55550000
+    sum = sum | (sum >> 16); /// sum = 0X55555555
+    sum = ~sum;              /// sum = 0xAAAAAAAA
+    sum = sum >> 1;          /// sum = 0x55555555
+  }
+  if (0x55555555 == sum)
+    return 1; //testas ivykditas sekmingai
+  return 0; // teste klaida
+}
+\end{verbatim}
+\subsection{Greitas Furj\.e\ eilut\.es }
 \newpage
    
 \section{Pagrindiniai rezultatai ir i\v{s}vados}
