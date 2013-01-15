@@ -1,12 +1,8 @@
 \select@language {lithuanian}
 \contentsline {section}{\k {I}vadas}{3}
 \contentsline {section}{\numberline {1}Pirmas skyrius}{4}
-\contentsline {subsection}{\numberline {1.1}Pirmo skyriaus poskyris}{4}
-\contentsline {subsection}{\numberline {1.2}Pirmojo skyriaus antras poskyris ir t.t.}{4}
-\contentsline {subsubsection}{\numberline {1.2.1}Pirmo skyriaus antro poskyrio pirmas poskyris}{4}
-\contentsline {subsubsection}{\numberline {1.2.2}Pirmojo skyriaus antro poskyrio antras poskyris}{4}
-\contentsline {subsection}{\numberline {1.3}Pirmojo skyriaus trecias poskyris}{4}
-\contentsline {section}{\numberline {2}Antras skyrius}{5}
+\contentsline {section}{\numberline {2}Praktin\.{e}\ dalis}{5}
+\contentsline {subsection}{\numberline {2.1}Naudoti algoritmai}{5}
 \contentsline {section}{\numberline {3}Pagrindiniai rezultatai ir i\v {s}vados}{6}
 \contentsline {section}{\numberline {4}Priedai}{7}
 \contentsline {section}{Mokslin\.{e}s publikacijos ir konferencij\k {u} prane\v {s}imai}{8}

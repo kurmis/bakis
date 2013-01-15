@@ -3,6 +3,7 @@
 \usepackage{graphicx} %--< reikalinga paveiksliuku ikelimui >--%
 \usepackage[left=1.18in,top=0.79in,right=0.39in,bottom=0.79in]{geometry} %--< parasciu nustatymai >--%
 \usepackage{color} %--< spalvoto srifto nustatymai >--%
+\usepackage{xcolor}
 \usepackage{setspace} %--< setspace.sty failas turi buti toje pacioje direktorijoje kaip ir winedt failas >--%
 \usepackage{caption} %--< leidzia rasyti komentarus po objektais >--%
 \usepackage{cite} %-< reikalinga citavimui >--%
@@ -118,10 +119,10 @@ ir naudojam formules citavimui \ref{formule_label}
 %=================================================================%
 
 \newcommand{\studentas}{Mindaugas Kurmauskas} %--< cia irasyti savo varda pavarde (toliau kitus duomenis) ir nebereikes tekste >--%
-\newcommand{\vadovas}{doc. Mindaugas Vil\={u}nas}
+\newcommand{\vadovas}{dr. Mindaugas Vil\={u}nas}
 \newcommand{\recenzentas}{dr. Recenzentas}
-\newcommand{\vedejas}{prof. Ved\.{e}jas}
-\newcommand{\pavadinimas}{Darbo pavadinimas} %--< cia irasyti darbo pavadinima >--%
+\newcommand{\vedejas}{dr.(HP) K\k{e}stutis Arlauskas}
+\newcommand{\pavadinimas}{Cortex R4 mikrovaldiklio architekt\={u}ros tyrimas} %--< cia irasyti darbo pavadinima >--%
 
 \newcommand{\katedra}{\kkek} %--< irasyti savo, nebutinai komanda >--%
 %=======%
@@ -205,31 +206,42 @@ ir naudojam formules citavimui \ref{formule_label}
 
 \v{C}ia yra pirmo skyriaus tekstas
 
-    \subsection{Pirmo skyriaus poskyris}
-
- \v{C}ia yra pirmo poskyrio tekstas
-
-    \subsection{Pirmojo skyriaus antras poskyris ir t.t.}
-
-     \v{C}ia yra pirmo skyriaus antro poskyrio tesktas
-  
-        \subsubsection{Pirmo skyriaus antro poskyrio pirmas poskyris}
-
-           \v{C}ia yra pirmo skyriaus antro poskyrio pirmo poskyrio tesktas
-   
-        \subsubsection{Pirmojo skyriaus antro poskyrio antras poskyris}
-
-             \v{C}ia yra pirmo skyriaus antro poskyrio antro poskyrio tesktas
-
-   \subsection{Pirmojo skyriaus trecias poskyris}
-
-      \v{C}ia yra pirmo skyriaus antro poskyrio tesktas
+    
 
 \newpage %perkelia testa i nauja lapa
 
-\section{Antras skyrius}
+\section{Praktin\.{e}\ dalis}
+%\addcontentsline{toc}{section}{Praktin\.{e}\ dalis} % prideda
+Buvo pasirinktas Cortex R4 mikrovaldilis
 
-  \v{C}ia yra antro skyriaus tesktas
+\subsection{Naudoti algoritmai}
+Slankaus kablelio Gauss Legendre algoritmas:
+\begin{equation*}\label{xx}
+a_{0}=1\;b_{0}=\frac{1}{\sqrt{2}}\;t_{0}=\frac{1}{4}\;p_{0}=1\\
+\end{equation*}
+\begin{equation*}
+a_{n+1} = \frac{a_n + b_n}{2},
+\end{equation*}
+\begin{equation*}
+b_{n+1} = \sqrt{a_n b_n}, 
+\end{equation*}
+\begin{equation*}
+t_{n+1} = t_n - p_n(a_n - a_{n+1})^2, 
+\end{equation*}
+\begin{equation*}
+p_{n+1} = 2p_n. 
+\end{equation*}
+\begin{equation}
+\pi \approx \frac{(a_n+b_n)^2}{4t_n}
+\end{equation}
+
+Naudojant dvigubo tikslumo kintam\k{u}j\k{u} test\k{a} buvo ie\v{s}komas 1000 narys, suskai\v{c}tas  
+tiksumas nuo konstantos skiriasi . Naudojant viengubo tikslumo slankaus kablelio kintamuosius buvo ie\v{s}
+komas 120 narys. Taip pasirinkta d\.el kintam\k{u}j\k{u} maksimalaus palaikomo tikslumo. 
+
+\textcolor{gray}{
+  kodas
+}
 
 \newpage
    
