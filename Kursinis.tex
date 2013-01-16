@@ -202,9 +202,19 @@ ir naudojam formules citavimui \ref{formule_label}
 \end{enumerate}
 \newpage
 
-\section{Pirmas skyrius}
-
-\v{C}ia yra pirmo skyriaus tekstas
+\section{Naudojamos \k{i}rangos ir programos}
+Naudojamas TMDXRM48USB paleisties rinkinys\footnote{development kit}. Jame yra:
+\begin{enumerate}
+\item Mikrovaldiklis xRM48L950AZWTT:
+\begin{enumerate}
+\item 2 Cortex-R4F ARM procesoriai, veikiantys kartu\footnote{lockstep - kartu atlieka tas pa\v{c}ias komandas}
+\item 3MB flash, 256kB RAM
+\item greitis iki 220MHz
+\item pus\.e, viengubo ir dvigubo tikslumo slankaus kablelio aritmetikos modulis
+\end{enumerate} 
+\item al
+\item b
+\end{enumerate}
 
     
 
@@ -212,10 +222,9 @@ ir naudojam formules citavimui \ref{formule_label}
 
 \section{Naudoti testavimo algoritmai}
 %\addcontentsline{toc}{section}{Praktin\.{e}\ dalis} % prideda
-Buvo pasirinktas Cortex R4 mikrovaldilis
 
 \subsection{Slankaus kablelio algoritmai}
-Slankaus kablelio Gauss Legendre algoritmas:
+Slankaus kablelio Gauss Legendre algoritmas $\pi$ skai\v{c}iavimui:
 \begin{equation*}\label{xx}
 a_{0}=1\;b_{0}=\frac{1}{\sqrt{2}}\;t_{0}=\frac{1}{4}\;p_{0}=1\\
 \end{equation*}
@@ -235,7 +244,7 @@ p_{n+1} = 2p_n.
 \pi \approx \frac{(a_n+b_n)^2}{4t_n}
 \end{equation}
 Naudojant dvigubo tikslumo kintam\k{u}j\k{u} test\k{a} buvo ie\v{s}komas 1000 narys, suskai\v{c}iuota  
-konstanta nuo tikrosios skiriasi $\pm3.55271 * 10^{-15}$. 
+konstanta nuo pasirinktosios skiriasi $3.55271 * 10^{-15}$. 
 %\textcolor{gray}{\\
 \begin{verbatim}
   int doubleTest() { 
@@ -258,7 +267,7 @@ konstanta nuo tikrosios skiriasi $\pm3.55271 * 10^{-15}$.
   } 
 \end{verbatim}
 %}
-Naudojant viengubo tikslumo slankaus kablelio kintamuosius buvo ie\v{s}komas 120 narys. Konstanta nuo tikrosios skiriasi $\pm8.74228* 10{^-8}s$
+Naudojant viengubo tikslumo slankaus kablelio kintamuosius buvo ie\v{s}komas 120 narys. Konstanta nuo pasirinktosios skiriasi $8.74228* 10^{-8}$
 \begin{verbatim}
 int floatTest() {
   volatile int i;
@@ -301,7 +310,8 @@ void intTest() {
 \subsection{Bitu testavimo algoritmas}
 \begin{verbatim}
 short test_bits() {
-  volatile unsigned sum = 0x55555555; // 0101 0101  0101 0101  0101 0101  0101 0101  
+  volatile unsigned sum = 0x55555555; 
+  // 0101 0101  0101 0101  0101 0101  0101 0101  
   for (volatile int i = 0; i < 0x020000; i++) {
     sum = sum << 1;          /// sum = 0xAAAAAAAA 
     sum &= 0x0000FFFF;       /// sum = 0x0000AAAA
@@ -313,13 +323,46 @@ short test_bits() {
   }
   if (0x55555555 == sum)
     return 1; //testas ivykditas sekmingai
-  return 0; // teste klaida
+  return 0; // teste ivyko klaida
 }
 \end{verbatim}
-\subsection{Greitas Furj\.e\ eilut\.es }
+\subsection{Greitas Furj\.e\ eilut\.es transformavimo testas}
+Naudotos arm dsp\footnote{Dsp - digital signal processing $($skaitmeninis signal\k{u} apdorojimas$)$} bibliotekos, atskirai optimizuotos R4 bei M4 mikrovaldikliams. Naudota 1024 kompleksini\k{u} ta\v{s}k\k{u}, kurie masyve i\v{s}d\.estyti vienas po kito ir bendras masyvo ilgis 2048. %pabaigti
+\begin{verbatim}
+#define TEST_LENGTH_SAMPLES 2048 // masyvo ilgis
+extern float32_t testInput_f32_10khz[TEST_LENGTH_SAMPLES]; 
+static float32_t testOutput[TEST_LENGTH_SAMPLES/2]; 
+uint32_t fftSize = 1024; //fft ilgis
+uint32_t ifftFlag = 0; 
+uint32_t doBitReverse = 1; //0 - atvirkstinis fft
+//refIndex - zinomas didziausio daznio indeksas
+uint32_t refIndex = 213, testIndex = 0;
+
+int32_t testCfftfloat(void) { 
+   
+  arm_status status; 
+  arm_cfft_radix4_instance_f32 S; 
+  float32_t maxValue; 
+   
+  status = ARM_MATH_SUCCESS; 
+   
+  status=arm_cfft_radix4_init_f32(&S,fftSize,ifftFlag,doBitReverse); 
+    
+  arm_cfft_radix4_f32(&S, testInput_f32_10khz); 
+    
+  arm_cmplx_mag_f32(testInput_f32_10khz, testOutput, fftSize);  
+   
+  arm_max_f32(testOutput, fftSize, &maxValue, &testIndex); 
+   
+  if(testIndex ==  refIndex) { 
+    return 1; //testas ivykdytas sekmingai
+  return 0;  //testuojant ivyko klaida
+} 
+\end{verbatim}    
 \newpage
    
-\section{Pagrindiniai rezultatai ir i\v{s}vados}
+\section{Rezultatai}
+\section{I\v{s}vados}
 
 
 \begin{enumerate}
