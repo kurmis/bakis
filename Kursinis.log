@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.1.13)  16 JAN 2013 01:36
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.1.13)  16 JAN 2013 17:41
 entering extended mode
  %&-line parsing enabled.
 **Kursinis.tex
@@ -3220,33 +3220,33 @@ Package caption Info: float package is loaded.
 Package caption Info: subfigure package is loaded.
 Package caption Info: End \AtBeginDocument code.
 (./title.tex
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 30.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 29.
  (/usr/share/texmf/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 30.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 29.
 
 (/usr/share/texmf/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 30.
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 29.
 
 
 (/usr/share/texmf/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 30.
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 29.
 
 
 (/usr/share/texmf/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 30.
+(Font)              <12> on input line 29.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 30.
+(Font)              <8> on input line 29.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 30.
+(Font)              <6> on input line 29.
  [1
 
 {/home/mindaugas/.texmf-var/fonts/map/pdftex/updmap/pdftex.map}]) (./Kursinis.t
@@ -3254,51 +3254,47 @@ oc)
 \tf@toc=\write5
 \openout5 = `Kursinis.toc'.
 
- [2] [3] [4]
-LaTeX Font Info:    Try loading font information for L7x+lmtt on input line 247
+ [2] [3]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 206.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 206.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 206.
+ [4]
+LaTeX Font Info:    Try loading font information for L7x+lmtt on input line 258
 .
 
 (/usr/share/texmf/tex/latex/lm/l7xlmtt.fd
 File: l7xlmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [5] [6]
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 328.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 328.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 328.
- [7] [8] [9] [10]
-Underfull \hbox (badness 10000) in paragraph at lines 389--390
+) [5] [6] [7] [8] [9] [10]
+Underfull \hbox (badness 10000) in paragraph at lines 400--401
 
  []
 
 [11] [12]
 No file Kursinis.bbl.
-[13] [14] (./Kursinis.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+[13] [14] (./Kursinis.aux) ) 
 Here is how much of TeX's memory you used:
- 9804 strings out of 495061
- 147236 string characters out of 1182621
+ 9807 strings out of 495061
+ 147278 string characters out of 1182621
  196498 words of memory out of 3000000
- 12754 multiletter control sequences out of 15000+50000
+ 12757 multiletter control sequences out of 15000+50000
  42899 words of font info for 50 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
- 37i,8n,38p,324b,329s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dv
-ips/lm/lm-l7x.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/shar
-e/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texmf/fonts/enc/dvips/lm/l
-m-mathit.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/tex
-mf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmm
-i12.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fon
-ts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb>
-</usr/share/texmf/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/
-public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/sha
-re/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/type1/public/l
-m/lmtt12.pfb>
-Output written on Kursinis.pdf (14 pages, 201227 bytes).
+ 37i,8n,38p,324b,396s stack positions out of 5000i,500n,10000p,200000b,50000s
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/us
+r/share/texmf/fonts/enc/dvips/lm/lm-l7x.enc}{/usr/share/texmf/fonts/enc/dvips/l
+m/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/
+texmf/fonts/enc/dvips/lm/lm-mathit.enc}</usr/share/texmf/fonts/type1/public/lm/
+lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf
+/fonts/type1/public/lm/lmmi12.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8
+.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/
+type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr7.pfb></us
+r/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/publ
+ic/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/
+texmf/fonts/type1/public/lm/lmtt12.pfb>
+Output written on Kursinis.pdf (14 pages, 204539 bytes).
 PDF statistics:
  103 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
