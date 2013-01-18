@@ -208,7 +208,7 @@ Naudojamas TMDXRM48USB paleisties rinkinys\footnote{development kit}. Jame yra:
 \item Mikrovaldiklis xRM48L950AZWTT:
 \begin{itemize}
 \item Du 32-bitu ARM Cortex-R4F procesoriai, veikiantys kartu\footnote{lockstep - kartu atlieka tas pa\v{c}ias komandas}
-\item 3MB flash, 256KB RAM
+\item 3MB flash, 256kB RAM
 \item greitis iki 220MHz
 \item neslankaus(32bitu) ir dvigubo tikslumo (64bitu) slankaus kablelio aritmetikos modulis
 \end{itemize} 
@@ -221,13 +221,13 @@ Palyginimui naudojamas STM32F4DISCOVERY paleisties rinkinys:
 \item mikrovaldiklis STM32F407VGT:
 \begin{itemize}
 \item 32-bitu ARM Cortex-M4F procesorius
-\item 1MB flash, 192 KB RAM 
+\item 1MB flash, 192 kB RAM 
 \item greitis iki 168MHz 
 \item neslankaus (32bitu) ir slankaus (32bitu) kablelio aritmetikos modulis
 \end{itemize}
 \item Integruotas ST-LINK/V2 emuliatorius programavimui per usb
-\item LED'ai, akselerometras, skaitmeninis mikroforas
-\item CS43L22- SAK garsui su integruotu D klases garso stiprintuvu  
+\item LED'ai, akselerometras, skaitmeninis mikrofonas
+\item CS43L22- SAK garsui su integruotu D klases garso stiprinimu
 \end{itemize}
 
     
@@ -304,7 +304,7 @@ int floatTest() {
   return 0; //teste ivyko klaida
 }
 \end{verbatim}
-\subsection{Fiksuoto tiklsumo algoritmas}
+\subsection{Neslankaus kablelio algoritmas}
 Fiksuoto tikslumo algoritmas:
 \begin{equation}
 b = \sum_{i=0}^{100000} (i * (-1)^{i+1})
@@ -340,39 +340,97 @@ short test_bits() {
   return 0; // teste ivyko klaida
 }
 \end{verbatim}
-\subsection{Greitas Furj\.e\ eilut\.es transformavimo testas}
-Naudotos arm dsp\footnote{Dsp - digital signal processing $($skaitmeninis signal\k{u} apdorojimas$)$} bibliotekos, atskirai optimizuotos R4 bei M4 mikrovaldikliams. Naudota 1024 kompleksini\k{u} ta\v{s}k\k{u}, kurie masyve i\v{s}d\.estyti vienas po kito ir bendras masyvo ilgis 2048. %pabaigti
+\subsection{Greitas disckretinis Furj\.e\ eilut\.es transformavimo testas}
+Naudotos arm dsp\footnote{Dsp - digital signal processing $($skaitmeninis signal\k{u} apdorojimas$)$} bibliotekos, atskirai optimizuotos R4 bei M4 mikrovaldikliams. Naudota 1024 kompleksini\k{u} ta\v{s}k\k{u}, kurie masyve i\v{s}d\.estyti vienas po kito ir bendras masyvo ilgis 2048. Slankaus kablelio testui masyvas u\v{z}pildomas funkcija:
+\begin{equation*}
+Re(z) = (sin(v*i) + cos(v*7)),\; t = 0, 2, 4... 2046
+\end{equation*}
+\begin{equation}
+Im(z) = 0
+\end{equation}
 \begin{verbatim}
-#define TEST_LENGTH_SAMPLES 2048 // masyvo ilgis
-extern float32_t testInput_f32_10khz[TEST_LENGTH_SAMPLES]; 
+#define TEST_LENGTH_SAMPLES 2048 
+static float32_t testInput[TEST_LENGTH_SAMPLES]; 
 static float32_t testOutput[TEST_LENGTH_SAMPLES/2]; 
-uint32_t fftSize = 1024; //fft ilgis
+uint32_t fftSize = 1024; 
 uint32_t ifftFlag = 0; 
-uint32_t doBitReverse = 1; //0 - atvirkstinis fft
-//refIndex - zinomas didziausio daznio indeksas
-uint32_t refIndex = 213, testIndex = 0;
+uint32_t doBitReverse = 1; 
 
-int32_t testCfftfloat(void) { 
-   
+void prepareTestFloat(void) {
+  for(volatile int t = 0; t < 2048; t+=2) {
+    testInput[i] = sin(t*3) + cos(t*7);
+    testInput[i+1] = 0;
+  }
+}
+
+int32_t testCfftFloat(void) { 
   arm_status status; 
   arm_cfft_radix4_instance_f32 S; 
-  float32_t maxValue; 
+  float32_t maxValue;  
    
-  status = ARM_MATH_SUCCESS; 
+  arm_cfft_radix4_init_f32(&S, fftSize, ifftFlag, doBitReverse); 
    
-  status=arm_cfft_radix4_init_f32(&S,fftSize,ifftFlag,doBitReverse); 
-    
-  arm_cfft_radix4_f32(&S, testInput_f32_10khz); 
-    
-  arm_cmplx_mag_f32(testInput_f32_10khz, testOutput, fftSize);  
+  arm_cfft_radix4_f32(&S, testInput); 
+   
+  arm_cmplx_mag_f32(testInput, testOutput, fftSize);  
    
   arm_max_f32(testOutput, fftSize, &maxValue, &testIndex); 
    
-  if(testIndex ==  refIndex) { 
-    return 1; //testas ivykdytas sekmingai
-  return 0;  //testuojant ivyko klaida
+  if(testIndex == refIndex) { 
+    return 1;
+  }
+  return 0;
 } 
-\end{verbatim}    
+\end{verbatim}  
+Fiksuoto tikslumo Furij\.e transformacijai naudoti ARM Q31 fiksuoto kablelio kintamieji. I\v{s} slankaus kablelio paversti \k{i} Q31 naudota funkcija:
+\begin{equation}
+Q31(x)= ROUND(((2^31)*(10^(x/20))))
+\end{equation}   
+Masyvo u\v{z}pildo funkcija
+\begin{equation*}
+Re(z) = Q31(1000*(sin(v*i) + cos(v*7)))),\; t = 0, 2, 4... 2046
+\end{equation*}
+\begin{equation}
+Im(z) = 0
+\end{equation}
+\begin{verbatim}
+#define TEST_LENGTH_SAMPLES 2048
+uint32_t fftSize = 1024; 
+uint32_t ifftFlag = 0; 
+uint32_t doBitReverse = 1; 
+static q31_t testInputQ[TEST_LENGTH_SAMPLES]; 
+static q31_t testOutputQ[TEST_LENGTH_SAMPLES/2]; 
+uint32_t refQIndex = 0;
+
+void prepareTestQ31(void) {
+  double skaicius=0;
+  int nulis = (int)round((pow(2,31)) * pow(10,(0/20)));
+  for(volatile int32_t i = 0; i < 2048; i+=2) {
+    skaicius = 1000*sin(i*3) + 1000*cos(i*7);
+    testInputQ[i] = (int)round((pow(2,31)) * pow(10,(skaicius/20)));;
+    testInputQ[i+1] = nulis;
+  }
+}
+
+int32_t testCfftQ31(void) { 
+  arm_status status; 
+  arm_cfft_radix4_instance_q31 S; 
+  q31_t maxValue; 
+   
+  status = arm_cfft_radix4_init_q31(&S, fftSize, ifftFlag, doBitReverse); 
+   
+  arm_cfft_radix4_q31(&S, testInputQ); 
+  
+  arm_cmplx_mag_q31(testInputQ, testOutputQ, fftSize);  
+ 
+  arm_max_q31(testOutputQ, fftSize, &maxValue, &testIndex); 
+
+  if(testIndex == refIndex) { 
+    return 1;
+  } 
+  return 0;
+}
+\end{verbatim}
 \newpage
    
 \section{Rezultatai}

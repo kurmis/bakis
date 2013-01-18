@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.1.13)  18 JAN 2013 22:09
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.1.13)  18 JAN 2013 22:41
 entering extended mode
  %&-line parsing enabled.
 **Kursinis.tex
@@ -3267,14 +3267,14 @@ LaTeX Font Info:    Try loading font information for L7x+lmtt on input line 263
 
 (/usr/share/texmf/tex/latex/lm/l7xlmtt.fd
 File: l7xlmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [5] [6] [7] [8] [9] [10]
-Underfull \hbox (badness 10000) in paragraph at lines 405--406
+) [5] [6] [7] [8] [9] [10] [11]
+Underfull \hbox (badness 10000) in paragraph at lines 463--464
 
  []
 
-[11] [12]
+[12] [13]
 No file Kursinis.bbl.
-[13] [14] (./Kursinis.aux) ) 
+[14] [15] (./Kursinis.aux) ) 
 Here is how much of TeX's memory you used:
  9807 strings out of 495061
  147278 string characters out of 1182621
@@ -3282,7 +3282,7 @@ Here is how much of TeX's memory you used:
  12757 multiletter control sequences out of 15000+50000
  42899 words of font info for 50 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
- 37i,8n,38p,324b,396s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 37i,8n,38p,372b,396s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/us
 r/share/texmf/fonts/enc/dvips/lm/lm-l7x.enc}{/usr/share/texmf/fonts/enc/dvips/l
 m/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/
@@ -3294,9 +3294,9 @@ type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr7.pfb></us
 r/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/publ
 ic/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/
 texmf/fonts/type1/public/lm/lmtt12.pfb>
-Output written on Kursinis.pdf (14 pages, 204869 bytes).
+Output written on Kursinis.pdf (15 pages, 211312 bytes).
 PDF statistics:
- 103 PDF objects out of 1000 (max. 8388607)
+ 106 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
