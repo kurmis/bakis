@@ -11,5 +11,5 @@
 \contentsline {section}{\numberline {5}Priedai}{11}
 \contentsline {section}{Mokslin\.{e}s publikacijos ir konferencij\k {u} prane\v {s}imai}{12}
 \contentsline {section}{Literat\={u}ros s\k {a}ra\v {s}as}{14}
-\contentsline {section}{Santrauka}{14}
-\contentsline {section}{Summary}{15}
+\contentsline {section}{Santrauka}{15}
+\contentsline {section}{Summary}{16}

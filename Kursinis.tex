@@ -33,6 +33,7 @@
 \let\c@lotdepth\relax
 \makeatother
 \usepackage{subfigure}
+%\usepackage{biblatex}
 
 \setlength{\cftaftertoctitleskip}{-10pt}
 \setlength{\cftbeforetoctitleskip}{-10pt}
@@ -64,7 +65,7 @@
 
 \textbf{padaro teksta bold}
 \textit{Padaro teksta italic}
-\cite{ka cituojam}
+%\cite{ka cituojam}
 \newpage naujas puslapis
 
 Jei norim tekste formuliu rasom ja tarp $formule$, jei numeruotai, tai pagal
@@ -382,9 +383,9 @@ int32_t testCfftFloat(void) {
   return 0;
 } 
 \end{verbatim}  
-Fiksuoto tikslumo Furij\.e transformacijai naudoti ARM Q31 fiksuoto kablelio kintamieji. I\v{s} slankaus kablelio paversti \k{i} Q31 naudota funkcija:
+Fiksuoto tikslumo Furij\.e transformacijai naudoti ARM Q31 fiksuoto kablelio kintamieji. I\v{s} slankaus kablelio paversti \k{i} Q31 naudota funkcija\cite{Q31}:
 \begin{equation}
-Q31(x)= ROUND(((2^31)*(10^(x/20))))
+Q31(x)= ROUND(2^{31}*10^{x/20})
 \end{equation}   
 Masyvo u\v{z}pildo funkcija
 \begin{equation*}
@@ -504,7 +505,7 @@ Bet kokia reikalinga papildoma informacija: paveiksl\.{e}liai, grafikai ir t.t.
 %%-----====literaturos sarasas====------%%
 
 \addcontentsline{toc}{section}{Literat\={u}ros s\k{a}ra\v{s}as}
-\bibliography{literatura} %--< skliausteliuose turi buti nurodamas literaturos saraso failo pavadinimas >--%
+\bibliography{Kursinis.bbl} %--< skliausteliuose turi buti nurodamas literaturos saraso failo pavadinimas >--%
 \bibliographystyle{nature} %--< literaturos stilius >--%
 
 \newpage
