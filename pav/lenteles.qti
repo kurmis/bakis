@@ -1,0 +1,244 @@
+QtiPlot 0.9.8 project file
+<scripting-lang>	muParser
+<windows>	4
+<table>
+Tuscias	30	6	18/01/2013 23:23
+geometry	196	450	859	284	minimized	
+header	1[X]	3[Y]	4[Y]	5[Y]	6[Y]	7[Y]
+ColWidth	100	100	100	100	100	100	
+<com>
+<col nr="2">
+2.39*col("3")
+</col>
+<col nr="4">
+(col("5")/0.12)*1.2 + 3.3*14.6
+</col>
+</com>
+ColType	0;0/13	0;0/13	0;0/13	0;0/13	0;0/13	0;0/13
+ReadOnlyColumn	0	0	0	0	0	0
+HiddenColumn	0	0	0	0	0	0
+Comments							
+WindowLabel		2
+<data>
+0	200			21.7	265.18	
+1	180			19.8	246.18	
+2	168	33	78.87			
+3	160			18	228.18	
+4	140	28	66.92	16.2	210.18	
+5	120	23.7	56.643	14.5	193.18	
+6	100	19.6	46.844	12.5	173.18	
+7	80	16.2	38.718	10.4	152.18	
+8	60	12.6	30.114	8.5	133.18	
+9	40	9.3	22.227	6.4	112.18	
+10	20	6.34	15.1526	4.2	90.18	
+</data>
+</table>
+<multiLayer>
+Graph1	1	1	18/01/2013 23:33
+geometry	0	450	517	453	minimized	
+WindowLabel		2
+Margins	5	5	5	5
+Spacing	5	5
+LayerCanvasSize	400	300
+Alignement	0	0
+<AlignPolicy>0</AlignPolicy>
+<CommonAxes>0</CommonAxes>
+<graph>
+ggeometry	5	5	499	390
+<PageGeometry>0.00982318	0.0123457	0.980354	0.962963</PageGeometry>
+PlotTitle		#000000	4228
+<Antialiasing>0</Antialiasing>
+<Autoscaling>1</Autoscaling>
+<ScaleFonts>1</ScaleFonts>
+<GridOnTop>0</GridOnTop>
+<MissingDataGap>1</MissingDataGap>
+Background	#ffffff	0
+Margin	0
+Border	0	#000000
+grid	0	0	1	1	#0000ff	0	0.5	#a0a0a4	2	0.4	#0000ff	0	0.5	#a0a0a4	2	0.4	0	0	2	0	0
+EnabledAxes	1	1	1	1	
+AxesTitles	ν, MHz	P, mW			
+AxesTitleColors	#000000	#000000	#000000	#000000	
+AxesTitleAlignment	5124	5124	5124	5124
+AxesTitleDistance	2	2	2	2
+TitleFont	Sans	11	75	0	0	0
+ScaleFont0	Sans	9	75	0	0	0
+ScaleFont1	Sans	9	75	0	0	0
+ScaleFont2	Sans	9	75	0	0	0
+ScaleFont3	Sans	9	75	0	0	0
+AxisFont0	Sans	9	50	0	0	0
+AxisFont1	Sans	9	50	0	0	0
+AxisFont2	Sans	9	50	0	0	0
+AxisFont3	Sans	9	50	0	0	0
+AxesColors	#000000	#000000	#000000	#000000
+AxesNumberColors	#1a1a1a	#1a1a1a	#1a1a1a	#1a1a1a
+AxesBaseline	0	0	0	0	
+CanvasBackground	#ffffff	0
+curve	Tuscias_1	Tuscias_4	1	0	#000000	0	1	7	1	#000000	#000000	0	#000000	14	1	2	0	0	29	1
+curve	Tuscias_1	Tuscias_6	1	0	#ff0000	0	1	7	2	#ff0000	#ff0000	0	#000000	14	1	2	0	0	29	1
+scale	0	0	300	0	7	5	0	0
+scale	1	0	300	0	7	5	0	0
+scale	2	0	210	0	6	5	0	0
+scale	3	0	210	0	6	5	0	0
+LabelsFormat	0	6	0	6	0	6	0	6
+AxisType	0	0	0	0	
+MajorTicks	3	3	3	3
+MinorTicks	3	3	3	3
+TicksLength	5	9
+DrawAxesBackbone	1	1	1	1	1
+AxesLineWidth	1
+LabelsRotation	0	0	0	0
+LabelsPrefix				
+LabelsSuffix				
+TickLabelsSpace	4	4	4	4
+ShowTicksPolicy	0	0	0	0
+EnabledTickLabels	1	1	1	1
+<Legend>
+<Frame>1</Frame>
+<Color>#000000</Color>
+<FrameWidth>1</FrameWidth>
+<LineStyle>0</LineStyle>
+<x>8.1453634085213</x>
+<y>290.71207430341</y>
+<right>90.8521303258145</right>
+<bottom>252.631578947368</bottom>
+<attachTo>1</attachTo>
+<onTop>1</onTop>
+<visible>1</visible>
+<Text>
+\l(1)Cortex M4
+\l(2)Certex R4
+</Text>
+<Font>Sans	9	50	0	0	0</Font>
+<TextColor>#000000</TextColor>
+<Background>#ffffff</Background>
+<Alpha>0</Alpha>
+<Angle>0</Angle>
+<AutoUpdate>1</AutoUpdate>
+<TeXOutput>0</TeXOutput>
+</Legend>
+</graph>
+<LinkXAxes>0</LinkXAxes>
+<ScaleLayers>1</ScaleLayers>
+</multiLayer>
+<table>
+Sleep	30	5	18/01/2013 23:37
+geometry	38	7	598	220	
+header	1[X]	2[Y]	3[Y]	4[Y]	5[Y]
+ColWidth	100	100	100	100	100	
+<com>
+<col nr="2">
+2.39*col("2")
+</col>
+<col nr="4">
+(col("4")/0.12)*1.2 + 3.3*14.6
+</col>
+</com>
+ColType	0;0/13	0;0/13	0;0/13	0;0/13	0;0/13
+ReadOnlyColumn	0	0	0	0	0
+HiddenColumn	0	0	0	0	0
+Comments						
+WindowLabel		2
+<data>
+0	200			17.6	224.18
+1	180			16.3	211.18
+2	168	12.8	30.592		
+3	160			14.7	195.18
+4	140	6.37	15.2243	13.1	179.18
+5	120	5.72	13.6708	11.7	165.18
+6	100	5.32	12.7148	10	148.18
+7	80	4.6	10.994	8.4	132.18
+8	60	3.9	9.321	6.8	116.18
+9	40	3.3	7.887	5.1	99.18
+10	20	3.29	7.8631	3.5	83.18
+</data>
+</table>
+<multiLayer>
+Graph2	1	1	18/01/2013 23:42
+geometry	417	-3	517	453	active
+WindowLabel		2
+Margins	5	5	5	5
+Spacing	5	5
+LayerCanvasSize	400	300
+Alignement	0	0
+<AlignPolicy>0</AlignPolicy>
+<CommonAxes>0</CommonAxes>
+<graph>
+ggeometry	5	5	499	390
+<PageGeometry>0.00982318	0.0123457	0.980354	0.962963</PageGeometry>
+PlotTitle		#000000	4228
+<Antialiasing>0</Antialiasing>
+<Autoscaling>1</Autoscaling>
+<ScaleFonts>1</ScaleFonts>
+<GridOnTop>0</GridOnTop>
+<MissingDataGap>1</MissingDataGap>
+Background	#ffffff	0
+Margin	0
+Border	0	#000000
+grid	0	0	1	1	#0000ff	0	0.5	#a0a0a4	2	0.4	#0000ff	0	0.5	#a0a0a4	2	0.4	0	0	2	0	0
+EnabledAxes	1	1	1	1	
+AxesTitles	ν, MHz	P, mW			
+AxesTitleColors	#000000	#000000	#000000	#000000	
+AxesTitleAlignment	5124	5124	5124	5124
+AxesTitleDistance	2	2	2	2
+TitleFont	Sans	11	75	0	0	0
+ScaleFont0	Sans	9	75	0	0	0
+ScaleFont1	Sans	9	75	0	0	0
+ScaleFont2	Sans	9	75	0	0	0
+ScaleFont3	Sans	9	75	0	0	0
+AxisFont0	Sans	9	50	0	0	0
+AxisFont1	Sans	9	50	0	0	0
+AxisFont2	Sans	9	50	0	0	0
+AxisFont3	Sans	9	50	0	0	0
+AxesColors	#000000	#000000	#000000	#000000
+AxesNumberColors	#1a1a1a	#1a1a1a	#1a1a1a	#1a1a1a
+AxesBaseline	0	0	0	0	
+CanvasBackground	#ffffff	0
+curve	Sleep_1	Sleep_3	1	0	#000000	0	1	7	1	#000000	#000000	0	#000000	14	1	2	0	0	29	1
+curve	Sleep_1	Sleep_5	1	0	#ff0000	0	1	7	2	#ff0000	#ff0000	0	#000000	14	1	2	0	0	29	1
+scale	0	0	230	0	6	5	0	0
+scale	1	0	230	0	6	5	0	0
+scale	2	0	210	0	6	5	0	0
+scale	3	0	210	0	6	5	0	0
+LabelsFormat	0	6	0	6	0	6	0	6
+AxisType	0	0	0	0	
+MajorTicks	3	3	3	3
+MinorTicks	3	3	3	3
+TicksLength	5	9
+DrawAxesBackbone	1	1	1	1	1
+AxesLineWidth	1
+LabelsRotation	0	0	0	0
+LabelsPrefix				
+LabelsSuffix				
+TickLabelsSpace	4	4	4	4
+ShowTicksPolicy	0	0	0	0
+EnabledTickLabels	1	1	1	1
+<Legend>
+<Frame>1</Frame>
+<Color>#000000</Color>
+<FrameWidth>1</FrameWidth>
+<LineStyle>0</LineStyle>
+<x>3.0288461538462</x>
+<y>227.15170278638</y>
+<right>69.6634615384615</right>
+<bottom>197.956656346749</bottom>
+<attachTo>1</attachTo>
+<onTop>1</onTop>
+<visible>1</visible>
+<Text>
+\l(1)Cortex M4
+\l(2)Cortex R4
+</Text>
+<Font>Sans	9	50	0	0	0</Font>
+<TextColor>#000000</TextColor>
+<Background>#ffffff</Background>
+<Alpha>0</Alpha>
+<Angle>0</Angle>
+<AutoUpdate>1</AutoUpdate>
+<TeXOutput>0</TeXOutput>
+</Legend>
+</graph>
+<LinkXAxes>0</LinkXAxes>
+<ScaleLayers>1</ScaleLayers>
+</multiLayer>
+<open>1</open>
