@@ -207,12 +207,12 @@ Naudojamas TMDXRM48USB paleisties rinkinys\footnote{development kit}. Jame yra:
 \begin{itemize}
 \item Mikrovaldiklis xRM48L950AZWTT:
 \begin{itemize}
-\item 2 Cortex-R4F ARM procesoriai, veikiantys kartu\footnote{lockstep - kartu atlieka tas pa\v{c}ias komandas}
-\item 3MB flash, 256kB RAM
+\item Du 32-bitu ARM Cortex-R4F procesoriai, veikiantys kartu\footnote{lockstep - kartu atlieka tas pa\v{c}ias komandas}
+\item 3MB flash, 256KB RAM
 \item greitis iki 220MHz
-\item pus\.e, viengubo ir dvigubo tikslumo slankaus kablelio aritmetikos modulis
+\item neslankaus(32bitu) ir dvigubo tikslumo (64bitu) slankaus kablelio aritmetikos modulis
 \end{itemize} 
-\item 
+\item Integruotas XDS100v2 emuliatorius programavimui per usb
 \item LED'ai, temperat\=uros sensorius, \v{s}viesos sensorius, akselerometras
 \item pro\v{z}ektoriukas
 \end{itemize}
@@ -220,9 +220,14 @@ Palyginimui naudojamas STM32F4DISCOVERY paleisties rinkinys:
 \begin{itemize}
 \item mikrovaldiklis STM32F407VGT:
 \begin{itemize}
-\item ram
+\item 32-bitu ARM Cortex-M4F procesorius
+\item 1MB flash, 192 KB RAM 
 \item greitis iki 168MHz 
-\end{itemize} 
+\item neslankaus (32bitu) ir slankaus (32bitu) kablelio aritmetikos modulis
+\end{itemize}
+\item Integruotas ST-LINK/V2 emuliatorius programavimui per usb
+\item LED'ai, akselerometras, skaitmeninis mikroforas
+\item CS43L22- SAK garsui su integruotu D klases garso stiprintuvu  
 \end{itemize}
 
     
