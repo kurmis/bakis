@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.1.13)  18 JAN 2013 23:12
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.1.13)  19 JAN 2013 00:16
 entering extended mode
  %&-line parsing enabled.
 **Kursinis.tex
@@ -3271,18 +3271,31 @@ File: l7xlmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 
 LaTeX Warning: Citation `Q31' on page 8 undefined on input line 386.
 
-[8] [9] [10] [11]
-Underfull \hbox (badness 10000) in paragraph at lines 464--465
+[8] [9] <pav/modes.jpg, id=44, 383.18156pt x 304.88907pt>
+File: pav/modes.jpg Graphic file (type jpg)
+ <use pav/modes.jpg>
+<pav/sleep.jpg, id=45, 383.18156pt x 304.88907pt>
+File: pav/sleep.jpg Graphic file (type jpg)
+ <use pav/sleep.jpg>
+<pav/tuscias.jpg, id=46, 383.18156pt x 304.88907pt>
+File: pav/tuscias.jpg Graphic file (type jpg)
+ <use pav/tuscias.jpg>
+<pav/binary.jpg, id=47, 383.18156pt x 304.88907pt>
+File: pav/binary.jpg Graphic file (type jpg)
+ <use pav/binary.jpg>
+[10 <./pav/modes.jpg> <./pav/sleep.jpg>] [11 <./pav/tuscias.jpg> <./pav/binary.
+jpg>] [12]
+Underfull \hbox (badness 10000) in paragraph at lines 498--499
 
  []
 
-[12] [13] (./Kursinis.bbl)
-Overfull \hbox (83.98582pt too wide) in paragraph at lines 9--510
+[13] [14] (./Kursinis.bbl)
+Overfull \hbox (83.98582pt too wide) in paragraph at lines 9--544
 \L7x/lmr/m/n/12 type @ON-LINE, month = jun, year = 2009, url = http://wintergre
 enworks.wordpress.com/2011/12/27/formats-
  []
 
-[14] [15] [16] (./Kursinis.aux)
+[15] [16] [17] (./Kursinis.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -3291,27 +3304,27 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 9810 strings out of 495061
- 147309 string characters out of 1182621
+ 9840 strings out of 495061
+ 147747 string characters out of 1182621
  196498 words of memory out of 3000000
- 12758 multiletter control sequences out of 15000+50000
- 42899 words of font info for 50 fonts, out of 3000000 for 9000
+ 12781 multiletter control sequences out of 15000+50000
+ 45216 words of font info for 51 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
- 37i,8n,38p,372b,396s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dv
-ips/lm/lm-l7x.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/shar
+ 37i,8n,38p,372b,449s stack positions out of 5000i,500n,10000p,200000b,50000s
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-l7x.enc}{/usr/share/texmf/fonts/enc/d
+vips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/shar
 e/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texmf/fonts/enc/dvips/lm/l
 m-mathit.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/tex
 mf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmm
 i12.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fon
 ts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb>
 </usr/share/texmf/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/
-public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/sha
-re/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/type1/public/l
-m/lmtt12.pfb>
-Output written on Kursinis.pdf (16 pages, 213470 bytes).
+public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.pfb></usr/sha
+re/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/
+lm/lmsy8.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt12.pfb>
+Output written on Kursinis.pdf (17 pages, 546796 bytes).
 PDF statistics:
- 109 PDF objects out of 1000 (max. 8388607)
+ 120 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 

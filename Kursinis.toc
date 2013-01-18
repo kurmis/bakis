@@ -4,12 +4,12 @@
 \contentsline {section}{\numberline {2}Naudoti testavimo algoritmai}{5}
 \contentsline {subsection}{\numberline {2.1}Slankaus kablelio algoritmai}{5}
 \contentsline {subsection}{\numberline {2.2}Neslankaus kablelio algoritmas}{6}
-\contentsline {subsection}{\numberline {2.3}Bitu testavimo algoritmas}{6}
+\contentsline {subsection}{\numberline {2.3}Bit\k {u} testavimo algoritmas}{6}
 \contentsline {subsection}{\numberline {2.4}Greitas disckretinis Furj\.e\ eilut\.es transformavimo testas}{7}
 \contentsline {section}{\numberline {3}Rezultatai}{10}
-\contentsline {section}{\numberline {4}I\v {s}vados}{10}
-\contentsline {section}{\numberline {5}Priedai}{11}
-\contentsline {section}{Mokslin\.{e}s publikacijos ir konferencij\k {u} prane\v {s}imai}{12}
-\contentsline {section}{Literat\={u}ros s\k {a}ra\v {s}as}{14}
-\contentsline {section}{Santrauka}{15}
-\contentsline {section}{Summary}{16}
+\contentsline {section}{\numberline {4}I\v {s}vados}{11}
+\contentsline {section}{\numberline {5}Priedai}{12}
+\contentsline {section}{Mokslin\.{e}s publikacijos ir konferencij\k {u} prane\v {s}imai}{13}
+\contentsline {section}{Literat\={u}ros s\k {a}ra\v {s}as}{15}
+\contentsline {section}{Santrauka}{16}
+\contentsline {section}{Summary}{17}

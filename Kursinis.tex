@@ -322,9 +322,9 @@ void intTest() {
   }
 }
 \end{verbatim}
-\subsection{Bitu testavimo algoritmas}
+\subsection{Bit\k{u} testavimo algoritmas}
 \begin{verbatim}
-short test_bits() {
+short testBits() {
   volatile unsigned sum = 0x55555555; 
   // 0101 0101  0101 0101  0101 0101  0101 0101  
   for (volatile int i = 0; i < 0x020000; i++) {
@@ -435,6 +435,40 @@ int32_t testCfftQ31(void) {
 \newpage
    
 \section{Rezultatai}
+\begin{figure}[H] %--< nustatymai kur bus paveiksliukas h - kaip tekste, t - puslapio virsuje, b - puslapio apacioje, H - tiksliai kaip tekste, p - atskiram paveiksleliu pslapy >--%
+\centering %--< lygiavimas >--%
+\includegraphics[scale=0.8]{pav/modes.jpg} %--< scale - dydis, {aplankas/pav.pavadinimas} >--%
+\captionsetup{labelformat=numbfirst} %--< pries tai apibrezem kaip turi atrodyti tekstas po paveiksleliu >--%
+\captionsetup{labelseparator=tarpas}
+\caption{Mikrovaldikliai stanby r\.e\v{z}ime}
+\label{vienas}
+\end{figure}
+\begin{figure}[H] %--< nustatymai kur bus paveiksliukas h - kaip tekste, t - puslapio virsuje, b - puslapio apacioje, H - tiksliai kaip tekste, p - atskiram paveiksleliu pslapy >--%
+\centering %--< lygiavimas >--%
+\includegraphics[scale=0.8]{pav/sleep.jpg} %--< scale - dydis, {aplankas/pav.pavadinimas} >--%
+\captionsetup{labelformat=numbfirst} %--< pries tai apibrezem kaip turi atrodyti tekstas po paveiksleliu >--%
+\captionsetup{labelseparator=tarpas}
+\caption{Mikrovaldikliai stanby r\.e\v{z}ime}
+\label{vienas}
+\end{figure}
+\begin{figure}[H] %--< nustatymai kur bus paveiksliukas h - kaip tekste, t - puslapio virsuje, b - puslapio apacioje, H - tiksliai kaip tekste, p - atskiram paveiksleliu pslapy >--%
+\centering %--< lygiavimas >--%
+\includegraphics[scale=0.8]{pav/tuscias.jpg} %--< scale - dydis, {aplankas/pav.pavadinimas} >--%
+\captionsetup{labelformat=numbfirst} %--< pries tai apibrezem kaip turi atrodyti tekstas po paveiksleliu >--%
+\captionsetup{labelseparator=tarpas}
+\caption{tuscias}
+\label{vienas}
+\end{figure}
+\begin{figure}[H] %--< nustatymai kur bus paveiksliukas h - kaip tekste, t - puslapio virsuje, b - puslapio apacioje, H - tiksliai kaip tekste, p - atskiram paveiksleliu pslapy >--%
+\centering %--< lygiavimas >--%
+\includegraphics[scale=0.8]{pav/binary.jpg} %--< scale - dydis, {aplankas/pav.pavadinimas} >--%
+\captionsetup{labelformat=numbfirst} %--< pries tai apibrezem kaip turi atrodyti tekstas po paveiksleliu >--%
+\captionsetup{labelseparator=tarpas}
+\caption{binary}
+\label{vienas}
+\end{figure}
+
+
 \section{I\v{s}vados}
 
 
@@ -455,52 +489,52 @@ Bet kokia reikalinga papildoma informacija: paveiksl\.{e}liai, grafikai ir t.t.
 
 \newpage
 
-\section*{Mokslin\.{e}s publikacijos ir konferencij\k{u} prane\v{s}imai}
+%\section*{Mokslin\.{e}s publikacijos ir konferencij\k{u} prane\v{s}imai}
 
-\addcontentsline{toc}{section}{Mokslin\.{e}s publikacijos ir konferencij\k{u} prane\v{s}imai}
+%\addcontentsline{toc}{section}{Mokslin\.{e}s publikacijos ir konferencij\k{u} prane\v{s}imai}
 
-\begin{onehalfspacing}
+%\begin{onehalfspacing}
 
-\v{S}iame skyriuje pateikiamos mokslin\.{e}s publikacijos bei \v{z}odiniai ir stendiniai prane\v{s}imai konferencijose, kurie yra susij\k{e} su "mano darbo pavadinimas".\\
+%\v{S}iame skyriuje pateikiamos mokslin\.{e}s publikacijos bei \v{z}odiniai ir stendiniai prane\v{s}imai konferencijose, kurie yra susij\k{e} su "mano darbo pavadinimas".\\
 
-\begin{center}
-\textbf{Mokslini\k{u} publikacij\k{u}, \k{i}traukt\k{u} \k{i} mokslin\.{e}s informacijos instituto (ISI) pagrindini\k{u} \v{z}urnal\k{u} duomen\k{u} baz\k{e}, s\k{a}rašas\\}
-\end{center}
+%\begin{center}
+%\textbf{Mokslini\k{u} publikacij\k{u}, \k{i}traukt\k{u} \k{i} mokslin\.{e}s informacijos instituto (ISI) pagrindini\k{u} \v{z}urnal\k{u} duomen\k{u} baz\k{e}, s\k{a}rašas\\}
+%\end{center}
 
-1. 
+%1. 
 
-2. 
+%2. 
 
-\newpage
+%\newpage
 
-\begin{center}
-\textbf{Kitos mokslin\.{e}s publikacijos\\}
-\end{center}
+%\begin{center}
+%\textbf{Kitos mokslin\.{e}s publikacijos\\}
+%\end{center}
 
-1. 
+%1. 
 
-2. 
+%2. 
 
-\begin{center}
-\textbf{\v{Z}odiniai prane\v{s}imai konferencijose}\\
-\end{center}
+%\begin{center}
+%\textbf{\v{Z}odiniai prane\v{s}imai konferencijose}\\
+%\end{center}
 
-1. 
+%1. 
 
-2. 
+%2. 
 
-\begin{center}
-\textbf{Stendiniai prane\v{s}imai konferencijose}\\
-\end{center}
+%\begin{center}
+%\textbf{Stendiniai prane\v{s}imai konferencijose}\\
+%\end{center}
 
-1. 
+%1. 
 
-2. 
+%2. 
 
 
-\end{onehalfspacing}
+%\end{onehalfspacing}
 
-\newpage
+%\newpage
 
 %%-----====literaturos sarasas====------%%
 
