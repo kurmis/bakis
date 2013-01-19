@@ -204,7 +204,7 @@ ir naudojam formules citavimui \ref{formule_label}
 \newpage
 
 \section{Naudojamos \k{i}rangos ir programos}
-Naudojamas TMDXRM48USB paleisties rinkinys\footnote{development kit}. Jame yra:
+Naudojamas TMDXRM48USB maketas. Jame yra:
 \begin{itemize}
 \item Mikrovaldiklis xRM48L950AZWTT:
 \begin{itemize}
@@ -217,7 +217,7 @@ Naudojamas TMDXRM48USB paleisties rinkinys\footnote{development kit}. Jame yra:
 \item LED'ai, temperat\=uros sensorius, \v{s}viesos sensorius, akselerometras
 \item pro\v{z}ektoriukas
 \end{itemize}
-Palyginimui naudojamas STM32F4DISCOVERY paleisties rinkinys:
+Palyginimui naudojamas STM32F4DISCOVERY maketas:
 \begin{itemize}
 \item mikrovaldiklis STM32F407VGT:
 \begin{itemize}
@@ -230,15 +230,16 @@ Palyginimui naudojamas STM32F4DISCOVERY paleisties rinkinys:
 \item LED'ai, akselerometras, skaitmeninis mikrofonas
 \item CS43L22- SAK garsui su integruotu D klases garso stiprinimu
 \end{itemize}
-
+Pasirinktas kompiliatorius - IAR 6.4 kompileris. Darbo prad\.ejimo metu vienintelis palaik\.e abu maketus, be papildomos \k{i}rangos. 
     
 
 \newpage %perkelia testa i nauja lapa
 
-\section{Naudoti testavimo algoritmai}
+\section{Naudoti testavimo algoritmai ir j\k{u} apra\v{s}ai}
 %\addcontentsline{toc}{section}{Praktin\.{e}\ dalis} % prideda
-
-\subsection{Slankaus kablelio algoritmai}
+\subsection{Matematini\k{u} funkcij\k{u} skai\v{c}iavimo grei\v{c}i\k{u} \k{i}vertinimo algoritmai}
+\v{S}iame paragrafe apra\v{s}ytiems algoritmams buvo naudojamas laiko tr\=ukis, kurio pagalba buvo ska\v{c}iuojamas algoritmo atlikimo greitis 1ms tikslumu. Abu maketai buvo nustatyti veikti 100MHz grei\v{c}iu. Algoritmai buvo leisti 100 kart\k{u} ir paskai\v{c}iuotas laikas suvidurkintas.
+\subsubsection{Slankaus kablelio algoritmai}
 Slankaus kablelio Gauss Legendre algoritmas $\pi$ skai\v{c}iavimui:
 \begin{equation*}\label{xx}
 a_{0}=1\;b_{0}=\frac{1}{\sqrt{2}}\;t_{0}=\frac{1}{4}\;p_{0}=1\\
@@ -305,7 +306,7 @@ int floatTest() {
   return 0; //teste ivyko klaida
 }
 \end{verbatim}
-\subsection{Neslankaus kablelio algoritmas}
+\subsubsection{Neslankaus kablelio algoritmas}
 Fiksuoto tikslumo algoritmas:
 \begin{equation}
 b = \sum_{i=0}^{100000} (i * (-1)^{i+1})
@@ -322,7 +323,7 @@ void intTest() {
   }
 }
 \end{verbatim}
-\subsection{Bit\k{u} testavimo algoritmas}
+\subsubsection{Logini\k{u} funkcij\k{e} testavimo algoritmas}
 \begin{verbatim}
 short testBits() {
   volatile unsigned sum = 0x55555555; 
@@ -341,7 +342,7 @@ short testBits() {
   return 0; // teste ivyko klaida
 }
 \end{verbatim}
-\subsection{Greitas disckretinis Furj\.e\ eilut\.es transformavimo testas}
+\subsubsection{Greitas disckretinis Furj\.e\ eilut\.es transformavimo testas}
 Naudotos arm dsp\footnote{Dsp - digital signal processing $($skaitmeninis signal\k{u} apdorojimas$)$} bibliotekos, atskirai optimizuotos R4 bei M4 mikrovaldikliams. Naudota 1024 kompleksini\k{u} ta\v{s}k\k{u}, kurie masyve i\v{s}d\.estyti vienas po kito ir bendras masyvo ilgis 2048. Slankaus kablelio testui masyvas u\v{z}pildomas funkcija:
 \begin{equation*}
 Re(z) = (sin(v*i) + cos(v*7)),\; t = 0, 2, 4... 2046
@@ -387,7 +388,7 @@ Fiksuoto tikslumo Furij\.e transformacijai naudoti ARM Q31 fiksuoto kablelio kin
 \begin{equation}
 Q31(x)= ROUND(2^{31}*10^{x/20})
 \end{equation}   
-Masyvo u\v{z}pildo funkcija
+Masyvo u\v{z}pildo funkcija:
 \begin{equation*}
 Re(z) = Q31(1000*(sin(v*i) + cos(v*7)))),\; t = 0, 2, 4... 2046
 \end{equation*}
@@ -432,6 +433,10 @@ int32_t testCfftQ31(void) {
   return 0;
 }
 \end{verbatim}
+\subsection{\k{I}\.ejimo ir i\v{s}\.ejimo \k{i} tr\=k\k{i} algoritmo apra\v{s}ymas}
+Naudojami maketai buvo paleisti veikti 100MHz grei\v{c}iu. Abu maketai keisdavo i\v{s}\.ejimo porto vienos kojos login\k{i} lyg\k{i}, bei buvo \k{i}jungtas nuo laiko priklausantis tu\v{s}\v{c}ias tr\=kis. Osciloscopu matuota port\k{u} lygmen\k{u} kitimo laikas.
+\subsection{Srov\.es matavimai}
+Kadangi TMDXRM48USB maketas netur\.ejo trumpikli\k{u}   
 \newpage
    
 \section{Rezultatai}
