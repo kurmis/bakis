@@ -455,7 +455,7 @@ trumpikli\k{u}, tarp maitinimo ir mikrovaldiklio buvo
 \newpage
    
 \section{Rezultatai}
-Cortex-R4 mikrovaldiklis visais skai\v{c}iavimo testais lenk\.e cortex-M4 mikrovaldikl\v{i}. 
+Cortex-R4 mikrovaldiklis beveik visus skai\v{c}iavimo testus atliko grei\v{c}iau nei cortex-M4 mikrovaldikl\k{i}. 
 \begin{figure}[H] %--< nustatymai kur bus paveiksliukas h - kaip tekste, t - puslapio virsuje, b - puslapio apacioje, H - tiksliai kaip tekste, p - atskiram paveiksleliu pslapy >--%
 \centering %--< lygiavimas >--%
 \includegraphics[scale=0.8]{pav/testai.jpg} %--< scale - dydis, {aplankas/pav.pavadinimas} >--%
@@ -464,12 +464,22 @@ Cortex-R4 mikrovaldiklis visais skai\v{c}iavimo testais lenk\.e cortex-M4 mikrov
 \caption{Skai\v{c}iavimo algoritm\k{u} laikai. 1 - dvigubo tikslumo slankaus kablelio testas. 2 - slankaus kablelio testas. 3 - neslankaus kablelio testas. 4 - logini\k{u} funkcij\k{u} testas. 5 - Furij\.e slankaus kablelio. 6 - Furij\.e neslankaus kablelio.}
 \label{vienas}
 \end{figure}
+Cortex-R4 generavo 280ns ilgio impulsus. \k{I}\.ejimo \k{i} tr\=uk\k{i} ir i\v{s}\.ejimo laikas 730ns. Cortex-M4 generavo 150ns ilgio impulsus. k{I}\.ejimo \k{i} tr\=uk\k{i} ir i\v{s}\.ejimo laikas 200ns.
 \begin{figure}[H] %--< nustatymai kur bus paveiksliukas h - kaip tekste, t - puslapio virsuje, b - puslapio apacioje, H - tiksliai kaip tekste, p - atskiram paveiksleliu pslapy >--%
 \centering %--< lygiavimas >--%
-\includegraphics[scale=0.8]{pav/modes.jpg} %--< scale - dydis, {aplankas/pav.pavadinimas} >--%
+\includegraphics[scale=0.4]{pav/trukiai.jpg} %--< scale - dydis, {aplankas/pav.pavadinimas} >--%
 \captionsetup{labelformat=numbfirst} %--< pries tai apibrezem kaip turi atrodyti tekstas po paveiksleliu >--%
 \captionsetup{labelseparator=tarpas}
-\caption{Mikrovaldikliai stanby r\.e\v{z}ime}
+\caption{Generuot\k{u} impuls\k{u} laikin\.e diagrama.}
+\label{vienas}
+\end{figure}
+Mikrovaldiklio Cortex-R4 \v{s}erdis maitinama 1.2V, periferijos 3.3V.I\v{s}jungtos periferijos naudojo 14.6mA srov\k{e}, tad prie suvartojamos galios buvo prid\.eta 48.18mW dedamoji, kuri nekito vis\k{u} matavim\k{u} metu .Cortex-M4 maitinamas 2.39V. 
+\begin{figure}[H] %--< nustatymai kur bus paveiksliukas h - kaip tekste, t - puslapio virsuje, b - puslapio apacioje, H - tiksliai kaip tekste, p - atskiram paveiksleliu pslapy >--%
+\centering %--< lygiavimas >--%
+\includegraphics[scale=0.4]{pav/modes.jpg} %--< scale - dydis, {aplankas/pav.pavadinimas} >--%
+\captionsetup{labelformat=numbfirst} %--< pries tai apibrezem kaip turi atrodyti tekstas po paveiksleliu >--%
+\captionsetup{labelseparator=tarpas}
+\caption{Mikrovaldikliai stanby r\.e\v{z}ime.}
 \label{vienas}
 \end{figure}
 \begin{figure}[H] %--< nustatymai kur bus paveiksliukas h - kaip tekste, t - puslapio virsuje, b - puslapio apacioje, H - tiksliai kaip tekste, p - atskiram paveiksleliu pslapy >--%
@@ -477,7 +487,7 @@ Cortex-R4 mikrovaldiklis visais skai\v{c}iavimo testais lenk\.e cortex-M4 mikrov
 \includegraphics[scale=0.8]{pav/sleep.jpg} %--< scale - dydis, {aplankas/pav.pavadinimas} >--%
 \captionsetup{labelformat=numbfirst} %--< pries tai apibrezem kaip turi atrodyti tekstas po paveiksleliu >--%
 \captionsetup{labelseparator=tarpas}
-\caption{Mikrovaldikliai stanby r\.e\v{z}ime}
+\caption{Mikrovaldikli\k{u} galios vartojimo priklausomyb\.e nuo taktinio grei\v{c}io sleep r\.e\v{z}ime.}
 \label{vienas}
 \end{figure}
 \begin{figure}[H] %--< nustatymai kur bus paveiksliukas h - kaip tekste, t - puslapio virsuje, b - puslapio apacioje, H - tiksliai kaip tekste, p - atskiram paveiksleliu pslapy >--%
@@ -485,7 +495,7 @@ Cortex-R4 mikrovaldiklis visais skai\v{c}iavimo testais lenk\.e cortex-M4 mikrov
 \includegraphics[scale=0.8]{pav/tuscias.jpg} %--< scale - dydis, {aplankas/pav.pavadinimas} >--%
 \captionsetup{labelformat=numbfirst} %--< pries tai apibrezem kaip turi atrodyti tekstas po paveiksleliu >--%
 \captionsetup{labelseparator=tarpas}
-\caption{tuscias}
+\caption{Mikrovaldikli\k{u} galios sunaudojimo priklausomyb\.e nuo taktinio grei\v{c}io tu\v{s}\v{c}iaje eigoje.}
 \label{vienas}
 \end{figure}
 \begin{figure}[H] %--< nustatymai kur bus paveiksliukas h - kaip tekste, t - puslapio virsuje, b - puslapio apacioje, H - tiksliai kaip tekste, p - atskiram paveiksleliu pslapy >--%
@@ -493,7 +503,7 @@ Cortex-R4 mikrovaldiklis visais skai\v{c}iavimo testais lenk\.e cortex-M4 mikrov
 \includegraphics[scale=0.8]{pav/binary.jpg} %--< scale - dydis, {aplankas/pav.pavadinimas} >--%
 \captionsetup{labelformat=numbfirst} %--< pries tai apibrezem kaip turi atrodyti tekstas po paveiksleliu >--%
 \captionsetup{labelseparator=tarpas}
-\caption{binary}
+\caption{Mikrovaldikli\k{u} galios sunaudojimo priklausomyb\.e nuo grei\v{c}io atliekant logines funkcijas}
 \label{vienas}
 \end{figure}
 
@@ -502,21 +512,20 @@ Cortex-R4 mikrovaldiklis visais skai\v{c}iavimo testais lenk\.e cortex-M4 mikrov
 
 
 \begin{enumerate}
-\item Pirmas
-\item Antras 
-\item Tre\v{c}ias
-\item Ketvirtas
+\item Atliekant skai\v{c}iavimus Cortex-R4 yra prana\v{e}snis
+\item Cortex-R4 turi tik du tr\=ukio re\v{z}imus ir \k{i}\.ejimo bei i\v{s}\.ejimo laikai stipriai atsilieka nuo M4, tod\.el jis labiau tinkamas naudoti ten kur tr\=uki\k{u} yra nedaug, o juose reikia atlikti daug skai\v{c}iavim\k{u}.
+\item Du procesoriai esantys R4 stipriai padidina mikrovaldiklio naudojam\k{a} gali\k{a}
 \end{enumerate}
 
 \newpage
 
-\section{Priedai}
+%\section{Priedai}
 
-Bet kokia reikalinga papildoma informacija: paveiksl\.{e}liai, grafikai ir t.t.
+%Bet kokia reikalinga papildoma informacija: paveiksl\.{e}liai, grafikai ir t.t.
 
-\end{onehalfspacing}
+%\end{onehalfspacing}
 
-\newpage
+%\newpage
 
 %\section*{Mokslin\.{e}s publikacijos ir konferencij\k{u} prane\v{s}imai}
 
@@ -567,46 +576,47 @@ Bet kokia reikalinga papildoma informacija: paveiksl\.{e}liai, grafikai ir t.t.
 
 %%-----====literaturos sarasas====------%%
 
-\addcontentsline{toc}{section}{Literat\={u}ros s\k{a}ra\v{s}as}
-\bibliography{Kursinis.bbl} %--< skliausteliuose turi buti nurodamas literaturos saraso failo pavadinimas >--%
-\bibliographystyle{nature} %--< literaturos stilius >--%
+%\addcontentsline{toc}{section}{Literat\={u}ros s\k{a}ra\v{s}as}
+%\bibliography{Kursinis.bbl} %--< skliausteliuose turi buti nurodamas literaturos saraso failo pavadinimas >--%
+%\bibliographystyle{nature} %--< literaturos stilius >--%
 
-\newpage
+%\newpage
 
-\section*{Santrauka}
-
-
-\addcontentsline{toc}{section}{Santrauka}
-
-\begin{onehalfspacing}
-
-\begin{center}
-
-\studentas \\[12pt]
-
-\MakeUppercase{,,\pavadinimas''}\\
-
-\end{center}
-
-Tekstas
-
-\newpage
-
-\section*{Summary}
-
-\addcontentsline{toc}{section}{Summary}
-
-\begin{center}
-
-\studentas \\[12pt]
-
-\MakeUppercase{,,Title''}\\
+%\section*{Santrauka}
 
 
-\end{center}
+%\addcontentsline{toc}{section}{Santrauka}
 
-Text
+%\begin{onehalfspacing}
+
+%\begin{center}
+
+%\studentas \\[12pt]
+
+%\MakeUppercase{,,\pavadinimas''}\\
+
+%\end{center}
+
+%Tekstas
+
+%\newpage
+
+%\section*{Summary}
+
+%\addcontentsline{toc}{section}{Summary}
+
+%\begin{center}
+
+%\studentas \\[12pt]
+
+%\MakeUppercase{,,Title''}\\
+
+
+%\end{center}
+
+%Text
 
 \end{onehalfspacing}
+
 
 \end{document} 

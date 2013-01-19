@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.1.13)  19 JAN 2013 04:22
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.1.13)  19 JAN 2013 05:57
 entering extended mode
  %&-line parsing enabled.
 **Kursinis.tex
@@ -3148,6 +3148,9 @@ LaTeX Warning: Label `vienas' multiply defined.
 
 LaTeX Warning: Label `vienas' multiply defined.
 
+
+LaTeX Warning: Label `vienas' multiply defined.
+
 )
 \openout1 = `Kursinis.aux'.
 
@@ -3286,27 +3289,24 @@ LaTeX Warning: Citation `Q31' on page 8 undefined on input line 387.
 [8] [9] [10] <pav/testai.jpg, id=47, 372.64218pt x 304.88907pt>
 File: pav/testai.jpg Graphic file (type jpg)
 
-<use pav/testai.jpg> <pav/modes.jpg, id=48, 383.18156pt x 304.88907pt>
+<use pav/testai.jpg> <pav/trukiai.jpg, id=48, 752.8125pt x 361.35pt>
+File: pav/trukiai.jpg Graphic file (type jpg)
+
+<use pav/trukiai.jpg> <pav/modes.jpg, id=49, 383.18156pt x 304.88907pt>
 File: pav/modes.jpg Graphic file (type jpg)
 
-<use pav/modes.jpg> <pav/sleep.jpg, id=49, 383.18156pt x 304.88907pt>
+<use pav/modes.jpg> <pav/sleep.jpg, id=50, 383.18156pt x 304.88907pt>
 File: pav/sleep.jpg Graphic file (type jpg)
 
-<use pav/sleep.jpg> <pav/tuscias.jpg, id=50, 383.18156pt x 304.88907pt>
+<use pav/sleep.jpg> [11 <./pav/testai.jpg> <./pav/trukiai.jpg>]
+<pav/tuscias.jpg, id=55, 383.18156pt x 304.88907pt>
 File: pav/tuscias.jpg Graphic file (type jpg)
-
-<use pav/tuscias.jpg> [11 <./pav/testai.jpg> <./pav/modes.jpg>]
-<pav/binary.jpg, id=55, 383.18156pt x 304.88907pt>
+ <use pav/tuscias.jpg>
+<pav/binary.jpg, id=56, 383.18156pt x 304.88907pt>
 File: pav/binary.jpg Graphic file (type jpg)
  <use pav/binary.jpg>
-[12 <./pav/sleep.jpg> <./pav/tuscias.jpg>] [13 <./pav/binary.jpg>] [14]
-(./Kursinis.bbl)
-Overfull \hbox (83.98582pt too wide) in paragraph at lines 9--573
-\L7x/lmr/m/n/12 type @ON-LINE, month = jun, year = 2009, url = http://wintergre
-enworks.wordpress.com/2011/12/27/formats-
- []
-
-[15] [16] [17] (./Kursinis.aux)
+[12 <./pav/modes.jpg> <./pav/sleep.jpg> <./pav/tuscias.jpg>] [13 <./pav/binary.
+jpg>] (./Kursinis.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -3315,13 +3315,13 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 9846 strings out of 495061
- 147840 string characters out of 1182621
+ 9848 strings out of 495061
+ 147900 string characters out of 1182621
  196509 words of memory out of 3000000
- 12786 multiletter control sequences out of 15000+50000
+ 12790 multiletter control sequences out of 15000+50000
  45216 words of font info for 51 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
- 37i,8n,38p,441b,448s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 37i,8n,38p,441b,447s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-l7x.enc}{/usr/share/texmf/fonts/enc/d
 vips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/shar
 e/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texmf/fonts/enc/dvips/lm/l
@@ -3333,9 +3333,9 @@ ts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb>
 public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.pfb></usr/sha
 re/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/
 lm/lmsy8.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt12.pfb>
-Output written on Kursinis.pdf (17 pages, 632297 bytes).
+Output written on Kursinis.pdf (13 pages, 645903 bytes).
 PDF statistics:
- 121 PDF objects out of 1000 (max. 8388607)
+ 110 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -3,7 +3,7 @@ QtiPlot 0.9.8 project file
 <windows>	10
 <table>
 Tuscias	30	6	18/01/2013 23:23
-geometry	0	450	859	284	minimized	
+geometry	784	426	859	284	minimized	active
 header	1[X]	3[Y]	4[Y]	5[Y]	6[Y]	7[Y]
 ColWidth	100	100	100	100	100	100	
 <com>
@@ -35,7 +35,7 @@ WindowLabel		2
 </table>
 <multiLayer>
 Graph1	1	1	18/01/2013 23:33
-geometry	196	450	517	453	minimized	
+geometry	0	450	517	453	minimized	
 WindowLabel		2
 Margins	5	5	5	5
 Spacing	5	5
@@ -123,7 +123,7 @@ EnabledTickLabels	1	1	1	1
 </multiLayer>
 <table>
 Sleep	30	5	18/01/2013 23:37
-geometry	392	450	598	220	minimized	
+geometry	196	450	598	220	minimized	
 header	1[X]	2[Y]	3[Y]	4[Y]	5[Y]
 ColWidth	100	100	100	100	100	
 <com>
@@ -155,7 +155,7 @@ WindowLabel		2
 </table>
 <multiLayer>
 Graph2	1	1	18/01/2013 23:42
-geometry	588	450	517	453	minimized	
+geometry	392	450	517	453	minimized	
 WindowLabel		2
 Margins	5	5	5	5
 Spacing	5	5
@@ -243,7 +243,7 @@ EnabledTickLabels	1	1	1	1
 </multiLayer>
 <table>
 binary	30	5	18/01/2013 23:47
-geometry	784	450	691	333	minimized	
+geometry	588	450	691	333	minimized	
 header	1[X]	2[Y]	3[Y]	4[Y]	5[Y]
 ColWidth	100	100	100	100	100	
 <com>
@@ -272,7 +272,7 @@ WindowLabel		2
 </table>
 <multiLayer>
 Graph3	1	1	18/01/2013 23:50
-geometry	0	426	517	453	minimized	
+geometry	784	450	517	453	minimized	
 WindowLabel		2
 Margins	5	5	5	5
 Spacing	5	5
@@ -360,7 +360,7 @@ EnabledTickLabels	1	1	1	1
 </multiLayer>
 <table>
 Table1	30	4	18/01/2013 23:53
-geometry	196	426	582	294	minimized	
+geometry	0	426	582	294	minimized	
 header	1[X]	2[Y]	3[Y]	4[Y]
 ColWidth	100	100	100	100	
 <com>
@@ -376,7 +376,7 @@ WindowLabel		2
 </table>
 <multiLayer>
 Graph4	1	1	19/01/2013 00:03
-geometry	392	426	517	453	minimized	
+geometry	196	426	517	453	minimized	
 WindowLabel		2
 Margins	5	5	5	5
 Spacing	5	5
@@ -488,7 +488,7 @@ Cortex M4
 </multiLayer>
 <table>
 Table2	30	3	19/01/2013 04:11
-geometry	0	0	535	220	
+geometry	588	426	535	220	minimized	
 header	1[X]	2[Y]	3[Y]
 ColWidth	100	100	100	
 <com>
@@ -509,7 +509,7 @@ WindowLabel		2
 </table>
 <multiLayer>
 Graph5	1	1	19/01/2013 04:15
-geometry	418	-12	503	453	active
+geometry	392	426	503	453	minimized	
 WindowLabel		2
 Margins	5	5	5	5
 Spacing	5	5
