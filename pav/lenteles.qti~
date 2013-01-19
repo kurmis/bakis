@@ -376,7 +376,7 @@ WindowLabel		2
 </table>
 <multiLayer>
 Graph4	1	1	19/01/2013 00:03
-geometry	430	-10	517	453	active
+geometry	392	426	517	453	minimized	active
 WindowLabel		2
 Margins	5	5	5	5
 Spacing	5	5

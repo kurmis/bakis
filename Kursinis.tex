@@ -433,13 +433,37 @@ int32_t testCfftQ31(void) {
   return 0;
 }
 \end{verbatim}
-\subsection{\k{I}\.ejimo ir i\v{s}\.ejimo \k{i} tr\=k\k{i} algoritmo apra\v{s}ymas}
-Naudojami maketai buvo paleisti veikti 100MHz grei\v{c}iu. Abu maketai keisdavo i\v{s}\.ejimo porto vienos kojos login\k{i} lyg\k{i}, bei buvo \k{i}jungtas nuo laiko priklausantis tu\v{s}\v{c}ias tr\=kis. Osciloscopu matuota port\k{u} lygmen\k{u} kitimo laikas.
+\subsection{\k{I}\.ejimo ir i\v{s}\.ejimo \k{i} tr\=uk\k{i} algoritmo apra\v{s}ymas}
+Naudojami maketai buvo paleisti veikti 100MHz grei\v{c}iu. Abu maketai keisdavo i\v{s}\.ejimo porto vienos kojos login\k{i} lyg\k{i}, bei buvo \k{i}jungtas nuo laiko priklausantis tu\v{s}\v{c}ias tr\=ukis. Osciloscopu matuota port\k{u} lygmen\k{u} kitimo laikas.
 \subsection{Srov\.es matavimai}
-Kadangi TMDXRM48USB maketas netur\.ejo trumpikli\k{u}   
+STM32F4DISCOVERY makete srov\.e matuota tiesiogiai multimetru 
+tarp \v{s}erdies ir maitinimo. TMDXRM48USB maketas netur\.ejo 
+trumpikli\k{u}, tarp maitinimo ir mikrovaldiklio buvo 
+\k{i}lituotos dvi 0.12 $\Omega$ var\v{z}os prie \v{s}erdies ir
+ port\k{u} maitinimo. Srov\.e matuota kaip \k{i}tampos kritimas
+  ant \v{z}inom\k{u} var\v{z}\k{u}.  Vis\k{u} matavim\k{u} metu 
+  i\v{s}oriniai portai buvo nustatyti kaip i\v{s}\.ejimai ir 
+  nustatyti nuliniame loginiame lygije. Buvo atlikti matavimai
+  esant \v{s}iom konfig\={u}racijomis:
+\begin{itemize}
+\item \k{i}jungtas stanby r\.e\v{z}imas
+\item \k{i}jungtas negilaus miego r\.e\v{z}imas esant \k{i}vairiems taktavimo grei\v{c}iams
+\item mikrovaldikliai tu\v{s}\v{c}iame cikle esant \k{i}vairiems taktavimo grei\v{c}iams
+\item mikrovaldikliai atlikin\.ejo login\k{i}\ testavimo algoritm\k{a} be tr\=ukio esant \k{i}vairiems taktavimo grei\v{c}iams  
+\end{itemize}
+
 \newpage
    
 \section{Rezultatai}
+Cortex-R4 mikrovaldiklis visais skai\v{c}iavimo testais lenk\.e cortex-M4 mikrovaldikl\v{i}. 
+\begin{figure}[H] %--< nustatymai kur bus paveiksliukas h - kaip tekste, t - puslapio virsuje, b - puslapio apacioje, H - tiksliai kaip tekste, p - atskiram paveiksleliu pslapy >--%
+\centering %--< lygiavimas >--%
+\includegraphics[scale=0.8]{pav/testai.jpg} %--< scale - dydis, {aplankas/pav.pavadinimas} >--%
+\captionsetup{labelformat=numbfirst} %--< pries tai apibrezem kaip turi atrodyti tekstas po paveiksleliu >--%
+\captionsetup{labelseparator=tarpas}
+\caption{Skai\v{c}iavimo algoritm\k{u} laikai. 1 - dvigubo tikslumo slankaus kablelio testas. 2 - slankaus kablelio testas. 3 - neslankaus kablelio testas. 4 - logini\k{u} funkcij\k{u} testas. 5 - Furij\.e slankaus kablelio. 6 - Furij\.e neslankaus kablelio.}
+\label{vienas}
+\end{figure}
 \begin{figure}[H] %--< nustatymai kur bus paveiksliukas h - kaip tekste, t - puslapio virsuje, b - puslapio apacioje, H - tiksliai kaip tekste, p - atskiram paveiksleliu pslapy >--%
 \centering %--< lygiavimas >--%
 \includegraphics[scale=0.8]{pav/modes.jpg} %--< scale - dydis, {aplankas/pav.pavadinimas} >--%

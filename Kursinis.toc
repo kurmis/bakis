@@ -1,15 +1,17 @@
 \select@language {lithuanian}
 \contentsline {section}{\k {I}vadas}{3}
 \contentsline {section}{\numberline {1}Naudojamos \k {i}rangos ir programos}{4}
-\contentsline {section}{\numberline {2}Naudoti testavimo algoritmai}{5}
-\contentsline {subsection}{\numberline {2.1}Slankaus kablelio algoritmai}{5}
-\contentsline {subsection}{\numberline {2.2}Neslankaus kablelio algoritmas}{6}
-\contentsline {subsection}{\numberline {2.3}Bit\k {u} testavimo algoritmas}{6}
-\contentsline {subsection}{\numberline {2.4}Greitas disckretinis Furj\.e\ eilut\.es transformavimo testas}{7}
-\contentsline {section}{\numberline {3}Rezultatai}{10}
-\contentsline {section}{\numberline {4}I\v {s}vados}{11}
-\contentsline {section}{\numberline {5}Priedai}{12}
-\contentsline {section}{Mokslin\.{e}s publikacijos ir konferencij\k {u} prane\v {s}imai}{13}
+\contentsline {section}{\numberline {2}Naudoti testavimo algoritmai ir j\k {u} apra\v {s}ai}{5}
+\contentsline {subsection}{\numberline {2.1}Matematini\k {u} funkcij\k {u} skai\v {c}iavimo grei\v {c}i\k {u} \k {i}vertinimo algoritmai}{5}
+\contentsline {subsubsection}{\numberline {2.1.1}Slankaus kablelio algoritmai}{5}
+\contentsline {subsubsection}{\numberline {2.1.2}Neslankaus kablelio algoritmas}{6}
+\contentsline {subsubsection}{\numberline {2.1.3}Logini\k {u} funkcij\k {e} testavimo algoritmas}{7}
+\contentsline {subsubsection}{\numberline {2.1.4}Greitas disckretinis Furj\.e\ eilut\.es transformavimo testas}{7}
+\contentsline {subsection}{\numberline {2.2}\k {I}\.ejimo ir i\v {s}\.ejimo \k {i} tr\=uk\k {i} algoritmo apra\v {s}ymas}{9}
+\contentsline {subsection}{\numberline {2.3}Srov\.es matavimai}{9}
+\contentsline {section}{\numberline {3}Rezultatai}{11}
+\contentsline {section}{\numberline {4}I\v {s}vados}{13}
+\contentsline {section}{\numberline {5}Priedai}{14}
 \contentsline {section}{Literat\={u}ros s\k {a}ra\v {s}as}{15}
 \contentsline {section}{Santrauka}{16}
 \contentsline {section}{Summary}{17}
