@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.1.13)  19 JAN 2013 05:57
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.1.13)  19 JAN 2013 06:31
 entering extended mode
  %&-line parsing enabled.
 **Kursinis.tex
@@ -3271,20 +3271,20 @@ oc)
 
  [2] [3]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 211.
+(Font)              <10> on input line 207.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 211.
+(Font)              <7> on input line 207.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 211.
+(Font)              <5> on input line 207.
  [4]
-LaTeX Font Info:    Try loading font information for L7x+lmtt on input line 265
+LaTeX Font Info:    Try loading font information for L7x+lmtt on input line 261
 .
 
 (/usr/share/texmf/tex/latex/lm/l7xlmtt.fd
 File: l7xlmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ) [5] [6] [7]
 
-LaTeX Warning: Citation `Q31' on page 8 undefined on input line 387.
+LaTeX Warning: Citation `Q31' on page 8 undefined on input line 384.
 
 [8] [9] [10] <pav/testai.jpg, id=47, 372.64218pt x 304.88907pt>
 File: pav/testai.jpg Graphic file (type jpg)
@@ -3306,7 +3306,31 @@ File: pav/tuscias.jpg Graphic file (type jpg)
 File: pav/binary.jpg Graphic file (type jpg)
  <use pav/binary.jpg>
 [12 <./pav/modes.jpg> <./pav/sleep.jpg> <./pav/tuscias.jpg>] [13 <./pav/binary.
-jpg>] (./Kursinis.aux)
+jpg>]
+Overfull \hbox (33.15536pt too wide) in paragraph at lines 582--582
+ []\L7x/lmtt/m/n/12 http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc
+.dai0240a/index.html 
+ []
+
+
+Overfull \hbox (144.29842pt too wide) in paragraph at lines 583--583
+ []\L7x/lmtt/m/n/12 http://www.st.com/internet/com/TECHNICAL_RESOURCES/TECHNICA
+L_LITERATURE/DATA_BRIEF/DM00037955.pdf 
+ []
+
+
+Overfull \hbox (138.13042pt too wide) in paragraph at lines 584--584
+ []\L7x/lmtt/m/n/12 http://www.st.com/internet/com/TECHNICAL_RESOURCES/TECHNICA
+L_LITERATURE/DATASHEET/DM00037051.pdf 
+ []
+
+
+Overfull \hbox (138.13042pt too wide) in paragraph at lines 585--585
+ []\L7x/lmtt/m/n/12 http://www.st.com/internet/com/TECHNICAL_RESOURCES/TECHNICA
+L_LITERATURE/DATASHEET/DM00037051.pdf 
+ []
+
+[14] (./Kursinis.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -3315,13 +3339,13 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 9848 strings out of 495061
- 147900 string characters out of 1182621
+ 9849 strings out of 495061
+ 147911 string characters out of 1182621
  196509 words of memory out of 3000000
- 12790 multiletter control sequences out of 15000+50000
+ 12791 multiletter control sequences out of 15000+50000
  45216 words of font info for 51 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
- 37i,8n,38p,441b,447s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 37i,8n,38p,441b,445s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-l7x.enc}{/usr/share/texmf/fonts/enc/d
 vips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/shar
 e/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texmf/fonts/enc/dvips/lm/l
@@ -3333,9 +3357,9 @@ ts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb>
 public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.pfb></usr/sha
 re/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/
 lm/lmsy8.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt12.pfb>
-Output written on Kursinis.pdf (13 pages, 645903 bytes).
+Output written on Kursinis.pdf (14 pages, 647808 bytes).
 PDF statistics:
- 110 PDF objects out of 1000 (max. 8388607)
+ 113 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  31 words of extra memory for PDF output out of 10000 (max. 10000000)
 
