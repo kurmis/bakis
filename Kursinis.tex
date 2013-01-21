@@ -381,7 +381,7 @@ int32_t testCfftFloat(void) {
   return 0;
 } 
 \end{verbatim}  
-Fiksuoto tikslumo Furij\.e transformacijai naudoti ARM Q31 fiksuoto kablelio kintamieji. I\v{s} slankaus kablelio paversti \k{i} Q31 naudota funkcija\cite{Q31}:
+Fiksuoto tikslumo Furij\.e transformacijai naudoti ARM Q31 fiksuoto kablelio kintamieji. I\v{s} slankaus kablelio paversti \k{i} Q31 naudota funkcija:
 \begin{equation}
 Q31(x)= ROUND(2^{31}*10^{x/20})
 \end{equation}   
@@ -431,21 +431,41 @@ int32_t testCfftQ31(void) {
 }
 \end{verbatim}
 \subsection{\k{I}\.ejimo ir i\v{s}\.ejimo \k{i} tr\=uk\k{i} algoritmo apra\v{s}ymas}
-Naudojami maketai buvo paleisti veikti 100MHz grei\v{c}iu. Abu maketai keisdavo i\v{s}\.ejimo porto vienos kojos login\k{i} lyg\k{i}, bei buvo \k{i}jungtas nuo laiko priklausantis tu\v{s}\v{c}ias tr\=ukis. Osciloscopu matuota port\k{u} lygmen\k{u} kitimo laikas.
+Naudojami maketai buvo paleisti veikti 100MHz grei\v{c}iu. Abu maketai keisdavo i\v{s}\.ejimo porto vienos kojos login\k{i} lyg\k{i}, bei buvo \k{i}jungtas nuo laiko priklausantis tu\v{s}\v{c}ias tr\=ukis. Osciloscopu matuota port\k{u} i\v{s}vad\k{u} lygmen\k{u} kitimo laikas.
 \subsection{Srov\.es matavimai}
 STM32F4DISCOVERY makete srov\.e matuota tiesiogiai multimetru 
-tarp \v{s}erdies ir maitinimo. TMDXRM48USB maketas netur\.ejo 
-trumpikli\k{u}, tarp maitinimo ir mikrovaldiklio buvo 
-\k{i}lituotos dvi 0.12 $\Omega$ var\v{z}os prie \v{s}erdies ir
- port\k{u} maitinimo. Srov\.e matuota kaip \k{i}tampos kritimas
-  ant \v{z}inom\k{u} var\v{z}\k{u}.  Vis\k{u} matavim\k{u} metu 
-  i\v{s}oriniai portai buvo nustatyti kaip i\v{s}\.ejimai ir 
+tarp mikrovaldiklio ir srov\.es stabilizatoriaus. . TMDXRM48USB maketas netur\.ejo 
+trumpikli\k{u} tarp srov\.es stabilizatoriaus ir mikrovaldiklio. Tarp stabilizatoriau 3.3V i\v{s}\.ejimo ir mikrovaldiklio i\v{s}vad\k{u} maitinimo bei stabilizatoriaus 1.2V i\v{s}\.ejimo ir mikrovaldiklio logikos maitinimo buvo \k{i}terptos 0.12$\Omega$ var\v{z}os. Vis\k{u} matavim\k{u} metu 
+  i\v{s}vadai buvo nustatyti i\v{s}vesties re\v{z}ime ir 
   nustatyti nuliniame loginiame lygije. Buvo atlikti matavimai
   esant \v{s}iom konfig\={u}racijomis:
 \begin{itemize}
-\item \k{i}jungtas stanby r\.e\v{z}imas
-\item \k{i}jungtas negilaus miego r\.e\v{z}imas esant \k{i}vairiems taktavimo grei\v{c}iams
-\item mikrovaldikliai tu\v{s}\v{c}iame cikle esant \k{i}vairiems taktavimo grei\v{c}iams
+\item \k{i}jungtas "stanby" re\v{z}imas:
+\begin{itemize} 
+\item Cortex-M4:
+\begin{itemize}
+\item vidinis 1.2V \k{i}tampos reguliatorius i\v{s}jungtas
+\item u\v{z}rakintos faz\.es ciklo $($pll$)$, vidinis 16MHz ir i\v{s}orinis 8MHz taktiniai osciliatoriai atjungti. Veikia vidinis 32kHz taktinis osciliatorius
+\item procesorius sustabdytas
+\item mikrovaldiklis minimalioje srov\.es suvartojimo b\=usenoje.
+\item re\v{z}im\k{a} galima i\v{s}eiti:
+\begin{itemize} 
+\item gavus i\v{s}orin\k{i} impuls\v{a} \k{i} NRST arba WKUP i\v{s}vadus 
+\item realaus laiko laikrod\v{z}iui $($RTC$)$ generus tr\=uk\k{i}
+\end{itemize} 
+\end{itemize}
+\item 
+\end{itemize}
+\item \k{i}jungtas negilaus miego re\v{z}imas esant \k{i}vairiems taktavimo grei\v{c}iams:
+\begin{itemize} %aprasyti sleep modey
+\item Cortex-M4:
+\begin{itemize}
+\item sistema veikia u\v{z}rakintos faz\.es ciklo taktavimo da\v{z}niu
+\item procesorius sustabdytas $($CPU$)$
+\item i\v{s} re\v{z}imo galima i\v{s}eiti betkokio tr\=ukio pagalba
+\end{itemize}
+\end{itemize}
+\item mikrovaldikliai tu\v{s}\v{c}iame cikle \begin{verbatim}( while(1){;} )\end{verbatim}esant \k{i}vairiems taktavimo grei\v{c}iams
 \item mikrovaldikliai atlikin\.ejo login\k{i}\ testavimo algoritm\k{a} be tr\=ukio esant \k{i}vairiems taktavimo grei\v{c}iams  
 \end{itemize}
 
@@ -461,7 +481,7 @@ Cortex-R4 mikrovaldiklis beveik visus skai\v{c}iavimo testus atliko grei\v{c}iau
 \caption{Skai\v{c}iavimo algoritm\k{u} laikai. 1 - dvigubo tikslumo slankaus kablelio testas. 2 - slankaus kablelio testas. 3 - neslankaus kablelio testas. 4 - logini\k{u} funkcij\k{u} testas. 5 - Furij\.e slankaus kablelio. 6 - Furij\.e neslankaus kablelio.}
 \label{vienas}
 \end{figure}
-Cortex-R4 generavo 280ns ilgio impulsus. \k{I}\.ejimo \k{i} tr\=uk\k{i} ir i\v{s}\.ejimo laikas 730ns. Cortex-M4 generavo 150ns ilgio impulsus. k{I}\.ejimo \k{i} tr\=uk\k{i} ir i\v{s}\.ejimo laikas 200ns.
+Cortex-R4 generavo 280ns ilgio impulsus. \k{I}\.ejimo \k{i} tr\=uk\k{i} ir i\v{s}\.ejimo laikas 730ns. Cortex-M4 generavo 150ns ilgio impulsus. \k{I}\.ejimo \k{i} tr\=uk\k{i} ir i\v{s}\.ejimo laikas 200ns.
 \begin{figure}[H] %--< nustatymai kur bus paveiksliukas h - kaip tekste, t - puslapio virsuje, b - puslapio apacioje, H - tiksliai kaip tekste, p - atskiram paveiksleliu pslapy >--%
 \centering %--< lygiavimas >--%
 \includegraphics[scale=0.4]{pav/trukiai.jpg} %--< scale - dydis, {aplankas/pav.pavadinimas} >--%
@@ -476,7 +496,7 @@ Mikrovaldiklio Cortex-R4 \v{s}erdis maitinama 1.2V, periferijos 3.3V.I\v{s}jungt
 \includegraphics[scale=0.4]{pav/modes.jpg} %--< scale - dydis, {aplankas/pav.pavadinimas} >--%
 \captionsetup{labelformat=numbfirst} %--< pries tai apibrezem kaip turi atrodyti tekstas po paveiksleliu >--%
 \captionsetup{labelseparator=tarpas}
-\caption{Mikrovaldikliai stanby r\.e\v{z}ime.}
+\caption{Mikrovaldikliai "stanby" re\v{z}ime.}
 \label{vienas}
 \end{figure}
 \begin{figure}[H] %--< nustatymai kur bus paveiksliukas h - kaip tekste, t - puslapio virsuje, b - puslapio apacioje, H - tiksliai kaip tekste, p - atskiram paveiksleliu pslapy >--%
@@ -484,7 +504,7 @@ Mikrovaldiklio Cortex-R4 \v{s}erdis maitinama 1.2V, periferijos 3.3V.I\v{s}jungt
 \includegraphics[scale=0.8]{pav/sleep.jpg} %--< scale - dydis, {aplankas/pav.pavadinimas} >--%
 \captionsetup{labelformat=numbfirst} %--< pries tai apibrezem kaip turi atrodyti tekstas po paveiksleliu >--%
 \captionsetup{labelseparator=tarpas}
-\caption{Mikrovaldikli\k{u} galios vartojimo priklausomyb\.e nuo taktinio grei\v{c}io sleep r\.e\v{z}ime.}
+\caption{Mikrovaldikli\k{u} galios vartojimo priklausomyb\.e nuo taktinio grei\v{c}io sleep re\v{z}ime.}
 \label{vienas}
 \end{figure}
 \begin{figure}[H] %--< nustatymai kur bus paveiksliukas h - kaip tekste, t - puslapio virsuje, b - puslapio apacioje, H - tiksliai kaip tekste, p - atskiram paveiksleliu pslapy >--%
