@@ -247,11 +247,31 @@ Palyginimui naudojamas STM32F4DISCOVERY maketas:
 \end{itemize}
 Pasirinktas kompiliatorius - IAR 6.4. Darbo prad\.ejimo metu vienintelis palaik\.e abu maketus, be papildomos \k{i}rangos. 
 \subsection{xRM48L950 apra\v{s}as}
-
-\k{I}renginys palaiko little-endian $($LE32$)$ format\k{a}. Tai rei\v{s}kia, kad atmintyje jauniausias bitas yra saugomas pirmas. 
+ 
 \subsubsection{Procesorius}
-xRM48L950 turi du integruotus ARM Cortex-R4F procesori\k{u}, su slankaus kablelio aritmetikos moduliu.  
+xRM48L950 turi du integruotus ARM Cortex-R4F procesori\k{u}, su slankaus kablelio aritmetikos moduliu. Procesoriai i\v{s}destyti skirtinga orientacija  
+\begin{figure}[H] %--< nustatymai kur bus paveiksliukas h - kaip tekste, t - puslapio virsuje, b - puslapio apacioje, H - tiksliai kaip tekste, p - atskiram paveiksleliu pslapy >--%
+\centering %--< lygiavimas >--%
+\includegraphics[scale=0.8]{pav/testai.jpg} %--< scale - dydis, {aplankas/pav.pavadinimas} >--%
+\captionsetup{labelformat=numbfirst} %--< pries tai apibrezem kaip turi atrodyti tekstas po paveiksleliu >--%
+\captionsetup{labelseparator=tarpas}
+\caption{Procesori\k{u} i\v{s}d\.estymas}
+\label{vienas}
+\end{figure}
+Taip pat taktinis da\v{z}nis procesoriams paduodamas su 2 takt\k{u} u\v{z}laikymo skirtumu. 
+Procesori\k{u} i\v{s}\.ejimo signalai palyginami atskirame modulyje.
+\begin{figure}[H] %--< nustatymai kur bus paveiksliukas h - kaip tekste, t - puslapio virsuje, b - puslapio apacioje, H - tiksliai kaip tekste, p - atskiram paveiksleliu pslapy >--%
+\centering %--< lygiavimas >--%
+\includegraphics[scale=0.8]{pav/testai.jpg} %--< scale - dydis, {aplankas/pav.pavadinimas} >--%
+\captionsetup{labelformat=numbfirst} %--< pries tai apibrezem kaip turi atrodyti tekstas po paveiksleliu >--%
+\captionsetup{labelseparator=tarpas}
+\caption{Dviej\k{u} branduoli\k{u} \k{i}gyvendinimas}
+\label{vienas}
+\end{figure}
+\k{I}renginys palaiko saves testavim\k{a}. Jo metu galima priversti procesori\k{u} i\v{s}\.ejimo signal\k{u} nesutapim\k{a}, taip patikrinama ar veikia procesori\k{u} palyginimo modulis ir ar irenginys sugeba atpa\v{z}inti klaidas. Procesoriai maitinami 1.2V \k{i}tampa.
 \subsubsection{Atmintys}
+\k{I}renginys palaiko little-endian $($LE32$)$ format\k{a}. Tai rei\v{s}kia, kad atmintyje jauniausias bitas yra saugomas pirmas.
+SRAM ir Flash atminys turi ECC\footnote{ECC - error corection code} apsaug\k{a}. Tai rei\v{s}kia, kad yra galimyb\.e 1 bito klaidos aptikimui ir pataisymui, bei 2 bit\k{u} klaidos aptikimui. Flash atmintis maitinama 3.3V \k{i}tampa.
 \subsubsection{Periferija}
 
 \subsection{STM32F4 apra\v{s}as}
