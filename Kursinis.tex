@@ -197,7 +197,24 @@ ir naudojam formules citavimui \ref{formule_label}
 
 Egzistuoja daug u\v{z}duo\v{c}i\k{u} kurioms atlikti reikia didelio patikimumo. J\k{u} atlikimui papra\v{s}\v{c}iausiu atveju galima naudoti standartinius mikrovaldiklius, kombinuojant su programin\.emis gudryb\.emis. Tokiomis kaip WDT $($watchdog timer$)$, kurios pri\v{z}i\=uri pagrindin\k{e} program\k{a}, kad ji tinkamai atliktu savo darb\k{a}. Nuolatiniais testais patikrinti duomen\k{u} skai\v{c}iavimo patikimum\k{a}, pavyzd\v{z}iui atlikti algoritma du kartus ir tikrinti ar atsakymai sutampa. Daugeliu atveju visos papildomos priemon\.es u\v{z}tikrinti patikimum\k{a} prailgina duomen\k{u} skai\v{c}iavimo laik\k{a}. \\
 \indent Sistemose kurioms reikalingas didelis patikimumas ir darbas realeame laike labai praver\v{c}ia sistemos dubliavimas su tikrinimo funkcijomis. Klaidos tikimyb\.e ne visais atvejais yra tolydi laike, taigi klaidos gali tuo pa\v{c}iu metu ivykti abiejose sistemose. Tokiu atveju naudinga, kai sistemos dirba pastumtos laike at\v{z}vilgiu viena kitos. \\
-\indent      
+\indent Yra daug aplink\k{u} kur gali reik\.eti toki\k{u} sistem\k{u}. Pramonin\.es saugumo reikalaujan\v{c}ios aplinkos, tokios kaip:
+\begin{itemize}
+\item automobil\k{u} stabdymo sistemos, tokios kaip rat\k{u} anti blokavimo sistema $($ABS$)$
+\item elektros gaminimo ir paskirstymo sistemos.  
+\item liftai ir eskalatoriai
+\end{itemize}      
+Medicinoje:
+\begin{itemize}
+\item defibriliatoriai
+\item radiacijos terapija
+\item robotizuotos operacijos
+\end{itemize} 
+\indent Atsi\v{z}velgiant \k{i} \v{s}\k{i} poreik\k{i} kompanija
+ Teksas Instruments neseniai suk\={u}r\.e mikrovaldikli\k{u} \v{s}eim\k{a} 
+ kodiniu pavadinimu Hercules. Mum kilo klausimas koks yra \v{s}i\k{u}
+  mikrovaldikli\k{u} energetinis efektyvumas, k\k{a} \v{s}iame
+   darba ir bandoma i\v{s}siai\v{s}kinti. \\
+\indent Tolimesniame darbe b\=ut\k{u} idomu patikrinti veikim\k{a} esant ekstremaliam poveikui, galimyb\k{e} panaudoti vien\k{a} i\v{s} Hercules \v{s}eimos atstov\k{u} RM48 kosmose, kur jo u\v{z}duotis gal\.et\k{u} b\=uti navigacija, kur reikia slankaus formato ir skai\v{c}i\k{u} tikslumo.  
 
 \newpage
 
@@ -228,7 +245,16 @@ Palyginimui naudojamas STM32F4DISCOVERY maketas:
 \item LED'ai, akselerometras, skaitmeninis mikrofonas
 \item CS43L22- SAK garsui su integruotu D klases garso stiprinimu
 \end{itemize}
-Pasirinktas kompiliatorius - IAR 6.4 kompileris. Darbo prad\.ejimo metu vienintelis palaik\.e abu maketus, be papildomos \k{i}rangos. 
+Pasirinktas kompiliatorius - IAR 6.4. Darbo prad\.ejimo metu vienintelis palaik\.e abu maketus, be papildomos \k{i}rangos. 
+\subsection{xRM48L950 apra\v{s}as}
+
+\k{I}renginys palaiko little-endian $($LE32$)$ format\k{a}. Tai rei\v{s}kia, kad atmintyje jauniausias bitas yra saugomas pirmas. 
+\subsubsection{Procesorius}
+xRM48L950 turi du integruotus ARM Cortex-R4F procesori\k{u}, su slankaus kablelio aritmetikos moduliu.  
+\subsubsection{Atmintys}
+\subsubsection{Periferija}
+
+\subsection{STM32F4 apra\v{s}as}
     
 
 \newpage %perkelia testa i nauja lapa
@@ -594,17 +620,22 @@ Mikrovaldiklio Cortex-R4 \v{s}erdis maitinama 1.2V, periferijos 3.3V.I\v{s}jungt
 %\newpage
 
 %%-----====literaturos sarasas====------%%
-
+\section*{Literat\={u}ros s\k{a}ra\v{s}as}
 \addcontentsline{toc}{section}{Literat\={u}ros s\k{a}ra\v{s}as}
 \begin{enumerate}
-\item  Q formatai ir konvertavimas. \begin{verbatim}http://infocenter.arm.com/help/topic/com.arm.doc.dai0033a/DAI0033A_fixedpoint_appsnote.pdf\end{verbatim}
+\item  Q formatai ir konvertavimas. \begin{verbatim}http://infocenter.arm.com/help/topic/com.arm.doc.dai0033a/
+DAI0033A_fixedpoint_appsnote.pdf\end{verbatim}
 \item TMDXRM48USB trumpas apra\v{s}as. \begin{verbatim}http://processors.wiki.ti.com/images/5/5c/RM48_USB_QUICK_START.pdf\end{verbatim}
 \item Detalus Cortex-R4 apra\v{s}as. \begin{verbatim}http://www.ti.com/lit/ds/spns177a/spns177a.pdf\end{verbatim}
 \item Cortex-R4 energijos vartojimo optimizavimo apra\v{s}as.\begin{verbatim} http://www.ti.com/lit/an/spna172a/spna172a.pdf\end{verbatim}
-\item Cortex-R4 slankaus kablelio modulio savybi\k{u} apra\v{s}as. \begin{verbatim}http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.dai0240a/index.html\end{verbatim}
-\item STM32F4-Discovery trumpas apra\v{s}as. \begin{verbatim}http://www.st.com/internet/com/TECHNICAL_RESOURCES/TECHNICAL_LITERATURE/DATA_BRIEF/DM00037955.pdf\end{verbatim}
-\item Detalus Cortex-M4 mikrovaldiklio apra\v{s}as. \begin{verbatim}http://www.st.com/internet/com/TECHNICAL_RESOURCES/TECHNICAL_LITERATURE/DATASHEET/DM00037051.pdf\end{verbatim}
-\item Cortex-M4 slankaus kablelio modulio sovybi\k{u} apra\v{s}as. \begin{verbatim}http://www.st.com/internet/com/TECHNICAL_RESOURCES/TECHNICAL_LITERATURE/DATASHEET/DM00037051.pdf\end{verbatim}
+\item Cortex-R4 slankaus kablelio modulio savybi\k{u} apra\v{s}as. \begin{verbatim}http://infocenter.arm.com/help/index.jsp?topic=/
+com.arm.doc.dai0240a/index.html\end{verbatim}
+\item STM32F4-Discovery trumpas apra\v{s}as. \begin{verbatim}http://www.st.com/internet/com/TECHNICAL_RESOURCES/
+TECHNICAL_LITERATURE/DATA_BRIEF/DM00037955.pdf\end{verbatim}
+\item Detalus Cortex-M4 mikrovaldiklio apra\v{s}as. \begin{verbatim}http://www.st.com/internet/com/TECHNICAL_RESOURCES/TECHNICAL_LITERATURE/
+DATASHEET/DM00037051.pdf\end{verbatim}
+\item Cortex-M4 slankaus kablelio modulio sovybi\k{u} apra\v{s}as. \begin{verbatim}http://www.st.com/internet/com/TECHNICAL_RESOURCES/TECHNICAL_LITERATURE/
+DATASHEET/DM00037051.pdf\end{verbatim}
 \item $\pi$ skai\v{c}iavimo algoritmas. \begin{verbatim}http://en.wikipedia.org/wiki/Gauss-Legendre_algorithm\end{verbatim}
 \end{enumerate}
 
