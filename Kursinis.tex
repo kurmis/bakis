@@ -195,7 +195,9 @@ ir naudojam formules citavimui \ref{formule_label}
 
 \addcontentsline{toc}{section}{\k{I}vadas} % prideda prie turinio
 
-Dar nesugalvota.
+Egzistuoja daug u\v{z}duo\v{c}i\k{u} kurioms atlikti reikia didelio patikimumo. J\k{u} atlikimui papra\v{s}\v{c}iausiu atveju galima naudoti standartinius mikrovaldiklius, kombinuojant su programin\.emis gudryb\.emis. Tokiomis kaip WDT $($watchdog timer$)$, kurios pri\v{z}i\=uri pagrindin\k{e} program\k{a}, kad ji tinkamai atliktu savo darb\k{a}. Nuolatiniais testais patikrinti duomen\k{u} skai\v{c}iavimo patikimum\k{a}, pavyzd\v{z}iui atlikti algoritma du kartus ir tikrinti ar atsakymai sutampa. Daugeliu atveju visos papildomos priemon\.es u\v{z}tikrinti patikimum\k{a} prailgina duomen\k{u} skai\v{c}iavimo laik\k{a}. \\
+\indent Sistemose kurioms reikalingas didelis patikimumas ir darbas realeame laike labai praver\v{c}ia sistemos dubliavimas su tikrinimo funkcijomis. Klaidos tikimyb\.e ne visais atvejais yra tolydi laike, taigi klaidos gali tuo pa\v{c}iu metu ivykti abiejose sistemose. Tokiu atveju naudinga, kai sistemos dirba pastumtos laike at\v{z}vilgiu viena kitos. \\
+\indent      
 
 \newpage
 
@@ -206,7 +208,7 @@ Naudojamas TMDXRM48USB maketas. Jame yra:
 \begin{itemize}
 \item Du 32-bitu ARM Cortex-R4F procesoriai, veikiantys kartu\footnote{lockstep - kartu atlieka tas pa\v{c}ias komandas}
 \item 3MB flash, 256kB RAM
-\item greitis iki 220MHz
+\item greitis iki 200MHz
 \item neslankaus(32bitu) ir dvigubo tikslumo (64bitu) slankaus kablelio aritmetikos modulis
 \end{itemize} 
 \item Integruotas XDS100v2 emuliatorius programavimui per usb
@@ -383,7 +385,7 @@ int32_t testCfftFloat(void) {
 \end{verbatim}  
 Fiksuoto tikslumo Furij\.e transformacijai naudoti ARM Q31 fiksuoto kablelio kintamieji. I\v{s} slankaus kablelio paversti \k{i} Q31 naudota funkcija:
 \begin{equation}
-Q31(x)= ROUND(2^{31}*10^{x/20})
+Q31(x)= ((int) ((x)*(float)(1<<31)) )
 \end{equation}   
 Masyvo u\v{z}pildo funkcija:
 \begin{equation*}
@@ -450,8 +452,8 @@ trumpikli\k{u} tarp srov\.es stabilizatoriaus ir mikrovaldiklio. Tarp stabilizat
 \item mikrovaldiklis minimalioje srov\.es suvartojimo b\=usenoje.
 \item re\v{z}im\k{a} galima i\v{s}eiti:
 \begin{itemize} 
-\item gavus i\v{s}orin\k{i} impuls\v{a} \k{i} NRST arba WKUP i\v{s}vadus 
-\item realaus laiko laikrod\v{z}iui $($RTC$)$ generus tr\=uk\k{i}
+\item gavus i\v{s}orin\k{i} impuls\k{a} \k{i} NRST arba WKUP i\v{s}vadus 
+\item realaus laiko laikrod\v{z}iui $($RTC$)$ sugeneravus tr\=uk\k{i}
 \end{itemize} 
 \end{itemize}
 \item 
@@ -595,7 +597,7 @@ Mikrovaldiklio Cortex-R4 \v{s}erdis maitinama 1.2V, periferijos 3.3V.I\v{s}jungt
 
 \addcontentsline{toc}{section}{Literat\={u}ros s\k{a}ra\v{s}as}
 \begin{enumerate}
-\item  Wintergreen Works, Q31 formatas. \begin{verbatim}http://wintergreenworks.wordpress.com/2011/12/27/formats-of-float/\end{verbatim}
+\item  Q formatai ir konvertavimas. \begin{verbatim}http://infocenter.arm.com/help/topic/com.arm.doc.dai0033a/DAI0033A_fixedpoint_appsnote.pdf\end{verbatim}
 \item TMDXRM48USB trumpas apra\v{s}as. \begin{verbatim}http://processors.wiki.ti.com/images/5/5c/RM48_USB_QUICK_START.pdf\end{verbatim}
 \item Detalus Cortex-R4 apra\v{s}as. \begin{verbatim}http://www.ti.com/lit/ds/spns177a/spns177a.pdf\end{verbatim}
 \item Cortex-R4 energijos vartojimo optimizavimo apra\v{s}as.\begin{verbatim} http://www.ti.com/lit/an/spna172a/spna172a.pdf\end{verbatim}

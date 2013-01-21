@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.1.13)  19 JAN 2013 06:31
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.1.13)  21 JAN 2013 17:41
 entering extended mode
  %&-line parsing enabled.
 **Kursinis.tex
@@ -3269,97 +3269,111 @@ oc)
 \tf@toc=\write5
 \openout5 = `Kursinis.toc'.
 
- [2] [3]
+ [2]
+Overfull \hbox (3.81013pt too wide) in paragraph at lines 198--201
+[]\L7x/lmr/m/n/12 Sistemose ku-ri-oms reikalin-gas didelis patiki-mu-mas ir dar
+-bas realeame laike labai praverèia
+ []
+
+[3]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 207.
+(Font)              <10> on input line 209.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 207.
+(Font)              <7> on input line 209.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 207.
+(Font)              <5> on input line 209.
  [4]
-LaTeX Font Info:    Try loading font information for L7x+lmtt on input line 261
+LaTeX Font Info:    Try loading font information for L7x+lmtt on input line 263
 .
-
-(/usr/share/texmf/tex/latex/lm/l7xlmtt.fd
+ (/usr/share/texmf/tex/latex/lm/l7xlmtt.fd
 File: l7xlmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [5] [6] [7]
+) [5] [6] [7] [8] [9]
+LaTeX Font Info:    Try loading font information for TS1+lmr on input line 449.
 
-LaTeX Warning: Citation `Q31' on page 8 undefined on input line 384.
 
-[8] [9] [10] <pav/testai.jpg, id=47, 372.64218pt x 304.88907pt>
+(/usr/share/texmf/tex/latex/lm/ts1lmr.fd
+File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+
+LaTeX Warning: Characters dropped after `\end{verbatim}' on input line 470.
+
+[10] <pav/testai.jpg, id=48, 372.64218pt x 304.88907pt>
 File: pav/testai.jpg Graphic file (type jpg)
-
-<use pav/testai.jpg> <pav/trukiai.jpg, id=48, 752.8125pt x 361.35pt>
+ <use pav/testai.jpg>
+<pav/trukiai.jpg, id=49, 752.8125pt x 361.35pt>
 File: pav/trukiai.jpg Graphic file (type jpg)
-
-<use pav/trukiai.jpg> <pav/modes.jpg, id=49, 383.18156pt x 304.88907pt>
+ <use pav/trukiai.jpg>
+<pav/modes.jpg, id=50, 383.18156pt x 304.88907pt>
 File: pav/modes.jpg Graphic file (type jpg)
-
-<use pav/modes.jpg> <pav/sleep.jpg, id=50, 383.18156pt x 304.88907pt>
+ <use pav/modes.jpg>
+<pav/sleep.jpg, id=51, 383.18156pt x 304.88907pt>
 File: pav/sleep.jpg Graphic file (type jpg)
-
-<use pav/sleep.jpg> [11 <./pav/testai.jpg> <./pav/trukiai.jpg>]
-<pav/tuscias.jpg, id=55, 383.18156pt x 304.88907pt>
+ <use pav/sleep.jpg> [11 <./pav/testai.jpg> <./pav/trukiai.jpg>]
+<pav/tuscias.jpg, id=56, 383.18156pt x 304.88907pt>
 File: pav/tuscias.jpg Graphic file (type jpg)
  <use pav/tuscias.jpg>
-<pav/binary.jpg, id=56, 383.18156pt x 304.88907pt>
+<pav/binary.jpg, id=57, 383.18156pt x 304.88907pt>
 File: pav/binary.jpg Graphic file (type jpg)
  <use pav/binary.jpg>
 [12 <./pav/modes.jpg> <./pav/sleep.jpg> <./pav/tuscias.jpg>] [13 <./pav/binary.
 jpg>]
-Overfull \hbox (33.15536pt too wide) in paragraph at lines 582--582
+Overfull \hbox (101.0804pt too wide) in paragraph at lines 600--600
+ []\L7x/lmtt/m/n/12 http://infocenter.arm.com/help/topic/com.arm.doc.dai0033a/D
+AI0033A_fixedpoint_appsnote.pdf[] 
+ []
+
+
+Overfull \hbox (33.15536pt too wide) in paragraph at lines 604--604
  []\L7x/lmtt/m/n/12 http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc
-.dai0240a/index.html 
+.dai0240a/index.html[] 
  []
 
 
-Overfull \hbox (144.29842pt too wide) in paragraph at lines 583--583
+Overfull \hbox (144.29842pt too wide) in paragraph at lines 605--605
  []\L7x/lmtt/m/n/12 http://www.st.com/internet/com/TECHNICAL_RESOURCES/TECHNICA
-L_LITERATURE/DATA_BRIEF/DM00037955.pdf 
+L_LITERATURE/DATA_BRIEF/DM00037955.pdf[] 
  []
 
 
-Overfull \hbox (138.13042pt too wide) in paragraph at lines 584--584
+Overfull \hbox (138.13042pt too wide) in paragraph at lines 606--606
  []\L7x/lmtt/m/n/12 http://www.st.com/internet/com/TECHNICAL_RESOURCES/TECHNICA
-L_LITERATURE/DATASHEET/DM00037051.pdf 
+L_LITERATURE/DATASHEET/DM00037051.pdf[] 
  []
 
 
-Overfull \hbox (138.13042pt too wide) in paragraph at lines 585--585
+Overfull \hbox (138.13042pt too wide) in paragraph at lines 607--607
  []\L7x/lmtt/m/n/12 http://www.st.com/internet/com/TECHNICAL_RESOURCES/TECHNICA
-L_LITERATURE/DATASHEET/DM00037051.pdf 
+L_LITERATURE/DATASHEET/DM00037051.pdf[] 
  []
 
 [14] (./Kursinis.aux)
-
-LaTeX Warning: There were undefined references.
-
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 9849 strings out of 495061
- 147911 string characters out of 1182621
+ 9883 strings out of 495061
+ 148763 string characters out of 1182621
  196509 words of memory out of 3000000
- 12791 multiletter control sequences out of 15000+50000
- 45216 words of font info for 51 fonts, out of 3000000 for 9000
+ 12821 multiletter control sequences out of 15000+50000
+ 45591 words of font info for 52 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
- 37i,8n,38p,441b,445s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 37i,8n,38p,652b,442s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-l7x.enc}{/usr/share/texmf/fonts/enc/d
-vips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/shar
-e/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texmf/fonts/enc/dvips/lm/l
-m-mathit.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/tex
-mf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmm
-i12.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fon
-ts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb>
-</usr/share/texmf/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/
-public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.pfb></usr/sha
-re/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/
-lm/lmsy8.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt12.pfb>
-Output written on Kursinis.pdf (14 pages, 647808 bytes).
+vips/lm/lm-ts1.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/t
+exmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-m
+athex.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}</usr/share/texmf/
+fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10
+.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi12.pfb></usr/share/texmf/fonts
+/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></
+usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/p
+ublic/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/
+texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf/fonts/type1/public/lm/
+lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/
+fonts/type1/public/lm/lmtt12.pfb>
+Output written on Kursinis.pdf (14 pages, 648779 bytes).
 PDF statistics:
- 113 PDF objects out of 1000 (max. 8388607)
+ 116 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  31 words of extra memory for PDF output out of 10000 (max. 10000000)
 
