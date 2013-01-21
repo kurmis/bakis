@@ -249,7 +249,7 @@ Pasirinktas kompiliatorius - IAR 6.4. Darbo prad\.ejimo metu vienintelis palaik\
 \subsection{xRM48L950 apra\v{s}as}
  
 \subsubsection{Procesorius}
-xRM48L950 turi du integruotus ARM Cortex-R4F procesori\k{u}, su slankaus kablelio aritmetikos moduliu. Procesoriai i\v{s}destyti skirtinga orientacija  
+xRM48L950 turi du integruotus ARM Cortex-R4F procesorius, su slankaus kablelio aritmetikos moduliu. Procesoriai i\v{s}destyti skirtinga orientacija  
 \begin{figure}[H] %--< nustatymai kur bus paveiksliukas h - kaip tekste, t - puslapio virsuje, b - puslapio apacioje, H - tiksliai kaip tekste, p - atskiram paveiksleliu pslapy >--%
 \centering %--< lygiavimas >--%
 \includegraphics[scale=0.8]{pav/testai.jpg} %--< scale - dydis, {aplankas/pav.pavadinimas} >--%
@@ -268,14 +268,30 @@ Procesori\k{u} i\v{s}\.ejimo signalai palyginami atskirame modulyje.
 \caption{Dviej\k{u} branduoli\k{u} \k{i}gyvendinimas}
 \label{vienas}
 \end{figure}
-\k{I}renginys palaiko saves testavim\k{a}. Jo metu galima priversti procesori\k{u} i\v{s}\.ejimo signal\k{u} nesutapim\k{a}, taip patikrinama ar veikia procesori\k{u} palyginimo modulis ir ar irenginys sugeba atpa\v{z}inti klaidas. Procesoriai maitinami 1.2V \k{i}tampa.
+\k{I}renginys palaiko sav\k{e}s testavim\k{a}. Jo metu galima priversti procesori\k{u} i\v{s}\.ejimo signal\k{u} nesutapim\k{a}, taip patikrinama ar veikia procesori\k{u} palyginimo modulis ir ar \k{i}renginys sugeba atpa\v{z}inti klaidas. Procesoriai maitinami 1.2V \k{i}tampa. 
 \subsubsection{Atmintys}
 \k{I}renginys palaiko little-endian $($LE32$)$ format\k{a}. Tai rei\v{s}kia, kad atmintyje jauniausias bitas yra saugomas pirmas.
-SRAM ir Flash atminys turi ECC\footnote{ECC - error corection code} apsaug\k{a}. Tai rei\v{s}kia, kad yra galimyb\.e 1 bito klaidos aptikimui ir pataisymui, bei 2 bit\k{u} klaidos aptikimui. Flash atmintis maitinama 3.3V \k{i}tampa.
-\subsubsection{Periferija}
+SRAM ir Flash atminys turi ECC\footnote{ECC - error corection code} apsaug\k{a} - galimyb\.e 1 bito klaidos aptikimui ir pataisymui, bei 2 bit\k{u} klaidos aptikimui. Flash atmintis maitinama 3.3V \k{i}tampa. Esant %%pipeline%% 
+re\v{z}imui flash atmintis gali veikti iki 200MHz taktiniu da\v{z}niu. SRAM atmint\k{i} galima nuskaityti arba ira\v{s}yti 1 ciklu nepriklausomai nuo re\v{z}imo.   
+\subsubsection{Tr\=uki\k{u} sistema}
+Vektorinis tr\=uki\k{u} valdiklis \k{i}galina veiksm\k{u} prioritizavim\k{a} ir kontrol\k{e}. Tr\=ukis - tai norimas priverstinis sistemos nukrypimas nuo normalaus darbo. Paprastai toks \k{i}vikis reikalauja greito procesoriaus atsako. Procesorius i\v{s} normalios programos per\v{s}oka \k{i} tr\=ukio aptarnavimo paprogram\k{e}. RM48 palaiko 96 skirtingus programi\v{s}kai reguliuojamo prioriteto tr\=ukius. Yra 2 tr\=ukio vektoriai - normal\=us tr\=ukiai $($IRQ\footnote{IRQ - interrupt request}$)$ ir greitieji tr\=ukiai $($FIQ\footnote{FIQ - fast interrupt request}$)$. Greitieji tr\=ukiai turi didesni prioriteta u\v{z} normalius ir yra nemaskuojami t.y. juos \k{i}jungus j\k{u} neimanoma i\v{s}jungti ar pakeisti, nebent atlikus sistemos perkrovima, kai visi tr\=ukiai yra automati\v{s}kai i\v{s}jungiami. Greitieji tr\=ukiai gali pertraukti normalius.  
+\subsubsection{Prievadai}
+RM48L950 turi 2 laikma\v{c}i\k{u} $($N2HET\footnote{N2HET - next generation high end timer}$)$ koprocesorius su tiesiogine magistrales prieiga $($DMA$)$ realaus laiko kontrolei. J\k{u} pagalba galima generuoti skirtingo plo\v{c}io impulsus $($PWM$)$, steb\.eti i\v{s}vado login\k{i} lyg\k{i}, bei gali veikti kaip \k{i}vesties/i\v{s}vesties periferija. Taipat yra du 12 bit\k{u} rezoliucijos analogas-skaitmeninis keitikliai su i\v{s}viso 24 kanalais. Prievadai maitinami 3.3V \k{i}tampa. Taipat yra bendrosios paskirties \k{i}vesties i\v{v}esties prievadai.
+Palaiko \v{s}ias periferijas:
+\begin{itemize}
+\item USB
+\item Ethernet
+\item UART
+\item $I^2C$
+\item SCI
+\item DCAN
+\end{itemize}
 
 \subsection{STM32F4 apra\v{s}as}
-    
+\subsubsection{Procesorius}
+\subsubsection{Atmintys}
+\subsubsection{Tr\=uki\k{u} sistema}
+\subsubsection{Prievadai}    
 
 \newpage %perkelia testa i nauja lapa
 
