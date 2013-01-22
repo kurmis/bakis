@@ -195,7 +195,7 @@ ir naudojam formules citavimui \ref{formule_label}
 
 \addcontentsline{toc}{section}{\k{I}vadas} % prideda prie turinio
 
-Egzistuoja daug u\v{z}duo\v{c}i\k{u} kurioms atlikti reikia didelio patikimumo. J\k{u} atlikimui papra\v{s}\v{c}iausiu atveju galima naudoti standartinius mikrovaldiklius, kombinuojant su programin\.emis gudryb\.emis. Tokiomis kaip WDT $($watchdog timer$)$, kurios pri\v{z}i\=uri pagrindin\k{e} program\k{a}, kad ji tinkamai atlikt\k{u} savo darb\k{a}. Nuolatiniais testais patikrinti duomen\k{u} skai\v{c}iavimo patikimum\k{a}, pavyzd\v{z}iui atlikti algoritma du kartus ir tikrinti ar atsakymai sutampa. Daugeliu atveju visos papildomos priemon\.es u\v{z}tikrinti patikimum\k{a} prailgina duomen\k{u} skai\v{c}iavimo laik\k{a}. \\
+Egzistuoja daug u\v{z}duo\v{c}i\k{u} kurioms atlikti reikia didelio patikimumo. J\k{u} atlikimui papra\v{s}\v{c}iausiu atveju galima naudoti standartinius mikrovaldiklius, kombinuojant su programin\.emis gudryb\.emis. Tokiomis kaip WDT $($watchdog timer$)$, kurios pri\v{z}i\=uri pagrindin\k{e} program\k{a}, kad ji tinkamai atlikt\k{u} savo darb\k{a}. Nuolatiniais testais patikrinti duomen\k{u} skai\v{c}iavimo patikimum\k{a}, pavyzd\v{z}iui atlikti algoritm\k{a} du kartus ir tikrinti ar atsakymai sutampa. Daugeliu atveju visos papildomos priemon\.es u\v{z}tikrinti patikimum\k{a} prailgina duomen\k{u} skai\v{c}iavimo laik\k{a}. \\
 \indent Sistemose kurioms reikalingas didelis patikimumas ir darbas realeame laike labai praver\v{c}ia sistemos dubliavimas su tikrinimo funkcijomis. Klaidos tikimyb\.e ne visais atvejais yra tolydi laike, taigi klaidos gali tuo pa\v{c}iu metu ivykti abiejose sistemose. Tokiu atveju naudinga, kai sistemos dirba pastumtos laike at\v{z}vilgiu viena kitos. \\
 \indent Yra daug aplink\k{u} kur gali reik\.eti toki\k{u} sistem\k{u}. Pramonin\.es saugumo reikalaujan\v{c}ios aplinkos, tokios kaip:
 \begin{itemize}
@@ -256,7 +256,7 @@ xRM48L950 turi du integruotus 32-bit\k{u} RISC ARM Cortex-R4F procesorius, su sl
 \includegraphics[scale=2.5]{pav/orentacija.jpg} %--< scale - dydis, {aplankas/pav.pavadinimas} >--%
 \captionsetup{labelformat=numbfirst} %--< pries tai apibrezem kaip turi atrodyti tekstas po paveiksleliu >--%
 \captionsetup{labelseparator=tarpas}
-\caption{Procesori\k{u} pakreipimas vienas kito at\v{z}vilgiu korpuse}
+\caption{Procesoriai pakreipiti fizi\v{s}kai vienas kito at\v{z}vilgiu korpuse}
 \label{vienas}
 \end{figure}
 
@@ -280,7 +280,7 @@ re\v{z}imui flash atmintis gali veikti iki 200MHz taktiniu da\v{z}niu. SRAM atmi
 
 
 \subsubsection{Tr\=uki\k{u} sistema}
-Vektorinis tr\=uki\k{u} valdiklis \k{i}galina veiksm\k{u} prioritizavim\k{a} ir kontrol\k{e}. Tr\=ukis - tai paprogram\.es i\v{s}kvietimas, galimai nutraukiant esam\k{a} procesoriaus veikl\k{a}. Paprastai toks \k{i}vykis reikalauja greito procesoriaus atsako. Procesorius i\v{s} normalios programos per\v{s}oka \k{i} tr\=ukio aptarnavimo paprogram\k{e}. RM48 palaiko 96 skirtingus programi\v{s}kai reguliuojamo prioriteto tr\=ukius. Yra 2 tr\=ukio vektoriai - normal\=us tr\=ukiai $($IRQ\footnote{IRQ - interrupt request}$)$ ir greitieji tr\=ukiai $($FIQ\footnote{FIQ - fast interrupt request}$)$. Greitieji tr\=ukiai turi didesni prioriteta u\v{z} normalius ir yra nemaskuojami t.y. juos \k{i}jungus j\k{u} neimanoma i\v{s}jungti ar pakeisti, nebent atlikus sistemos perkrovima, kai visi tr\=ukiai yra automati\v{s}kai i\v{s}jungiami. Greitieji tr\=ukiai gali pertraukti normalius.  
+Vektorinis tr\=uki\k{u} valdiklis \k{i}galina veiksm\k{u} prioritizavim\k{a} ir kontrol\k{e}. Tr\=ukis - tai paprogram\.es i\v{s}kvietimas, galimai nutraukiant esam\k{a} procesoriaus veikl\k{a}. Paprastai toks \k{i}vykis reikalauja greito procesoriaus atsako. Procesorius i\v{s} normalios programos per\v{s}oka \k{i} tr\=ukio aptarnavimo paprogram\k{e}. RM48 palaiko 96 skirtingus programi\v{s}kai reguliuojamo prioriteto tr\=ukius. Yra 2 tr\=ukio vektoriai - normal\=us tr\=ukiai $($IRQ\footnote{IRQ - interrupt request}$)$ ir greitieji tr\=ukiai $($FIQ\footnote{FIQ - fast interrupt request}$)$. Greitieji tr\=ukiai turi didesn\k{i} prioriteta u\v{z} normalius ir yra nemaskuojami t.y. juos \k{i}jungus j\k{u} neimanoma i\v{s}jungti ar pakeisti, nebent atlikus sistemos perkrovima, kai visi tr\=ukiai yra automati\v{s}kai i\v{s}jungiami. Greitieji tr\=ukiai gali pertraukti normalius.  
 
 
 \subsubsection{Prievadai}
@@ -589,7 +589,7 @@ Cortex-R4 mikrovaldiklis beveik visus skai\v{c}iavimo testus atliko grei\v{c}iau
 
 
 \indent Tirtas periferijos perjungimo greitis ir \k{i}\.ejimo i\v{s}\.ejimo i tu\v{s}\v{c}i\k{a} tr\=ukio paprogram\k{e} laikas esant 100MHz taktavimo da\v{z}niui.  
-Cortex-R4 periferijos i\v{s}\.ejimo lygmen\k{i} keit\.{e} kas 280ns. \k{I}\.ejimo \k{i} tr\=uk\k{i} ir i\v{s}\.ejimo laikas 730ns. Cortex-M4 periferikos i\v{s}vado login\k{i} lygmen\k{i} keit\.e kas 150ns. \k{I}\.ejimo \k{i} tr\=uk\k{i} ir i\v{s}\.ejimo laikas 200ns.
+Cortex-R4 periferijos i\v{s}\.ejimo lygmen\k{i} keit\.{e} kas 280ns. \k{I}\.ejimo \k{i} tr\=uk\k{i} ir i\v{s}\.ejimo laikas 730ns. Skirtumo tarp IRQ ir FIQ tr\=uki\k{u} laiko nebuvo. Cortex-M4 periferikos i\v{s}vado login\k{i} lygmen\k{i} keit\.e kas 150ns. \k{I}\.ejimo \k{i} tr\=uk\k{i} ir i\v{s}\.ejimo laikas 200ns.
 \begin{figure}[H] %--< nustatymai kur bus paveiksliukas h - kaip tekste, t - puslapio virsuje, b - puslapio apacioje, H - tiksliai kaip tekste, p - atskiram paveiksleliu pslapy >--%
 \centering %--< lygiavimas >--%
 \includegraphics[scale=0.4]{pav/trukiai.jpg} %--< scale - dydis, {aplankas/pav.pavadinimas} >--%
@@ -598,7 +598,7 @@ Cortex-R4 periferijos i\v{s}\.ejimo lygmen\k{i} keit\.{e} kas 280ns. \k{I}\.ejim
 \caption{Generuot\k{u} impuls\k{u} laikin\.e diagrama.}
 \label{vienas}
 \end{figure}
-Mikrovaldiklio Cortex-R4 \v{s}erdis maitinama 1.2V, periferijos 3.3V. Kadangi 3.3V maitinama ir kiti \k{i}renginiai esantys makete naudojama galia buvo skai\v{c}iuojama pagal formul\k{e} $P=I_{\v{s}erdies} *1.2V + (I_{bendras}-I_{iv{s}orini\k{u} \k{i}rengini\k{u}}) * 3.3V$, kur $I_{iv{s}orini\k{u} \k{i}rengini\k{u}}$ rastas visi\k{s}kai atjungus mikrovaldiklio periferij\k{a}. Cortex-M4 maitinamas 3.3V, galia $P=I*3.3V$.
+Mikrovaldiklio Cortex-R4 \v{s}erdis maitinama 1.2V, periferijos 3.3V. Kadangi 3.3V maitinama ir kiti \k{i}renginiai esantys makete $($tokie kaip \v{s}viesos sesnosrius, akselerometras$)$ naudojama galia buvo skai\v{c}iuojama pagal formul\k{e} $P=I_{serdies} *1.2V + (I_{bendras}-I_{ivsoriniu irenginiu}) * 3.3V$, kur $I_{ivsoriniu irenginiu}$ rastas visi\v{s}kai atjungus mikrovaldiklio periferij\k{a}. Cortex-M4 maitinamas 3.3V, galia $P=I*3.3V$.
 \begin{figure}[H] %--< nustatymai kur bus paveiksliukas h - kaip tekste, t - puslapio virsuje, b - puslapio apacioje, H - tiksliai kaip tekste, p - atskiram paveiksleliu pslapy >--%
 \centering %--< lygiavimas >--%
 \includegraphics[scale=0.8]{pav/modes.jpg} %--< scale - dydis, {aplankas/pav.pavadinimas} >--%
@@ -637,11 +637,11 @@ Mikrovaldiklio Cortex-R4 \v{s}erdis maitinama 1.2V, periferijos 3.3V. Kadangi 3.
 
 
 \begin{enumerate}
-\item RM48 esant 100MHz taktiniui da\v{z}niui yra \v{z}ymiai greitesnis atliekant dvigubo tikslumo slankaus kablelio skai\v{c}iavimus nei stm32f4 mikrovaldiklis.
+\item RM48, esant 100MHz taktiniui da\v{z}niui, yra \v{z}ymiai greitesnis atliekant dvigubo tikslumo slankaus kablelio skai\v{c}iavimus nei stm32f4 mikrovaldiklis.
 \item Du procesoriai esantys R4 stipriai padidina mikrovaldiklio naudojam\k{a} gali\k{a}
 \item RM48 mikrovaldiklio periferija dirba l\.{e}\v{c}iau nei stm32f4 esant 100MHz taktiniam da\v{z}niui.
 \item RM48 tr\=uki\k{u} sistema yra labai l\.{e}ta ir neefektyvi.
-\item Ma\v{z}iausia naudojama galia, kuri\k{a} pavyko pasiekti su RM48 yra 166 kartus didesn\.e nei ma\v{z}iausia vartojama galia, kuri\k{a} pavyko pasiekti su stm32f4 maketu
+\item Ma\v{z}iausia naudojama galia, kuri\k{a} pavyko pasiekti su RM48 yra 82 kartus didesn\.e nei ma\v{z}iausia vartojama galia, kuri\k{a} pavyko pasiekti su stm32f4 maketu.
 \item Mikrovaldikliams atliekant skirtingus skai\v{c}iavimus naudojama galia labiausiai priklauso nuo taktinio da\v{z}nio ir tik ne\v{z}ymiai nuo procesoriaus apkrovos skai\v{c}iavimais.
 \end{enumerate}
 

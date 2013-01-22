@@ -3,7 +3,7 @@ QtiPlot 0.9.8 project file
 <windows>	14
 <table>
 Tuscias	30	6	18/01/2013 23:23
-geometry	196	450	-1	-1	minimized	
+geometry	130	200	445	220	active
 header	1[X]	3[Y]	4[Y]	5[Y]	6[Y]	7[Y]
 ColWidth	100	100	100	100	100	100	
 <com>
@@ -35,7 +35,7 @@ WindowLabel		2
 </table>
 <table>
 Sleep	30	5	18/01/2013 23:37
-geometry	588	450	598	220	minimized	
+geometry	156	240	598	220	
 header	1[X]	2[Y]	3[Y]	4[Y]	5[Y]
 ColWidth	100	100	100	100	100	
 <com>
@@ -43,7 +43,7 @@ ColWidth	100	100	100	100	100
 3.3*col("2")
 </col>
 <col nr="4">
-(col("4")/0.12)*1.2 + 3.3*14.6
+(col("4")/0.12)*1.2 + 3.3*(14.6-5.7)/0.12
 </col>
 </com>
 ColType	0;0/13	0;0/13	0;0/13	0;0/13	0;0/13
@@ -52,22 +52,22 @@ HiddenColumn	0	0	0	0	0
 Comments						
 WindowLabel		2
 <data>
-0	200			17.6	224.18
-1	180			16.3	211.18
+0	200			17.6	420.75
+1	180			16.3	407.75
 2	168	12.8	42.24		
-3	160			14.7	195.18
-4	140	6.37	21.021	13.1	179.18
-5	120	5.72	18.876	11.7	165.18
-6	100	5.32	17.556	10	148.18
-7	80	4.6	15.18	8.4	132.18
-8	60	3.9	12.87	6.8	116.18
-9	40	3.3	10.89	5.1	99.18
-10	20	3.29	10.857	3.5	83.18
+3	160			14.7	391.75
+4	140	6.37	21.021	13.1	375.75
+5	120	5.72	18.876	11.7	361.75
+6	100	5.32	17.556	10	344.75
+7	80	4.6	15.18	8.4	328.75
+8	60	3.9	12.87	6.8	312.75
+9	40	3.3	10.89	5.1	295.75
+10	20	3.29	10.857	3.5	279.75
 </data>
 </table>
 <table>
 binary	30	5	18/01/2013 23:47
-geometry	0	450	-1	-1	minimized	
+geometry	117	180	445	220	
 header	1[X]	2[Y]	3[Y]	4[Y]	5[Y]
 ColWidth	100	100	100	100	100	
 <com>
@@ -96,7 +96,7 @@ WindowLabel		2
 </table>
 <table>
 Table1	30	4	18/01/2013 23:53
-geometry	50	50	582	294	active
+geometry	143	220	582	294	
 header	1[X]	2[Y]	3[Y]	4[Y]
 ColWidth	100	100	100	100	
 <com>
@@ -107,12 +107,12 @@ HiddenColumn	0	0	0	0
 Comments					
 WindowLabel		2
 <data>
-0	1	1.815	1	306
+0	1	1.815	1	149.25
 </data>
 </table>
 <table>
 Table2	30	4	19/01/2013 04:11
-geometry	196	402	535	220	minimized	
+geometry	104	160	535	220	
 header	1[X]	2[Y]	3[Y]	4[Y]
 ColWidth	100	100	100	140	
 <com>
@@ -136,7 +136,7 @@ WindowLabel		2
 </table>
 <table>
 floatirint	30	13	22/01/2013 04:19
-geometry	392	402	1019	281	minimized	
+geometry	91	140	1019	281	
 header	1[X]	2[Y]	3[Y]	4[Y]	5[Y]	6[Y]	7[Y]	8[Y]	9[Y]	10[Y]	11[Y]	12[Y]	13[Y]
 ColWidth	100	100	100	100	100	100	100	100	100	100	100	100	100	
 <com>
@@ -177,7 +177,7 @@ WindowLabel		2
 </table>
 <multiLayer>
 Graph1	1	1	18/01/2013 23:33
-geometry	196	426	517	453	minimized	
+geometry	78	120	517	453	
 WindowLabel		2
 Margins	5	5	5	5
 Spacing	5	5
@@ -265,7 +265,7 @@ EnabledTickLabels	1	1	1	1
 </multiLayer>
 <multiLayer>
 Graph2	1	1	18/01/2013 23:42
-geometry	588	426	517	453	minimized	
+geometry	169	260	517	453	
 WindowLabel		2
 Margins	5	5	5	5
 Spacing	5	5
@@ -306,8 +306,8 @@ AxesBaseline	0	0	0	0
 CanvasBackground	#ffffff	0
 curve	Sleep_1	Sleep_3	1	0	#000000	0	1	7	1	#000000	#000000	0	#000000	14	1	2	0	0	29	1
 curve	Sleep_1	Sleep_5	1	0	#ff0000	0	1	7	2	#ff0000	#ff0000	0	#000000	14	1	2	0	0	29	1
-scale	0	0	250	0	6	5	0	0
-scale	1	0	250	0	6	5	0	0
+scale	0	0	500	0	6	5	0	0
+scale	1	0	500	0	6	5	0	0
 scale	2	0	250	0	6	5	0	0
 scale	3	0	250	0	6	5	0	0
 LabelsFormat	0	6	0	6	0	6	0	6
@@ -328,10 +328,10 @@ EnabledTickLabels	1	1	1	1
 <Color>#000000</Color>
 <FrameWidth>1</FrameWidth>
 <LineStyle>0</LineStyle>
-<x>3.0288461538462</x>
-<y>227.15170278638</y>
-<right>72.7513227513227</right>
-<bottom>217.532467532468</bottom>
+<x>5.9101654846336</x>
+<y>463.63636363636</y>
+<right>83.9243498817967</right>
+<bottom>401.515151515152</bottom>
 <attachTo>1</attachTo>
 <onTop>1</onTop>
 <visible>1</visible>
@@ -353,7 +353,7 @@ EnabledTickLabels	1	1	1	1
 </multiLayer>
 <multiLayer>
 Graph3	1	1	18/01/2013 23:50
-geometry	392	426	517	453	minimized	
+geometry	65	100	517	453	
 WindowLabel		2
 Margins	5	5	5	5
 Spacing	5	5
@@ -441,7 +441,7 @@ EnabledTickLabels	1	1	1	1
 </multiLayer>
 <multiLayer>
 Graph4	1	1	19/01/2013 00:03
-geometry	784	426	517	453	minimized	
+geometry	52	80	517	453	
 WindowLabel		2
 Margins	5	5	5	5
 Spacing	5	5
@@ -482,7 +482,7 @@ AxesBaseline	0	0	0	0
 CanvasBackground	#ffffff	0
 curve	Table1_1	Table1_2	3	1	#000000	0	1	7	0	#000000	#000000	1	#000000	0	50	-50	2	0	0	29	1
 curve	Table1_1	Table1_4	3	1	#000000	0	1	7	0	#ff0000	#ff0000	1	#ff0000	0	50	50	2	0	0	29	1
-scale	0	0	400	0	5	5	0	0
+scale	0	0	160	0	9	5	0	0
 scale	1	0	500	0	6	5	0	0
 scale	2	0.4	1.6	0	7	5	0	0
 scale	3	0.4	1.6	0	7	5	0	0
@@ -547,13 +547,37 @@ Cortex M4
 <AutoUpdate>0</AutoUpdate>
 <TeXOutput>0</TeXOutput>
 </Legend>
+<Legend>
+<Frame>0</Frame>
+<Color>#000000</Color>
+<FrameWidth>1</FrameWidth>
+<LineStyle>0</LineStyle>
+<x>0.66265060240964</x>
+<y>68.688946015424</y>
+<right>0.865060240963855</right>
+<bottom>51.8251928020566</bottom>
+<attachTo>1</attachTo>
+<onTop>1</onTop>
+<visible>1</visible>
+<Text>
+Cortex R4
+149.25 mW
+</Text>
+<Font>Sans	9	50	0	0	0</Font>
+<TextColor>#000000</TextColor>
+<Background>#ffffff</Background>
+<Alpha>0</Alpha>
+<Angle>0</Angle>
+<AutoUpdate>0</AutoUpdate>
+<TeXOutput>0</TeXOutput>
+</Legend>
 </graph>
 <LinkXAxes>0</LinkXAxes>
 <ScaleLayers>1</ScaleLayers>
 </multiLayer>
 <multiLayer>
 Graph5	1	1	19/01/2013 04:15
-geometry	0	402	503	453	minimized	
+geometry	39	60	503	453	
 WindowLabel		2
 Margins	5	5	5	5
 Spacing	5	5
@@ -642,8 +666,8 @@ EnabledTickLabels	1	1	1	1
 <LineStyle>0</LineStyle>
 <x>0.3806146572104</x>
 <y>23.401162790698</y>
-<right>1.62174940898345</right>
-<bottom>19.6220930232558</bottom>
+<right>2.06989247311828</right>
+<bottom>43.9577039274924</bottom>
 <attachTo>1</attachTo>
 <onTop>1</onTop>
 <visible>1</visible>
@@ -665,8 +689,8 @@ t<sub>R4</sub>/t<sub>M4</sub>=6
 <LineStyle>0</LineStyle>
 <x>1.3238770685579</x>
 <y>15.552325581395</y>
-<right>2.56501182033097</right>
-<bottom>11.7732558139535</bottom>
+<right>2.06989247311828</right>
+<bottom>43.9577039274924</bottom>
 <attachTo>1</attachTo>
 <onTop>1</onTop>
 <visible>1</visible>
@@ -688,8 +712,8 @@ t<sub>R4</sub>/t<sub>M4</sub>=4
 <LineStyle>0</LineStyle>
 <x>2.2671394799054</x>
 <y>19.767441860465</y>
-<right>3.6903073286052</right>
-<bottom>15.9883720930233</bottom>
+<right>2.06989247311828</right>
+<bottom>43.9577039274924</bottom>
 <attachTo>1</attachTo>
 <onTop>1</onTop>
 <visible>1</visible>
@@ -711,8 +735,8 @@ t<sub>R4</sub>/t<sub>M4</sub>=1.5
 <LineStyle>0</LineStyle>
 <x>3.2600472813239</x>
 <y>51.889534883721</y>
-<right>4.81560283687943</right>
-<bottom>48.1104651162791</bottom>
+<right>2.06989247311828</right>
+<bottom>43.9577039274924</bottom>
 <attachTo>1</attachTo>
 <onTop>1</onTop>
 <visible>1</visible>
@@ -734,8 +758,8 @@ t<sub>R4</sub>/t<sub>M4</sub>=1.17
 <LineStyle>0</LineStyle>
 <x>4.3853427895981</x>
 <y>5.8139534883721</y>
-<right>5.62647754137116</right>
-<bottom>2.03488372093023</bottom>
+<right>2.06989247311828</right>
+<bottom>43.9577039274924</bottom>
 <attachTo>1</attachTo>
 <onTop>1</onTop>
 <visible>1</visible>
@@ -757,8 +781,8 @@ t<sub>R4</sub>/t<sub>M4</sub>=1
 <LineStyle>0</LineStyle>
 <x>5.3120567375887</x>
 <y>7.5581395348837</y>
-<right>6.86761229314421</right>
-<bottom>3.77906976744186</bottom>
+<right>2.06989247311828</right>
+<bottom>43.9577039274924</bottom>
 <attachTo>1</attachTo>
 <onTop>1</onTop>
 <visible>1</visible>
@@ -779,7 +803,7 @@ t<sub>R4</sub>/t<sub>M4</sub>=1.33
 </multiLayer>
 <multiLayer>
 Graph6	1	1	22/01/2013 04:29
-geometry	392	450	517	453	minimized	
+geometry	26	40	517	453	
 WindowLabel		2
 Margins	5	5	5	5
 Spacing	5	5
@@ -869,7 +893,7 @@ EnabledTickLabels	1	1	1	1
 </multiLayer>
 <multiLayer>
 Graph7	1	1	22/01/2013 04:30
-geometry	784	450	517	453	minimized	
+geometry	13	20	517	453	
 WindowLabel		2
 Margins	5	5	5	5
 Spacing	5	5
@@ -959,7 +983,7 @@ EnabledTickLabels	1	1	1	1
 </multiLayer>
 <multiLayer>
 Graph8	1	1	22/01/2013 05:09
-geometry	0	426	487	453	minimized	
+geometry	0	0	487	453	
 WindowLabel		2
 Margins	5	5	5	5
 Spacing	5	5
