@@ -252,7 +252,7 @@ Pasirinktas kompiliatorius - IAR 6.4. Darbo prad\.ejimo metu vienintelis palaik\
 xRM48L950 turi du integruotus 32-bit\k{u} RISC ARM Cortex-R4F procesorius, su slankaus kablelio aritmetikos moduliu. THUMB2 instrukcij\k{u} rinkinys - 16bit\k{u} ir 32bit\k{u} instrukcij\k{u} rinkiniai skirti suma\v{z}inti program\k{u} dyd\k{i}, nel\.etinant procesoriaus darbo. Procesoriai i\v{s}destyti skirtinga orientacija  
 \begin{figure}[H] %--< nustatymai kur bus paveiksliukas h - kaip tekste, t - puslapio virsuje, b - puslapio apacioje, H - tiksliai kaip tekste, p - atskiram paveiksleliu pslapy >--%
 \centering %--< lygiavimas >--%
-\includegraphics[scale=0.8]{pav/testai.jpg} %--< scale - dydis, {aplankas/pav.pavadinimas} >--%
+\includegraphics[scale=2.5]{pav/orentacija.jpg} %--< scale - dydis, {aplankas/pav.pavadinimas} >--%
 \captionsetup{labelformat=numbfirst} %--< pries tai apibrezem kaip turi atrodyti tekstas po paveiksleliu >--%
 \captionsetup{labelseparator=tarpas}
 
@@ -264,7 +264,7 @@ Taip pat taktinis da\v{z}nis procesoriams paduodamas su 2 takt\k{u} u\v{z}laikym
 Procesori\k{u} i\v{s}\.ejimo signalai palyginami atskirame modulyje.
 \begin{figure}[H] %--< nustatymai kur bus paveiksliukas h - kaip tekste, t - puslapio virsuje, b - puslapio apacioje, H - tiksliai kaip tekste, p - atskiram paveiksleliu pslapy >--%
 \centering %--< lygiavimas >--%
-\includegraphics[scale=0.8]{pav/testai.jpg} %--< scale - dydis, {aplankas/pav.pavadinimas} >--%
+\includegraphics[scale=2.8]{pav/impl.jpg} %--< scale - dydis, {aplankas/pav.pavadinimas} >--%
 \captionsetup{labelformat=numbfirst} %--< pries tai apibrezem kaip turi atrodyti tekstas po paveiksleliu >--%
 \captionsetup{labelseparator=tarpas}
 \caption{Dviej\k{u} branduoli\k{u} \k{i}gyvendinimas}
@@ -415,7 +415,7 @@ void intTest() {
   }
 }
 \end{verbatim}
-\subsubsection{Logini\k{u} funkcij\k{e} testavimo algoritmas}
+\subsubsection{Logini\k{u} funkcij\k{u} testavimo algoritmas}
 Mikrovaldikliai atlieka logines AND, NOT, OR, XOR, bei bit\k{u} stumdymo funkcijas. 
 \begin{verbatim}
 short testBits() {
@@ -538,6 +538,12 @@ trumpikli\k{u} tarp srov\.es stabilizatoriaus ir mikrovaldiklio. Tarp stabilizat
 \begin{itemize}
 \item \k{i}jungtas "stanby" re\v{z}imas:
 \begin{itemize} 
+\item Cortex-R4:
+\begin{itemize}
+\item i\v{s}jungta Flash atmintis
+\item procesoriai neatlieka joki\k{u} skai\v{c}iavim\k{u}
+\end{itemize}
+
 \item Cortex-M4:
 \begin{itemize}
 \item vidinis 1.2V \k{i}tampos reguliatorius i\v{s}jungtas
@@ -550,10 +556,14 @@ trumpikli\k{u} tarp srov\.es stabilizatoriaus ir mikrovaldiklio. Tarp stabilizat
 \item realaus laiko laikrod\v{z}iui $($RTC$)$ sugeneravus tr\=uk\k{i}
 \end{itemize} 
 \end{itemize}
-\item 
 \end{itemize}
 \item \k{i}jungtas negilaus miego re\v{z}imas esant \k{i}vairiems taktavimo grei\v{c}iams:
 \begin{itemize} %aprasyti sleep modey
+\item Cortex-R4:
+\begin{itemize}
+\item sistema veikia taktavimo da\v{z}niu
+\item procesorius neatlieka skai\v{c}iavim\k{u}
+\end{itemize}
 \item Cortex-M4:
 \begin{itemize}
 \item sistema veikia u\v{z}rakintos faz\.es ciklo taktavimo da\v{z}niu
@@ -561,14 +571,13 @@ trumpikli\k{u} tarp srov\.es stabilizatoriaus ir mikrovaldiklio. Tarp stabilizat
 \item i\v{s} re\v{z}imo galima i\v{s}eiti betkokio tr\=ukio pagalba
 \end{itemize}
 \end{itemize}
-\item mikrovaldikliai tu\v{s}\v{c}iame cikle \begin{verbatim}( while(1){;} )\end{verbatim}esant \k{i}vairiems taktavimo grei\v{c}iams
-\item mikrovaldikliai atlikin\.ejo login\k{i}\ testavimo algoritm\k{a} be tr\=ukio esant \k{i}vairiems taktavimo grei\v{c}iams  
+\item esant skirtingiems taktavimo da\v{z}niams mikrovaldikliai atlikin\.ejo slankaus kablelio, neslankaus kablelio aritmetikos testus, bei buvo paleisti veikti cikle: \begin{verbatim} while(1); \end{verbatim} 
 \end{itemize}
 
 \newpage
    
 \section{Rezultatai}
-Cortex-R4 mikrovaldiklis beveik visus skai\v{c}iavimo testus atliko grei\v{c}iau nei cortex-M4 mikrovaldikl\k{i}. 
+Cortex-R4 mikrovaldiklis beveik visus skai\v{c}iavimo testus atliko grei\v{c}iau nei cortex-M4 mikrovaldikl\k{i} esant 100MHz taktiniui da\v{z}niui. 
 \begin{figure}[H] %--< nustatymai kur bus paveiksliukas h - kaip tekste, t - puslapio virsuje, b - puslapio apacioje, H - tiksliai kaip tekste, p - atskiram paveiksleliu pslapy >--%
 \centering %--< lygiavimas >--%
 \includegraphics[scale=0.8]{pav/testai.jpg} %--< scale - dydis, {aplankas/pav.pavadinimas} >--%
@@ -586,13 +595,13 @@ Cortex-R4 generavo 280ns ilgio impulsus. \k{I}\.ejimo \k{i} tr\=uk\k{i} ir i\v{s
 \caption{Generuot\k{u} impuls\k{u} laikin\.e diagrama.}
 \label{vienas}
 \end{figure}
-Mikrovaldiklio Cortex-R4 \v{s}erdis maitinama 1.2V, periferijos 3.3V.I\v{s}jungtos periferijos naudojo 14.6mA srov\k{e}, tad prie suvartojamos galios buvo prid\.eta 48.18mW dedamoji, kuri nekito vis\k{u} matavim\k{u} metu .Cortex-M4 maitinamas 2.39V. 
+Mikrovaldiklio Cortex-R4 \v{s}erdis maitinama 1.2V, periferijos 3.3V.Naudojama galia $P=I_{\v{s}erdies} *1.2V + I_{periferijos} * 3.3V$  .Cortex-M4 maitinamas 3.3V, galia $P=I*3.3V$.
 \begin{figure}[H] %--< nustatymai kur bus paveiksliukas h - kaip tekste, t - puslapio virsuje, b - puslapio apacioje, H - tiksliai kaip tekste, p - atskiram paveiksleliu pslapy >--%
 \centering %--< lygiavimas >--%
-\includegraphics[scale=0.4]{pav/modes.jpg} %--< scale - dydis, {aplankas/pav.pavadinimas} >--%
+\includegraphics[scale=0.8]{pav/modes.jpg} %--< scale - dydis, {aplankas/pav.pavadinimas} >--%
 \captionsetup{labelformat=numbfirst} %--< pries tai apibrezem kaip turi atrodyti tekstas po paveiksleliu >--%
 \captionsetup{labelseparator=tarpas}
-\caption{Mikrovaldikliai "stanby" re\v{z}ime.}
+\caption{Mikrovaldikliai stanby re\v{z}ime.}
 \label{vienas}
 \end{figure}
 \begin{figure}[H] %--< nustatymai kur bus paveiksliukas h - kaip tekste, t - puslapio virsuje, b - puslapio apacioje, H - tiksliai kaip tekste, p - atskiram paveiksleliu pslapy >--%
@@ -605,22 +614,22 @@ Mikrovaldiklio Cortex-R4 \v{s}erdis maitinama 1.2V, periferijos 3.3V.I\v{s}jungt
 \end{figure}
 \begin{figure}[H] %--< nustatymai kur bus paveiksliukas h - kaip tekste, t - puslapio virsuje, b - puslapio apacioje, H - tiksliai kaip tekste, p - atskiram paveiksleliu pslapy >--%
 \centering %--< lygiavimas >--%
-\includegraphics[scale=0.8]{pav/tuscias.jpg} %--< scale - dydis, {aplankas/pav.pavadinimas} >--%
+\includegraphics[scale=0.8]{pav/R4galia.jpg} %--< scale - dydis, {aplankas/pav.pavadinimas} >--%
 \captionsetup{labelformat=numbfirst} %--< pries tai apibrezem kaip turi atrodyti tekstas po paveiksleliu >--%
 \captionsetup{labelseparator=tarpas}
-\caption{Mikrovaldikli\k{u} galios sunaudojimo priklausomyb\.e nuo taktinio grei\v{c}io tu\v{s}\v{c}iaje eigoje.}
+\caption{RM48 mikrovaldiklio naudojamos galios priklausomyb\.e nuo taktinio da\v{z}nio atliekant slankaus kablelio, neslankaus kablelio ir b\=unant tu\v{s}\v{c}iame cikle.}
 \label{vienas}
 \end{figure}
 \begin{figure}[H] %--< nustatymai kur bus paveiksliukas h - kaip tekste, t - puslapio virsuje, b - puslapio apacioje, H - tiksliai kaip tekste, p - atskiram paveiksleliu pslapy >--%
 \centering %--< lygiavimas >--%
-\includegraphics[scale=0.8]{pav/binary.jpg} %--< scale - dydis, {aplankas/pav.pavadinimas} >--%
+\includegraphics[scale=0.8]{pav/M4galia.jpg} %--< scale - dydis, {aplankas/pav.pavadinimas} >--%
 \captionsetup{labelformat=numbfirst} %--< pries tai apibrezem kaip turi atrodyti tekstas po paveiksleliu >--%
 \captionsetup{labelseparator=tarpas}
-\caption{Mikrovaldikli\k{u} galios sunaudojimo priklausomyb\.e nuo grei\v{c}io atliekant logines funkcijas}
+\caption{STM32F4 mikrovaldiklio naudojamos galios priklausomyb\.e nuo taktinio da\v{z}nio atliekant slankaus kablelio, neslankaus kablelio ir b\=unant tu\v{s}\v{c}iame cikle.}
 \label{vienas}
 \end{figure}
 
-
+\newpage
 \section{I\v{s}vados}
 
 

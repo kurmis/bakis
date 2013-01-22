@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.1.13)  22 JAN 2013 00:18
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.1.13)  22 JAN 2013 04:53
 entering extended mode
  %&-line parsing enabled.
 **Kursinis.tex
@@ -3288,12 +3288,13 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <7> on input line 226.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 226.
- <pav/testai.jpg, id=14, 372.64218pt x 304.88907pt>
-File: pav/testai.jpg Graphic file (type jpg)
- <use pav/testai.jpg>
-[4]
-File: pav/testai.jpg Graphic file (type jpg)
- <use pav/testai.jpg> [5 <./pav/testai.jpg>] [6] [7]
+ <pav/orentacija.jpg, id=14, 63.8385pt x 23.1264pt>
+File: pav/orentacija.jpg Graphic file (type jpg)
+
+<use pav/orentacija.jpg> [4] <pav/impl.jpg, id=21, 133.6995pt x 96.1191pt>
+File: pav/impl.jpg Graphic file (type jpg)
+
+<use pav/impl.jpg> [5 <./pav/orentacija.jpg> <./pav/impl.jpg>] [6] [7]
 LaTeX Font Info:    Try loading font information for L7x+lmtt on input line 357
 .
 
@@ -3305,39 +3306,39 @@ LaTeX Font Info:    Try loading font information for TS1+lmr on input line 543.
 
 (/usr/share/texmf/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-
-LaTeX Warning: Characters dropped after `\end{verbatim}' on input line 564.
-
-[13]
+) [13]
+<pav/testai.jpg, id=61, 372.64218pt x 304.88907pt>
 File: pav/testai.jpg Graphic file (type jpg)
- <use pav/testai.jpg> <pav/trukiai.jpg, id=60, 752.8125pt x 361.35pt>
+ <use pav/testai.jpg>
+<pav/trukiai.jpg, id=62, 752.8125pt x 361.35pt>
 File: pav/trukiai.jpg Graphic file (type jpg)
+ <use pav/trukiai.jpg>
 
-<use pav/trukiai.jpg> <pav/modes.jpg, id=61, 383.18156pt x 304.88907pt>
+LaTeX Warning: Command \v invalid in math mode on input line 598.
+
+<pav/modes.jpg, id=63, 383.18156pt x 304.88907pt>
 File: pav/modes.jpg Graphic file (type jpg)
-
-<use pav/modes.jpg> <pav/sleep.jpg, id=62, 383.18156pt x 304.88907pt>
+ <use pav/modes.jpg>
+<pav/sleep.jpg, id=64, 383.18156pt x 304.88907pt>
 File: pav/sleep.jpg Graphic file (type jpg)
-
-<use pav/sleep.jpg> [14 <./pav/trukiai.jpg>]
-<pav/tuscias.jpg, id=66, 383.18156pt x 304.88907pt>
-File: pav/tuscias.jpg Graphic file (type jpg)
- <use pav/tuscias.jpg>
-<pav/binary.jpg, id=67, 383.18156pt x 304.88907pt>
-File: pav/binary.jpg Graphic file (type jpg)
- <use pav/binary.jpg>
-[15 <./pav/modes.jpg> <./pav/sleep.jpg> <./pav/tuscias.jpg>] [16 <./pav/binary.
-jpg>] [17] (./Kursinis.aux)
+ <use pav/sleep.jpg> [14 <./pav/testai.jpg> <./pav/trukiai.jpg>]
+<pav/R4galia.jpg, id=68, 383.18156pt x 304.88907pt>
+File: pav/R4galia.jpg Graphic file (type jpg)
+ <use pav/R4galia.jpg>
+<pav/M4galia.jpg, id=69, 383.18156pt x 304.88907pt>
+File: pav/M4galia.jpg Graphic file (type jpg)
+ <use pav/M4galia.jpg>
+[15 <./pav/modes.jpg> <./pav/sleep.jpg>] [16 <./pav/R4galia.jpg> <./pav/M4galia
+.jpg>] [17] [18] (./Kursinis.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 9884 strings out of 495061
- 148771 string characters out of 1182621
+ 9894 strings out of 495061
+ 148956 string characters out of 1182621
  196509 words of memory out of 3000000
- 12822 multiletter control sequences out of 15000+50000
+ 12830 multiletter control sequences out of 15000+50000
  45591 words of font info for 52 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
  37i,8n,38p,889b,439s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -3353,9 +3354,9 @@ ublic/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/
 texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf/fonts/type1/public/lm/
 lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/
 fonts/type1/public/lm/lmtt12.pfb>
-Output written on Kursinis.pdf (17 pages, 665004 bytes).
+Output written on Kursinis.pdf (18 pages, 687452 bytes).
 PDF statistics:
- 125 PDF objects out of 1000 (max. 8388607)
+ 130 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 41 words of extra memory for PDF output out of 10000 (max. 10000000)
 
