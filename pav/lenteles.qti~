@@ -3,7 +3,7 @@ QtiPlot 0.9.8 project file
 <windows>	14
 <table>
 Tuscias	30	6	18/01/2013 23:23
-geometry	196	434	-1	-1	minimized	
+geometry	196	450	-1	-1	minimized	
 header	1[X]	3[Y]	4[Y]	5[Y]	6[Y]	7[Y]
 ColWidth	100	100	100	100	100	100	
 <com>
@@ -35,7 +35,7 @@ WindowLabel		2
 </table>
 <table>
 Sleep	30	5	18/01/2013 23:37
-geometry	784	434	598	220	minimized	
+geometry	588	450	598	220	minimized	
 header	1[X]	2[Y]	3[Y]	4[Y]	5[Y]
 ColWidth	100	100	100	100	100	
 <com>
@@ -67,7 +67,7 @@ WindowLabel		2
 </table>
 <table>
 binary	30	5	18/01/2013 23:47
-geometry	0	434	-1	-1	minimized	
+geometry	0	450	-1	-1	minimized	
 header	1[X]	2[Y]	3[Y]	4[Y]	5[Y]
 ColWidth	100	100	100	100	100	
 <com>
@@ -96,7 +96,7 @@ WindowLabel		2
 </table>
 <table>
 Table1	30	4	18/01/2013 23:53
-geometry	588	434	582	294	minimized	
+geometry	50	50	582	294	active
 header	1[X]	2[Y]	3[Y]	4[Y]
 ColWidth	100	100	100	100	
 <com>
@@ -112,7 +112,7 @@ WindowLabel		2
 </table>
 <table>
 Table2	30	4	19/01/2013 04:11
-geometry	-53	48	535	220	
+geometry	196	402	535	220	minimized	
 header	1[X]	2[Y]	3[Y]	4[Y]
 ColWidth	100	100	100	140	
 <com>
@@ -136,7 +136,7 @@ WindowLabel		2
 </table>
 <table>
 floatirint	30	13	22/01/2013 04:19
-geometry	-2	23	1019	281	
+geometry	392	402	1019	281	minimized	
 header	1[X]	2[Y]	3[Y]	4[Y]	5[Y]	6[Y]	7[Y]	8[Y]	9[Y]	10[Y]	11[Y]	12[Y]	13[Y]
 ColWidth	100	100	100	100	100	100	100	100	100	100	100	100	100	
 <com>
@@ -177,7 +177,7 @@ WindowLabel		2
 </table>
 <multiLayer>
 Graph1	1	1	18/01/2013 23:33
-geometry	392	410	517	453	minimized	
+geometry	196	426	517	453	minimized	
 WindowLabel		2
 Margins	5	5	5	5
 Spacing	5	5
@@ -265,7 +265,7 @@ EnabledTickLabels	1	1	1	1
 </multiLayer>
 <multiLayer>
 Graph2	1	1	18/01/2013 23:42
-geometry	784	410	517	453	minimized	
+geometry	588	426	517	453	minimized	
 WindowLabel		2
 Margins	5	5	5	5
 Spacing	5	5
@@ -353,7 +353,7 @@ EnabledTickLabels	1	1	1	1
 </multiLayer>
 <multiLayer>
 Graph3	1	1	18/01/2013 23:50
-geometry	588	410	517	453	minimized	
+geometry	392	426	517	453	minimized	
 WindowLabel		2
 Margins	5	5	5	5
 Spacing	5	5
@@ -441,7 +441,7 @@ EnabledTickLabels	1	1	1	1
 </multiLayer>
 <multiLayer>
 Graph4	1	1	19/01/2013 00:03
-geometry	0	386	517	453	minimized	
+geometry	784	426	517	453	minimized	
 WindowLabel		2
 Margins	5	5	5	5
 Spacing	5	5
@@ -553,7 +553,7 @@ Cortex M4
 </multiLayer>
 <multiLayer>
 Graph5	1	1	19/01/2013 04:15
-geometry	478	6	503	453	active
+geometry	0	402	503	453	minimized	
 WindowLabel		2
 Margins	5	5	5	5
 Spacing	5	5
@@ -779,7 +779,7 @@ t<sub>R4</sub>/t<sub>M4</sub>=1.33
 </multiLayer>
 <multiLayer>
 Graph6	1	1	22/01/2013 04:29
-geometry	392	434	517	453	minimized	
+geometry	392	450	517	453	minimized	
 WindowLabel		2
 Margins	5	5	5	5
 Spacing	5	5
@@ -869,7 +869,7 @@ EnabledTickLabels	1	1	1	1
 </multiLayer>
 <multiLayer>
 Graph7	1	1	22/01/2013 04:30
-geometry	0	410	517	453	minimized	
+geometry	784	450	517	453	minimized	
 WindowLabel		2
 Margins	5	5	5	5
 Spacing	5	5
@@ -959,7 +959,7 @@ EnabledTickLabels	1	1	1	1
 </multiLayer>
 <multiLayer>
 Graph8	1	1	22/01/2013 05:09
-geometry	196	410	487	453	minimized	
+geometry	0	426	487	453	minimized	
 WindowLabel		2
 Margins	5	5	5	5
 Spacing	5	5

@@ -208,13 +208,14 @@ Medicinoje:
 \item defibriliatoriai
 \item radiacijos terapija
 \item robotizuotos operacijos
-\end{itemize} 
+\end{itemize}
+\noindent 
 \indent Atsi\v{z}velgiant \k{i} \v{s}\k{i} poreik\k{i} kompanija
- Teksas Instruments neseniai suk\={u}r\.e mikrovaldikli\k{u} \v{s}eim\k{a} 
+ Teksas Instruments neseniai i\v{s}leido ARM Cortex-R4 mikrovaldikli\k{u} \v{s}eim\k{a} 
  kodiniu pavadinimu Hercules. Mum kilo klausimas koks yra \v{s}i\k{u}
   mikrovaldikli\k{u} energetinis efektyvumas, k\k{a} \v{s}iame
    darba ir bandoma i\v{s}siai\v{s}kinti. \\
-\indent Tolimesniame darbe b\=ut\k{u} idomu patikrinti veikim\k{a} esant ekstremaliam poveikui, galimyb\k{e} panaudoti vien\k{a} i\v{s} Hercules \v{s}eimos atstov\k{u} RM48 kosmose, kur jo u\v{z}duotis gal\.et\k{u} b\=uti navigacija, kur reikia slankaus formato ir skai\v{c}i\k{u} tikslumo.  
+\indent Tolimesniame darbe b\=ut\k{u} idomu patikrinti veikim\k{a} esant ekstremaliam poveikui, galimyb\k{e} panaudoti vien\k{a} i\v{s} Hercules \v{s}eimos atstov\k{u} RM48 kosmose, kur jo u\v{z}duotis gal\.et\k{u} b\=uti navigacija, kuriai atlikti reikia slankaus formato ir skai\v{c}i\k{u} tikslumo.  
 
 \newpage
 
@@ -249,17 +250,16 @@ Pasirinktas kompiliatorius - IAR 6.4. Darbo prad\.ejimo metu vienintelis palaik\
 \subsection{xRM48L950 apra\v{s}as}
  
 \subsubsection{Procesorius}
-xRM48L950 turi du integruotus 32-bit\k{u} RISC ARM Cortex-R4F procesorius, su slankaus kablelio aritmetikos moduliu. THUMB2 instrukcij\k{u} rinkinys - 16bit\k{u} ir 32bit\k{u} instrukcij\k{u} rinkiniai skirti suma\v{z}inti program\k{u} dyd\k{i}, nel\.etinant procesoriaus darbo. Procesoriai i\v{s}destyti skirtinga orientacija  
+xRM48L950 turi du integruotus 32-bit\k{u} RISC ARM Cortex-R4F procesorius, su slankaus kablelio aritmetikos moduliu. Procesoriai i\v{s}destyti skirtinga orientacija  
 \begin{figure}[H] %--< nustatymai kur bus paveiksliukas h - kaip tekste, t - puslapio virsuje, b - puslapio apacioje, H - tiksliai kaip tekste, p - atskiram paveiksleliu pslapy >--%
 \centering %--< lygiavimas >--%
 \includegraphics[scale=2.5]{pav/orentacija.jpg} %--< scale - dydis, {aplankas/pav.pavadinimas} >--%
 \captionsetup{labelformat=numbfirst} %--< pries tai apibrezem kaip turi atrodyti tekstas po paveiksleliu >--%
 \captionsetup{labelseparator=tarpas}
-
-
-\caption{Procesori\k{u} i\v{s}d\.estymas}
+\caption{Procesori\k{u} pakreipimas vienas kito at\v{z}vilgiu korpuse}
 \label{vienas}
 \end{figure}
+
 Taip pat taktinis da\v{z}nis procesoriams paduodamas su 2 takt\k{u} u\v{z}laikymo skirtumu. 
 Procesori\k{u} i\v{s}\.ejimo signalai palyginami atskirame modulyje.
 \begin{figure}[H] %--< nustatymai kur bus paveiksliukas h - kaip tekste, t - puslapio virsuje, b - puslapio apacioje, H - tiksliai kaip tekste, p - atskiram paveiksleliu pslapy >--%
@@ -280,7 +280,7 @@ re\v{z}imui flash atmintis gali veikti iki 200MHz taktiniu da\v{z}niu. SRAM atmi
 
 
 \subsubsection{Tr\=uki\k{u} sistema}
-Vektorinis tr\=uki\k{u} valdiklis \k{i}galina veiksm\k{u} prioritizavim\k{a} ir kontrol\k{e}. Tr\=ukis - tai norimas priverstinis sistemos nukrypimas nuo normalaus darbo. Paprastai toks \k{i}vikis reikalauja greito procesoriaus atsako. Procesorius i\v{s} normalios programos per\v{s}oka \k{i} tr\=ukio aptarnavimo paprogram\k{e}. RM48 palaiko 96 skirtingus programi\v{s}kai reguliuojamo prioriteto tr\=ukius. Yra 2 tr\=ukio vektoriai - normal\=us tr\=ukiai $($IRQ\footnote{IRQ - interrupt request}$)$ ir greitieji tr\=ukiai $($FIQ\footnote{FIQ - fast interrupt request}$)$. Greitieji tr\=ukiai turi didesni prioriteta u\v{z} normalius ir yra nemaskuojami t.y. juos \k{i}jungus j\k{u} neimanoma i\v{s}jungti ar pakeisti, nebent atlikus sistemos perkrovima, kai visi tr\=ukiai yra automati\v{s}kai i\v{s}jungiami. Greitieji tr\=ukiai gali pertraukti normalius.  
+Vektorinis tr\=uki\k{u} valdiklis \k{i}galina veiksm\k{u} prioritizavim\k{a} ir kontrol\k{e}. Tr\=ukis - tai paprogram\.es i\v{s}kvietimas, galimai nutraukiant esam\k{a} procesoriaus veikl\k{a}. Paprastai toks \k{i}vykis reikalauja greito procesoriaus atsako. Procesorius i\v{s} normalios programos per\v{s}oka \k{i} tr\=ukio aptarnavimo paprogram\k{e}. RM48 palaiko 96 skirtingus programi\v{s}kai reguliuojamo prioriteto tr\=ukius. Yra 2 tr\=ukio vektoriai - normal\=us tr\=ukiai $($IRQ\footnote{IRQ - interrupt request}$)$ ir greitieji tr\=ukiai $($FIQ\footnote{FIQ - fast interrupt request}$)$. Greitieji tr\=ukiai turi didesni prioriteta u\v{z} normalius ir yra nemaskuojami t.y. juos \k{i}jungus j\k{u} neimanoma i\v{s}jungti ar pakeisti, nebent atlikus sistemos perkrovima, kai visi tr\=ukiai yra automati\v{s}kai i\v{s}jungiami. Greitieji tr\=ukiai gali pertraukti normalius.  
 
 
 \subsubsection{Prievadai}
@@ -398,7 +398,7 @@ int floatTest() {
   return 0; //teste ivyko klaida
 }
 \end{verbatim}
-\subsubsection{Neslankaus kablelio algoritmas}
+\subsubsection{Fiksuoto tikslumo algoritmas}
 Fiksuoto tikslumo algoritmas:
 \begin{equation}
 b = \sum_{i=0}^{100000} (i * (-1)^{i+1})
@@ -436,7 +436,7 @@ short testBits() {
 }
 \end{verbatim}
 \subsubsection{Greitas disckretinis Furj\.e\ eilut\.es transformavimo testas}
-Naudotos arm dsp\footnote{Dsp - digital signal processing $($skaitmeninis signal\k{u} apdorojimas$)$} bibliotekos, atskirai optimizuotos R4 bei M4 mikrovaldikliams. Naudota 1024 kompleksini\k{u} ta\v{s}k\k{u}, kurie masyve i\v{s}d\.estyti vienas po kito ir bendras masyvo ilgis 2048. Slankaus kablelio testui masyvas u\v{z}pildomas funkcija:
+Naudotos ARM dsp\footnote{Dsp - digital signal processing $($skaitmeninis signal\k{u} apdorojimas$)$} bibliotekos, atskirai optimizuotos R4 bei M4 mikrovaldikliams. Naudota 1024 kompleksini\k{u} ta\v{s}k\k{u}, kurie masyve i\v{s}d\.estyti vienas po kito ir bendras masyvo ilgis 2048. Slankaus kablelio testui masyvas u\v{z}pildomas funkcija:
 \begin{equation*}
 Re(z) = (sin(v*i) + cos(v*7)),\; t = 0, 2, 4... 2046
 \end{equation*}
@@ -477,7 +477,7 @@ int32_t testCfftFloat(void) {
   return 0;
 } 
 \end{verbatim}  
-Fiksuoto tikslumo Furij\.e transformacijai naudoti ARM Q31 fiksuoto kablelio kintamieji. I\v{s} slankaus kablelio paversti \k{i} Q31 naudota funkcija:
+Fiksuoto tikslumo Furij\.e transformacijai naudoti ARM Q31 fiksuoto kablelio kintamieji. I\v{s} slankaus kablelio paversti \k{i} Q31 formato kintamuosius naudota funkcija:
 \begin{equation}
 Q31(x)= ((int)\; ((x)*(float)(1<<31))\; )
 \end{equation}   
@@ -527,11 +527,10 @@ int32_t testCfftQ31(void) {
 }
 \end{verbatim}
 \subsection{\k{I}\.ejimo ir i\v{s}\.ejimo \k{i} tr\=uk\k{i} algoritmo apra\v{s}ymas}
-Naudojami maketai buvo paleisti veikti 100MHz grei\v{c}iu. Abu maketai keisdavo i\v{s}\.ejimo prievado vieno i\v{s} i\v{s}vad\k{u} login\k{i} lyg\k{i}, bei buvo \k{i}jungtas nuo laiko priklausantis tu\v{s}\v{c}ias tr\=ukis. Osciloscopu matuotas i\v{s}vad\k{u} lygmen\k{u} kitimo laikas.
+Naudojami maketai buvo paleisti veikti 100MHz grei\v{c}iu. Abu maketai keisdavo i\v{s}\.ejimo prievado vieno i\v{s} i\v{s}vad\k{u} login\k{i} lyg\k{i}, bei buvo \k{i}jungtas taimeris su tu\v{s}\v{c}ia paprograme. Osciloscopu matuotas i\v{s}vad\k{u} lygmen\k{u} kitimo laikas.
 \subsection{Srov\.es matavimai}
-STM32F4DISCOVERY makete srov\.e matuota tiesiogiai multimetru 
-tarp mikrovaldiklio ir srov\.es stabilizatoriaus. . TMDXRM48USB maketas netur\.ejo 
-trumpikli\k{u} tarp srov\.es stabilizatoriaus ir mikrovaldiklio. Tarp stabilizatoriau 3.3V i\v{s}\.ejimo ir mikrovaldiklio i\v{s}vad\k{u} maitinimo bei stabilizatoriaus 1.2V i\v{s}\.ejimo ir mikrovaldiklio logikos maitinimo buvo \k{i}terptos 0.12$\Omega$ var\v{z}os. Vis\k{u} matavim\k{u} metu 
+STM32F4DISCOVERY makete srov\.e matuota tiesiogiai. TMDXRM48USB maketas netur\.ejo 
+trumpikli\k{u} tarp maitinimo ir mikrovaldiklio. Tarp maitinimo 3.3V i\v{s}\.ejimo ir mikrovaldiklio i\v{s}vad\k{u} maitinimo bei maitinimo 1.2V i\v{s}\.ejimo ir mikrovaldiklio logikos maitinimo buvo \k{i}terptos 0.12$\Omega$ var\v{z}os. Vis\k{u} matavim\k{u} metu 
   i\v{s}vadai buvo nustatyti i\v{s}vesties re\v{z}ime ir 
   nustatyti nuliniame loginiame lygije. Buvo atlikti matavimai
   esant \v{s}ioms konfig\={u}racijoms:
@@ -542,12 +541,13 @@ trumpikli\k{u} tarp srov\.es stabilizatoriaus ir mikrovaldiklio. Tarp stabilizat
 \begin{itemize}
 \item i\v{s}jungta Flash atmintis
 \item procesoriai neatlieka joki\k{u} skai\v{c}iavim\k{u}
+\item taktavimo da\v{z}nis 20kHz
 \end{itemize}
 
 \item Cortex-M4:
 \begin{itemize}
 \item vidinis 1.2V \k{i}tampos reguliatorius i\v{s}jungtas
-\item u\v{z}rakintos faz\.es ciklo $($pll$)$, vidinis 16MHz ir i\v{s}orinis 8MHz taktiniai osciliatoriai atjungti. Veikia vidinis 32kHz taktinis osciliatorius
+\item Pll\footnote{PLL - phase lock loop da\v{z}ni\k{u} generatorius}, vidinis 16MHz ir i\v{s}orinis 8MHz taktiniai osciliatoriai atjungti. Veikia vidinis 32kHz taktinis osciliatorius
 \item procesorius sustabdytas
 \item mikrovaldiklis minimalioje srov\.es suvartojimo b\=usenoje.
 \item re\v{z}im\k{a} galima i\v{s}eiti:
@@ -566,12 +566,12 @@ trumpikli\k{u} tarp srov\.es stabilizatoriaus ir mikrovaldiklio. Tarp stabilizat
 \end{itemize}
 \item Cortex-M4:
 \begin{itemize}
-\item sistema veikia u\v{z}rakintos faz\.es ciklo taktavimo da\v{z}niu
+\item sistema veikia pll taktavimo da\v{z}niu
 \item procesorius sustabdytas $($CPU$)$
 \item i\v{s} re\v{z}imo galima i\v{s}eiti betkokio tr\=ukio pagalba
 \end{itemize}
 \end{itemize}
-\item esant skirtingiems taktavimo da\v{z}niams mikrovaldikliai atlikin\.ejo slankaus kablelio, neslankaus kablelio aritmetikos testus, bei buvo paleisti veikti cikle: \begin{verbatim} while(1); \end{verbatim} 
+\item esant skirtingiems taktavimo da\v{z}niams mikrovaldikliai atlikin\.ejo slankaus kablelio ir fiksuoto tikslumo aritmetikos testus, bei buvo paleisti veikti cikle: \begin{verbatim} while(1); \end{verbatim} 
 \end{itemize}
 
 \newpage
@@ -583,12 +583,13 @@ Cortex-R4 mikrovaldiklis beveik visus skai\v{c}iavimo testus atliko grei\v{c}iau
 \includegraphics[scale=0.8]{pav/testai.jpg} %--< scale - dydis, {aplankas/pav.pavadinimas} >--%
 \captionsetup{labelformat=numbfirst} %--< pries tai apibrezem kaip turi atrodyti tekstas po paveiksleliu >--%
 \captionsetup{labelseparator=tarpas}
-\caption{Skai\v{c}iavimo algoritm\k{u} laikai. 1 - dvigubo tikslumo slankaus kablelio testas. 2 - slankaus kablelio testas. 3 - neslankaus kablelio testas. 4 - logini\k{u} funkcij\k{u} testas. 5 - Furij\.e slankaus kablelio. 6 - Furij\.e neslankaus kablelio.}
+\caption{Skai\v{c}iavimo algoritm\k{u} laikai. 1 - dvigubo tikslumo slankaus kablelio testas $($$($2.1.1$)$ algoritmas$)$. 2 - slankaus kablelio testas $($$($2.1.1$)$ antras algoritmas$)$. 3 - neslankaus kablelio testas $($$($2.1.2$)$ algoritmas$)$. 4 - logini\k{u} funkcij\k{u} testas $($$($2.1.3$)$ algoritmas$)$. 5 - Furij\.e slankaus kablelio $($$($2.1.4$)$ algoritmas$)$. 6 - Furij\.e neslankaus kablelio$($$($2.1.4$)$ antras algoritmas$)$.}
 \label{vienas}
 \end{figure}
 
 
-\indent Cortex-R4 generavo 280ns ilgio impulsus. \k{I}\.ejimo \k{i} tr\=uk\k{i} ir i\v{s}\.ejimo laikas 730ns. Cortex-M4 generavo 150ns ilgio impulsus. \k{I}\.ejimo \k{i} tr\=uk\k{i} ir i\v{s}\.ejimo laikas 200ns.
+\indent Tirtas periferijos perjungimo greitis ir \k{i}\.ejimo i\v{s}\.ejimo i tu\v{s}\v{c}i\k{a} tr\=ukio paprogram\k{e} laikas esant 100MHz taktavimo da\v{z}niui.  
+Cortex-R4 periferijos i\v{s}\.ejimo lygmen\k{i} keit\.{e} kas 280ns. \k{I}\.ejimo \k{i} tr\=uk\k{i} ir i\v{s}\.ejimo laikas 730ns. Cortex-M4 periferikos i\v{s}vado login\k{i} lygmen\k{i} keit\.e kas 150ns. \k{I}\.ejimo \k{i} tr\=uk\k{i} ir i\v{s}\.ejimo laikas 200ns.
 \begin{figure}[H] %--< nustatymai kur bus paveiksliukas h - kaip tekste, t - puslapio virsuje, b - puslapio apacioje, H - tiksliai kaip tekste, p - atskiram paveiksleliu pslapy >--%
 \centering %--< lygiavimas >--%
 \includegraphics[scale=0.4]{pav/trukiai.jpg} %--< scale - dydis, {aplankas/pav.pavadinimas} >--%
@@ -597,7 +598,7 @@ Cortex-R4 mikrovaldiklis beveik visus skai\v{c}iavimo testus atliko grei\v{c}iau
 \caption{Generuot\k{u} impuls\k{u} laikin\.e diagrama.}
 \label{vienas}
 \end{figure}
-Mikrovaldiklio Cortex-R4 \v{s}erdis maitinama 1.2V, periferijos 3.3V.Naudojama galia $P=I_{\v{s}erdies} *1.2V + I_{periferijos} * 3.3V$  .Cortex-M4 maitinamas 3.3V, galia $P=I*3.3V$.
+Mikrovaldiklio Cortex-R4 \v{s}erdis maitinama 1.2V, periferijos 3.3V. Kadangi 3.3V maitinama ir kiti \k{i}renginiai esantys makete naudojama galia buvo skai\v{c}iuojama pagal formul\k{e} $P=I_{\v{s}erdies} *1.2V + (I_{bendras}-I_{iv{s}orini\k{u} \k{i}rengini\k{u}}) * 3.3V$, kur $I_{iv{s}orini\k{u} \k{i}rengini\k{u}}$ rastas visi\k{s}kai atjungus mikrovaldiklio periferij\k{a}. Cortex-M4 maitinamas 3.3V, galia $P=I*3.3V$.
 \begin{figure}[H] %--< nustatymai kur bus paveiksliukas h - kaip tekste, t - puslapio virsuje, b - puslapio apacioje, H - tiksliai kaip tekste, p - atskiram paveiksleliu pslapy >--%
 \centering %--< lygiavimas >--%
 \includegraphics[scale=0.8]{pav/modes.jpg} %--< scale - dydis, {aplankas/pav.pavadinimas} >--%
@@ -636,12 +637,12 @@ Mikrovaldiklio Cortex-R4 \v{s}erdis maitinama 1.2V, periferijos 3.3V.Naudojama g
 
 
 \begin{enumerate}
-\item RM48 esantis 64 bit\k{u} slankaus kablelio modulis nenaudojant speciali\k{u} bibliotek\k{u} leid\v{z}ia sutrumpinti dvigubo tikslumo slankaus kablelio skai\v{c}iavimus esant 100MHz lyginant su stm32f4 mikrovaldikliu.
+\item RM48 esant 100MHz taktiniui da\v{z}niui yra \v{z}ymiai greitesnis atliekant dvigubo tikslumo slankaus kablelio skai\v{c}iavimus nei stm32f4 mikrovaldiklis.
 \item Du procesoriai esantys R4 stipriai padidina mikrovaldiklio naudojam\k{a} gali\k{a}
-\item RM48 mikrovaldiklis nenaudojant speciali\k{u} tr\=ukiu l\.e\v{c}iau perjungin\.eja periferij\k{a}.
-\item RM48 ilgai u\v{z}trunka \k{i}einant ir i\v{s}einant i\v{s} tr\k{u}kio
-\item Ma\v{z}iausia naudojama galia, kuri\v{a} pavyko pasiekti su RM48 yra 166 kartus didesn\.e nei ma\v{z}iausia vartojama galia, kuri\k{a} pavyko pasiekti su stm32f4 maketu
-\item Mikrovaldikliams atliekant skirtingus skai\v{c}iavimus naudojama galia labiausiai priklauso nuo taktinio da\v{z}nio ir tik ne\v{z}ymiai nuo pa\v{c}i\k{u} skai\v{c}iavim\k{u}
+\item RM48 mikrovaldiklio periferija dirba l\.{e}\v{c}iau nei stm32f4 esant 100MHz taktiniam da\v{z}niui.
+\item RM48 tr\=uki\k{u} sistema yra labai l\.{e}ta ir neefektyvi.
+\item Ma\v{z}iausia naudojama galia, kuri\k{a} pavyko pasiekti su RM48 yra 166 kartus didesn\.e nei ma\v{z}iausia vartojama galia, kuri\k{a} pavyko pasiekti su stm32f4 maketu
+\item Mikrovaldikliams atliekant skirtingus skai\v{c}iavimus naudojama galia labiausiai priklauso nuo taktinio da\v{z}nio ir tik ne\v{z}ymiai nuo procesoriaus apkrovos skai\v{c}iavimais.
 \end{enumerate}
 
 \newpage
@@ -743,7 +744,7 @@ DATASHEET/DM00037051.pdf\end{verbatim}
 
 U\v{z}duotys kurioms reikia didelio patikimumo reikalauja skai\v{c}iavimo dubliacijos. Mikrovaldiklis RM48 turi integruot\k{a} skai\v{c}iavimo ir kontrol\.es dubliavim\k{a}, ta\v{c}iau neai\v{s}ku kaip tai yra energeti\v{s}kai naudinga. \\
 \indent
-\v{S}iame darbe buvo pabandyta i\v{s}siai\v{s}kinti Hercules \v{s}eimos atstovo RM48 mikrovaldiklio energetin\k{i} efektyvum\k{a} ir bandyta palyginti su kitu \k{i}prastesniu mikrovaldikliu. Taip pat susipa\v{z}inta su 32 bit\v{u} Cortex \v{s}eimos programavimo ypatyb\.emis.
+\v{S}iame darbe buvo pabandyta i\v{s}siai\v{s}kinti Hercules \v{s}eimos atstovo RM48 mikrovaldiklio energetin\k{i} efektyvum\k{a} ir bandyta palyginti su kitu \k{i}prastesniu mikrovaldikliu. Taip pat susipa\v{z}inta su 32 bit\k{u} Cortex \v{s}eimos programavimo ypatyb\.emis.
 
 
 
