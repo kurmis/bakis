@@ -195,7 +195,7 @@ ir naudojam formules citavimui \ref{formule_label}
 
 \addcontentsline{toc}{section}{\k{I}vadas} % prideda prie turinio
 
-Egzistuoja daug u\v{z}duo\v{c}i\k{u} kurioms atlikti reikia didelio patikimumo. J\k{u} atlikimui papra\v{s}\v{c}iausiu atveju galima naudoti standartinius mikrovaldiklius, kombinuojant su programin\.emis gudryb\.emis. Tokiomis kaip WDT $($watchdog timer$)$, kurios pri\v{z}i\=uri pagrindin\k{e} program\k{a}, kad ji tinkamai atliktu savo darb\k{a}. Nuolatiniais testais patikrinti duomen\k{u} skai\v{c}iavimo patikimum\k{a}, pavyzd\v{z}iui atlikti algoritma du kartus ir tikrinti ar atsakymai sutampa. Daugeliu atveju visos papildomos priemon\.es u\v{z}tikrinti patikimum\k{a} prailgina duomen\k{u} skai\v{c}iavimo laik\k{a}. \\
+Egzistuoja daug u\v{z}duo\v{c}i\k{u} kurioms atlikti reikia didelio patikimumo. J\k{u} atlikimui papra\v{s}\v{c}iausiu atveju galima naudoti standartinius mikrovaldiklius, kombinuojant su programin\.emis gudryb\.emis. Tokiomis kaip WDT $($watchdog timer$)$, kurios pri\v{z}i\=uri pagrindin\k{e} program\k{a}, kad ji tinkamai atlikt\k{u} savo darb\k{a}. Nuolatiniais testais patikrinti duomen\k{u} skai\v{c}iavimo patikimum\k{a}, pavyzd\v{z}iui atlikti algoritma du kartus ir tikrinti ar atsakymai sutampa. Daugeliu atveju visos papildomos priemon\.es u\v{z}tikrinti patikimum\k{a} prailgina duomen\k{u} skai\v{c}iavimo laik\k{a}. \\
 \indent Sistemose kurioms reikalingas didelis patikimumas ir darbas realeame laike labai praver\v{c}ia sistemos dubliavimas su tikrinimo funkcijomis. Klaidos tikimyb\.e ne visais atvejais yra tolydi laike, taigi klaidos gali tuo pa\v{c}iu metu ivykti abiejose sistemose. Tokiu atveju naudinga, kai sistemos dirba pastumtos laike at\v{z}vilgiu viena kitos. \\
 \indent Yra daug aplink\k{u} kur gali reik\.eti toki\k{u} sistem\k{u}. Pramonin\.es saugumo reikalaujan\v{c}ios aplinkos, tokios kaip:
 \begin{itemize}
@@ -275,7 +275,7 @@ Procesori\k{u} i\v{s}\.ejimo signalai palyginami atskirame modulyje.
 
 \subsubsection{Atmintys}
 \k{I}renginys palaiko little-endian $($LE32$)$ format\k{a}. Tai rei\v{s}kia, kad atmintyje jauniausias bitas yra saugomas pirmas.
-SRAM ir Flash atminys turi ECC\footnote{ECC - error corection code} apsaug\k{a} - galimyb\.e 1 bito klaidos aptikimui ir pataisymui, bei 2 bit\k{u} klaidos aptikimui. Flash atmintis maitinama 3.3V \k{i}tampa. Esant %%pipeline%% 
+SRAM ir Flash atminys turi ECC\footnote{ECC - error corection code} apsaug\k{a} - galimyb\.e 1 bito klaidos aptikimui ir pataisymui, bei 2 bit\k{u} klaidos aptikimui. Flash atmintis maitinama 3.3V \k{i}tampa. Esant kaskadiniui
 re\v{z}imui flash atmintis gali veikti iki 200MHz taktiniu da\v{z}niu. SRAM atmint\k{i} galima nuskaityti arba ira\v{s}yti 1 ciklu nepriklausomai nuo re\v{z}imo.   
 
 
@@ -527,16 +527,16 @@ int32_t testCfftQ31(void) {
 }
 \end{verbatim}
 \subsection{\k{I}\.ejimo ir i\v{s}\.ejimo \k{i} tr\=uk\k{i} algoritmo apra\v{s}ymas}
-Naudojami maketai buvo paleisti veikti 100MHz grei\v{c}iu. Abu maketai keisdavo i\v{s}\.ejimo porto vienos kojos login\k{i} lyg\k{i}, bei buvo \k{i}jungtas nuo laiko priklausantis tu\v{s}\v{c}ias tr\=ukis. Osciloscopu matuota port\k{u} i\v{s}vad\k{u} lygmen\k{u} kitimo laikas.
+Naudojami maketai buvo paleisti veikti 100MHz grei\v{c}iu. Abu maketai keisdavo i\v{s}\.ejimo porto vieno i\v{s}vado login\k{i} lyg\k{i}, bei buvo \k{i}jungtas nuo laiko priklausantis tu\v{s}\v{c}ias tr\=ukis. Osciloscopu matuotas i\v{s}vad\k{u} lygmen\k{u} kitimo laikas.
 \subsection{Srov\.es matavimai}
 STM32F4DISCOVERY makete srov\.e matuota tiesiogiai multimetru 
 tarp mikrovaldiklio ir srov\.es stabilizatoriaus. . TMDXRM48USB maketas netur\.ejo 
 trumpikli\k{u} tarp srov\.es stabilizatoriaus ir mikrovaldiklio. Tarp stabilizatoriau 3.3V i\v{s}\.ejimo ir mikrovaldiklio i\v{s}vad\k{u} maitinimo bei stabilizatoriaus 1.2V i\v{s}\.ejimo ir mikrovaldiklio logikos maitinimo buvo \k{i}terptos 0.12$\Omega$ var\v{z}os. Vis\k{u} matavim\k{u} metu 
   i\v{s}vadai buvo nustatyti i\v{s}vesties re\v{z}ime ir 
   nustatyti nuliniame loginiame lygije. Buvo atlikti matavimai
-  esant \v{s}iom konfig\={u}racijomis:
+  esant \v{s}ioms konfig\={u}racijoms:
 \begin{itemize}
-\item \k{i}jungtas "stanby" re\v{z}imas:
+\item \k{i}jungtas stanby re\v{z}imas:
 \begin{itemize} 
 \item Cortex-R4:
 \begin{itemize}
@@ -586,7 +586,9 @@ Cortex-R4 mikrovaldiklis beveik visus skai\v{c}iavimo testus atliko grei\v{c}iau
 \caption{Skai\v{c}iavimo algoritm\k{u} laikai. 1 - dvigubo tikslumo slankaus kablelio testas. 2 - slankaus kablelio testas. 3 - neslankaus kablelio testas. 4 - logini\k{u} funkcij\k{u} testas. 5 - Furij\.e slankaus kablelio. 6 - Furij\.e neslankaus kablelio.}
 \label{vienas}
 \end{figure}
-Cortex-R4 generavo 280ns ilgio impulsus. \k{I}\.ejimo \k{i} tr\=uk\k{i} ir i\v{s}\.ejimo laikas 730ns. Cortex-M4 generavo 150ns ilgio impulsus. \k{I}\.ejimo \k{i} tr\=uk\k{i} ir i\v{s}\.ejimo laikas 200ns.
+
+
+\indent Cortex-R4 generavo 280ns ilgio impulsus. \k{I}\.ejimo \k{i} tr\=uk\k{i} ir i\v{s}\.ejimo laikas 730ns. Cortex-M4 generavo 150ns ilgio impulsus. \k{I}\.ejimo \k{i} tr\=uk\k{i} ir i\v{s}\.ejimo laikas 200ns.
 \begin{figure}[H] %--< nustatymai kur bus paveiksliukas h - kaip tekste, t - puslapio virsuje, b - puslapio apacioje, H - tiksliai kaip tekste, p - atskiram paveiksleliu pslapy >--%
 \centering %--< lygiavimas >--%
 \includegraphics[scale=0.4]{pav/trukiai.jpg} %--< scale - dydis, {aplankas/pav.pavadinimas} >--%
@@ -634,9 +636,12 @@ Mikrovaldiklio Cortex-R4 \v{s}erdis maitinama 1.2V, periferijos 3.3V.Naudojama g
 
 
 \begin{enumerate}
-\item Atliekant skai\v{c}iavimus Cortex-R4 yra prana\v{e}snis
-\item Cortex-R4 turi tik du tr\=ukio re\v{z}imus ir \k{i}\.ejimo bei i\v{s}\.ejimo laikai stipriai atsilieka nuo M4, tod\.el jis labiau tinkamas naudoti ten kur tr\=uki\k{u} yra nedaug, o juose reikia atlikti daug skai\v{c}iavim\k{u}.
+\item RM48 esantis 64 bit\k{u} slankaus kablelio modulis nenaudojant speciali\k{u} bibliotek\k{u} leid\v{z}ia sutrumpinti dvigubo tikslumo slankaus kablelio skai\v{c}iavimus esant 100MHz lyginant su stm32f4 mikrovaldikliu.
 \item Du procesoriai esantys R4 stipriai padidina mikrovaldiklio naudojam\k{a} gali\k{a}
+\item RM48 mikrovaldiklis nenaudojant speciali\k{u} tr\=ukiu l\.e\v{c}iau perjungin\.eja periferij\k{a}.
+\item RM48 ilgai u\v{z}trunka \k{i}einant ir i\v{s}einant i\v{s} tr\k{u}kio
+\item Ma\v{z}iausia naudojama galia, kuri\v{a} pavyko pasiekti su RM48 yra 166 kartus didesn\.e nei ma\v{z}iausia vartojama galia, kuri\k{a} pavyko pasiekti su stm32f4 maketu
+\item Mikrovaldikliams atliekant skirtingus skai\v{c}iavimus naudojama galia labiausiai priklauso nuo taktinio da\v{z}nio ir tik ne\v{z}ymiai nuo pa\v{c}i\k{u} skai\v{c}iavim\k{u}
 \end{enumerate}
 
 \newpage
@@ -719,24 +724,28 @@ DATASHEET/DM00037051.pdf\end{verbatim}
 %\bibliography{Kursinis.bbl} %--< skliausteliuose turi buti nurodamas literaturos saraso failo pavadinimas >--%
 %\bibliographystyle{nature} %--< literaturos stilius >--%
 
-%\newpage
+\newpage
 
-%\section*{Santrauka}
+\section*{Santrauka}
 
 
-%\addcontentsline{toc}{section}{Santrauka}
+\addcontentsline{toc}{section}{Santrauka}
 
 %\begin{onehalfspacing}
 
-%\begin{center}
+\begin{center}
 
 %\studentas \\[12pt]
 
-%\MakeUppercase{,,\pavadinimas''}\\
+\MakeUppercase{,,\pavadinimas''}\\
 
-%\end{center}
+\end{center}
 
-%Tekstas
+U\v{z}duotys kurioms reikia didelio patikimumo reikalauja skai\v{c}iavimo dubliacijos. Mikrovaldiklis RM48 turi integruot\k{a} skai\v{c}iavimo ir kontrol\.es dubliavim\k{a}, ta\v{c}iau neai\v{s}ku kaip tai yra energeti\v{s}kai naudinga. \\
+\indent
+\v{S}iame darbe buvo pabandyta i\v{s}siai\v{s}kinti Hercules \v{s}eimos atstovo RM48 mikrovaldiklio energetin\k{i} efektyvum\k{a} ir bandyta palyginti su kitu \k{i}prastesniu mikrovaldikliu. Taip pat susipa\v{z}inta su 32 bit\v{u} Cortex \v{s}eimos programavimo ypatyb\.emis.
+
+
 
 %\newpage
 

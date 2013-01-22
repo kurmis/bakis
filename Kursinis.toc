@@ -22,3 +22,4 @@
 \contentsline {section}{\numberline {3}Rezultatai}{14}
 \contentsline {section}{\numberline {4}I\v {s}vados}{17}
 \contentsline {section}{Literat\={u}ros s\k {a}ra\v {s}as}{18}
+\contentsline {section}{Santrauka}{19}

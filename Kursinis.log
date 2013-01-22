@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.1.13)  22 JAN 2013 04:53
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.1.13)  22 JAN 2013 05:54
 entering extended mode
  %&-line parsing enabled.
 **Kursinis.tex
@@ -3314,7 +3314,7 @@ File: pav/testai.jpg Graphic file (type jpg)
 File: pav/trukiai.jpg Graphic file (type jpg)
  <use pav/trukiai.jpg>
 
-LaTeX Warning: Command \v invalid in math mode on input line 598.
+LaTeX Warning: Command \v invalid in math mode on input line 600.
 
 <pav/modes.jpg, id=63, 383.18156pt x 304.88907pt>
 File: pav/modes.jpg Graphic file (type jpg)
@@ -3329,16 +3329,22 @@ File: pav/R4galia.jpg Graphic file (type jpg)
 File: pav/M4galia.jpg Graphic file (type jpg)
  <use pav/M4galia.jpg>
 [15 <./pav/modes.jpg> <./pav/sleep.jpg>] [16 <./pav/R4galia.jpg> <./pav/M4galia
-.jpg>] [17] [18] (./Kursinis.aux)
+.jpg>] [17] [18]
+Overfull \hbox (19.81876pt too wide) in paragraph at lines 744--747
+[]\L7x/lmr/m/n/12 Uþduotys ku-ri-oms reikia dide-lio patiki-mu-mo reikalau-ja s
+kaièi-av-i-mo dubliaci-jos. Mikrovaldik-
+ []
+
+[19] (./Kursinis.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 9894 strings out of 495061
- 148956 string characters out of 1182621
+ 9895 strings out of 495061
+ 148964 string characters out of 1182621
  196509 words of memory out of 3000000
- 12830 multiletter control sequences out of 15000+50000
+ 12831 multiletter control sequences out of 15000+50000
  45591 words of font info for 52 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
  37i,8n,38p,889b,439s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -3354,9 +3360,9 @@ ublic/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/
 texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf/fonts/type1/public/lm/
 lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/
 fonts/type1/public/lm/lmtt12.pfb>
-Output written on Kursinis.pdf (18 pages, 687452 bytes).
+Output written on Kursinis.pdf (19 pages, 695727 bytes).
 PDF statistics:
- 130 PDF objects out of 1000 (max. 8388607)
+ 134 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  41 words of extra memory for PDF output out of 10000 (max. 10000000)
 
