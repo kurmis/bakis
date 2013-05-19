@@ -123,7 +123,7 @@ ir naudojam formules citavimui \ref{formule_label}
 \newcommand{\vadovas}{dr. Mindaugas Vil\={u}nas}
 \newcommand{\recenzentas}{dr. Recenzentas}
 \newcommand{\vedejas}{dr.(HP) K\k{e}stutis Arlauskas}
-\newcommand{\pavadinimas}{Cortex R4 mikrovaldiklio architekt\={u}ros tyrimas} %--< cia irasyti darbo pavadinima >--%
+\newcommand{\pavadinimas}{Cortex R4 architekt\={u}ros mikrovaldiklio savybi\k{u} tyrimas} %--< cia irasyti darbo pavadinima >--%
 
 \newcommand{\katedra}{\kkek} %--< irasyti savo, nebutinai komanda >--%
 %=======%
@@ -135,7 +135,7 @@ ir naudojam formules citavimui \ref{formule_label}
 \newcommand{\bfsk}{Bendrosios fizikos ir spektroskopijos katedra}
 %==========%
 
-\newcommand{\darbas}{\bakikurs} %--< irasyti savo >--%
+\newcommand{\darbas}{\bakis} %--< irasyti savo >--%
 %=========%
 \newcommand{\bakikurs}{Pagrindini\k{u} studij\k{u} kursinis darbas}
 \newcommand{\bakis}{Pagrindini\k{u} studij\k{u} baigiamasis darbas}
@@ -260,7 +260,7 @@ xRM48L950 turi du integruotus 32-bit\k{u} RISC ARM Cortex-R4F procesorius, su sl
 \label{vienas}
 \end{figure}
 
-Taip pat taktinis da\v{z}nis procesoriams paduodamas su 2 takt\k{u} u\v{z}laikymo skirtumu. 
+Taip pat taktinis da\v{z}nis procesoriams paduodamas su 2 takt\k{u} u\v{z}laikymo skirtumu. Procesoriai fizi\v{s}kai atskirti 100$\micro$m. atstumu.  
 Procesori\k{u} i\v{s}\.ejimo signalai palyginami atskirame modulyje.
 \begin{figure}[H] %--< nustatymai kur bus paveiksliukas h - kaip tekste, t - puslapio virsuje, b - puslapio apacioje, H - tiksliai kaip tekste, p - atskiram paveiksleliu pslapy >--%
 \centering %--< lygiavimas >--%
@@ -290,6 +290,7 @@ Palaiko \v{s}ias periferijas:
 \item USB
 \item Ethernet
 \item UART
+\item MibSPI
 \item $I^2C$
 \item SCI
 \item DCAN
@@ -318,6 +319,7 @@ Yra 16 prioritet\k{u} lygi\k{u}, 82 maskuojami tr\=uki\k{u} kanalai. Leid\v{z}ia
 Palaikomos periferijos:
 \begin{itemize}
 \item $I^2C$
+\item SPI
 \item UART
 \item $I^2S$
 \item CAN
@@ -539,9 +541,10 @@ trumpikli\k{u} tarp maitinimo ir mikrovaldiklio. Tarp maitinimo 3.3V i\v{s}\.eji
 \begin{itemize} 
 \item Cortex-R4:
 \begin{itemize}
-\item i\v{s}jungta Flash atmintis
-\item procesoriai neatlieka joki\k{u} skai\v{c}iavim\k{u}
-\item taktavimo da\v{z}nis 20kHz
+\item Flash atmintis automatinio miego re\v{z}ime
+\item procesoriai laukimo re\v{z}ime
+\item taktuojama is L 
+%damusti------------------------------------------%
 \end{itemize}
 
 \item Cortex-M4:
@@ -598,7 +601,7 @@ Cortex-R4 periferijos i\v{s}\.ejimo lygmen\k{i} keit\.{e} kas 280ns. \k{I}\.ejim
 \caption{Generuot\k{u} impuls\k{u} laikin\.e diagrama.}
 \label{vienas}
 \end{figure}
-Mikrovaldiklio Cortex-R4 \v{s}erdis maitinama 1.2V, periferijos 3.3V. Kadangi 3.3V maitinama ir kiti \k{i}renginiai esantys makete $($tokie kaip \v{s}viesos sesnosrius, akselerometras$)$ naudojama galia buvo skai\v{c}iuojama pagal formul\k{e} $P=I_{serdies} *1.2V + (I_{bendras}-I_{ivsoriniu irenginiu}) * 3.3V$, kur $I_{ivsoriniu irenginiu}$ rastas visi\v{s}kai atjungus mikrovaldiklio periferij\k{a}. Cortex-M4 maitinamas 3.3V, galia $P=I*3.3V$.
+Mikrovaldiklio Cortex-R4 \v{s}erdis maitinama 1.2V, periferijos 3.3V. Kadangi 3.3V maitinama ir kiti \k{i}renginiai esantys makete $($tokie kaip \v{s}viesos sesnosrius, akselerometras$)$ naudojama galia buvo skai\v{c}iuojama pagal formul\k{e} $P=I_{serdies} *1.2V$. Cortex-M4 maitinamas 3.3V, galia $P=I*3.3V$.
 \begin{figure}[H] %--< nustatymai kur bus paveiksliukas h - kaip tekste, t - puslapio virsuje, b - puslapio apacioje, H - tiksliai kaip tekste, p - atskiram paveiksleliu pslapy >--%
 \centering %--< lygiavimas >--%
 \includegraphics[scale=0.8]{pav/modes.jpg} %--< scale - dydis, {aplankas/pav.pavadinimas} >--%

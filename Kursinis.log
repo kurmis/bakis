@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.1.13)  22 JAN 2013 12:08
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.1.13)  19 MAY 2013 23:55
 entering extended mode
  %&-line parsing enabled.
 **Kursinis.tex
@@ -3241,33 +3241,33 @@ Package caption Info: float package is loaded.
 Package caption Info: subfigure package is loaded.
 Package caption Info: End \AtBeginDocument code.
 (./title.tex
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 29.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 30.
  (/usr/share/texmf/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 29.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 30.
 
 (/usr/share/texmf/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 29.
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 30.
 
 
 (/usr/share/texmf/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 29.
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 30.
 
 
 (/usr/share/texmf/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 29.
+(Font)              <12> on input line 30.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 29.
+(Font)              <8> on input line 30.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 29.
+(Font)              <6> on input line 30.
  [1
 
 {/home/mindaugas/.texmf-var/fonts/map/pdftex/updmap/pdftex.map}]) (./Kursinis.t
@@ -3295,39 +3295,39 @@ File: pav/orentacija.jpg Graphic file (type jpg)
 File: pav/impl.jpg Graphic file (type jpg)
 
 <use pav/impl.jpg> [4] [5 <./pav/orentacija.jpg> <./pav/impl.jpg>] [6] [7]
-LaTeX Font Info:    Try loading font information for L7x+lmtt on input line 357
+LaTeX Font Info:    Try loading font information for L7x+lmtt on input line 359
 .
 
 (/usr/share/texmf/tex/latex/lm/l7xlmtt.fd
 File: l7xlmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ) [8] [9] [10] [11] [12]
-LaTeX Font Info:    Try loading font information for TS1+lmr on input line 542.
+LaTeX Font Info:    Try loading font information for TS1+lmr on input line 544.
 
 
 (/usr/share/texmf/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ) [13]
-<pav/testai.jpg, id=61, 372.64218pt x 304.88907pt>
+<pav/testai.jpg, id=62, 372.64218pt x 304.88907pt>
 File: pav/testai.jpg Graphic file (type jpg)
  <use pav/testai.jpg>
-<pav/trukiai.jpg, id=62, 752.8125pt x 361.35pt>
+<pav/trukiai.jpg, id=63, 752.8125pt x 361.35pt>
 File: pav/trukiai.jpg Graphic file (type jpg)
  <use pav/trukiai.jpg>
-<pav/modes.jpg, id=63, 383.18156pt x 304.88907pt>
+<pav/modes.jpg, id=64, 383.18156pt x 304.88907pt>
 File: pav/modes.jpg Graphic file (type jpg)
- <use pav/modes.jpg> [14 <./pav/testai.jpg> <./pav/trukiai.jpg>]
-<pav/sleep.jpg, id=67, 383.18156pt x 304.88907pt>
+ <use pav/modes.jpg>
+<pav/sleep.jpg, id=65, 383.18156pt x 304.88907pt>
 File: pav/sleep.jpg Graphic file (type jpg)
- <use pav/sleep.jpg>
-<pav/R4galia.jpg, id=68, 383.18156pt x 304.88907pt>
+ <use pav/sleep.jpg> [14 <./pav/testai.jpg> <./pav/trukiai.jpg>]
+<pav/R4galia.jpg, id=69, 383.18156pt x 304.88907pt>
 File: pav/R4galia.jpg Graphic file (type jpg)
  <use pav/R4galia.jpg>
-<pav/M4galia.jpg, id=69, 383.18156pt x 304.88907pt>
+<pav/M4galia.jpg, id=70, 383.18156pt x 304.88907pt>
 File: pav/M4galia.jpg Graphic file (type jpg)
  <use pav/M4galia.jpg>
 [15 <./pav/modes.jpg> <./pav/sleep.jpg>] [16 <./pav/R4galia.jpg> <./pav/M4galia
 .jpg>] [17] [18]
-Overfull \hbox (19.81876pt too wide) in paragraph at lines 745--748
+Overfull \hbox (19.81876pt too wide) in paragraph at lines 747--750
 []\L7x/lmr/m/n/12 Uþduotys ku-ri-oms reikia dide-lio patiki-mu-mo reikalau-ja s
 kaièi-av-i-mo dubliaci-jos. Mikrovaldik-
  []
@@ -3340,7 +3340,7 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  9893 strings out of 495061
  148948 string characters out of 1182621
- 196509 words of memory out of 3000000
+ 196520 words of memory out of 3000000
  12829 multiletter control sequences out of 15000+50000
  45591 words of font info for 52 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
@@ -3348,18 +3348,19 @@ Here is how much of TeX's memory you used:
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/share/texmf/fonts/enc/d
 vips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-l7x.enc}{/usr/share/t
 exmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-m
-athex.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}</usr/share/texmf/
-fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10
-.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi12.pfb></usr/share/texmf/fonts
-/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></
-usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/p
-ublic/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/
-texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf/fonts/type1/public/lm/
-lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/
-fonts/type1/public/lm/lmtt12.pfb>
-Output written on Kursinis.pdf (19 pages, 690150 bytes).
+athex.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}</usr/share/texmf-
+texlive/fonts/type1/public/amsfonts/euler/eurm10.pfb></usr/share/texmf/fonts/ty
+pe1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></u
+sr/share/texmf/fonts/type1/public/lm/lmmi12.pfb></usr/share/texmf/fonts/type1/p
+ublic/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/shar
+e/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm
+/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fo
+nts/type1/public/lm/lmri12.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.p
+fb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/ty
+pe1/public/lm/lmtt12.pfb>
+Output written on Kursinis.pdf (19 pages, 700473 bytes).
 PDF statistics:
- 134 PDF objects out of 1000 (max. 8388607)
+ 138 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  41 words of extra memory for PDF output out of 10000 (max. 10000000)
 
