@@ -212,10 +212,10 @@ Medicinoje:
 \noindent 
 \indent Atsi\v{z}velgiant \k{i} \v{s}\k{i} poreik\k{i} kompanija
  Teksas Instruments neseniai i\v{s}leido ARM Cortex-R4 mikrovaldikli\k{u} \v{s}eim\k{a} 
- kodiniu pavadinimu Hercules. Mum kilo klausimas koks yra \v{s}i\k{u}
-  mikrovaldikli\k{u} energetinis efektyvumas, k\k{a} \v{s}iame
+ kodiniu pavadinimu Hercules. Mums kilo klausimas koks yra \v{s}i\k{u}
+  mikrovaldikli\k{u} energetinis efektyvumas, bei mikrovaldikli\k{u} veikimas esant ekstramaliam poveikiui, k\k{a} \v{s}iame
    darba ir bandoma i\v{s}siai\v{s}kinti. \\
-\indent Tolimesniame darbe b\=ut\k{u} idomu patikrinti veikim\k{a} esant ekstremaliam poveikui, galimyb\k{e} panaudoti vien\k{a} i\v{s} Hercules \v{s}eimos atstov\k{u} RM48 kosmose, kur jo u\v{z}duotis gal\.et\k{u} b\=uti navigacija, kuriai atlikti reikia slankaus formato ir skai\v{c}i\k{u} tikslumo.  
+%\indent Tolimesniame darbe b\=ut\k{u} idomu patikrinti veikim\k{a} esant ekstremaliam poveikui, galimyb\k{e} panaudoti vien\k{a} i\v{s} Hercules \v{s}eimos atstov\k{u} RM48 kosmose, kur jo u\v{z}duotis gal\.et\k{u} b\=uti navigacija, kuriai atlikti reikia slankaus formato ir skai\v{c}i\k{u} tikslumo.  %
 
 \newpage
 
@@ -244,7 +244,7 @@ Palyginimui naudojamas STM32F4DISCOVERY maketas:
 \end{itemize}
 \item Integruotas ST-LINK/V2 emuliatorius programavimui per usb
 \item LED'ai, akselerometras, skaitmeninis mikrofonas
-\item CS43L22- SAK garsui su integruotu D klases garso stiprinimu
+\item CS43L22- SAK garsui su integruotu D klas\.es garso stiprinimu
 \end{itemize}
 Pasirinktas kompiliatorius - IAR 6.4. Darbo prad\.ejimo metu vienintelis palaik\.e abu maketus, be papildomos \k{i}rangos. 
 \subsection{xRM48L950 apra\v{s}as}
@@ -543,7 +543,8 @@ trumpikli\k{u} tarp maitinimo ir mikrovaldiklio. Tarp maitinimo 3.3V i\v{s}\.eji
 \begin{itemize}
 \item Flash atmintis automatinio miego re\v{z}ime
 \item procesoriai laukimo re\v{z}ime
-\item taktuojama is L 
+\item taktuojama i\v{s} ma\v{z}os galios i\v{s}orinio kvarco 
+\item periferijos i\v{s}jungtos
 %damusti------------------------------------------%
 \end{itemize}
 
@@ -576,7 +577,10 @@ trumpikli\k{u} tarp maitinimo ir mikrovaldiklio. Tarp maitinimo 3.3V i\v{s}\.eji
 \end{itemize}
 \item esant skirtingiems taktavimo da\v{z}niams mikrovaldikliai atlikin\.ejo slankaus kablelio ir fiksuoto tikslumo aritmetikos testus, bei buvo paleisti veikti cikle: \begin{verbatim} while(1); \end{verbatim} 
 \end{itemize}
-
+\subsection{Radiacinis matavimas}
+Cortex-M4 ir Cortex-R4 mikrovaldikliai sujungti spi protokolu. Cortex-M4 nustatytas kaip master, Cortex-R4 kaip slave.
+Cortex-M4 atlikin\.{e}jo matematinius skai\v{c}iavimus ir siunt\.{e} rezultatus \k{i} Cortex-R4 mikrovaldikl\k{i} patikrinimui, kuris per UART jungt\k{i} juos siunt\.{e} \k{i} kompiuterio terminal\k{a}.  
+%------------------------------%
 \newpage
    
 \section{Rezultatai}
@@ -591,7 +595,7 @@ Cortex-R4 mikrovaldiklis beveik visus skai\v{c}iavimo testus atliko grei\v{c}iau
 \end{figure}
 
 
-\indent Tirtas periferijos perjungimo greitis ir \k{i}\.ejimo i\v{s}\.ejimo i tu\v{s}\v{c}i\k{a} tr\=ukio paprogram\k{e} laikas esant 100MHz taktavimo da\v{z}niui.  
+Tirtas periferijos perjungimo greitis ir \k{i}\.ejimo i\v{s}\.ejimo i tu\v{s}\v{c}i\k{a} tr\=ukio paprogram\k{e} laikas esant 100MHz taktavimo da\v{z}niui.  
 Cortex-R4 periferijos i\v{s}\.ejimo lygmen\k{i} keit\.{e} kas 280ns. \k{I}\.ejimo \k{i} tr\=uk\k{i} ir i\v{s}\.ejimo laikas 730ns. Skirtumo tarp IRQ ir FIQ tr\=uki\k{u} laiko nebuvo. Cortex-M4 periferikos i\v{s}vado login\k{i} lygmen\k{i} keit\.e kas 150ns. \k{I}\.ejimo \k{i} tr\=uk\k{i} ir i\v{s}\.ejimo laikas 200ns.
 \begin{figure}[H] %--< nustatymai kur bus paveiksliukas h - kaip tekste, t - puslapio virsuje, b - puslapio apacioje, H - tiksliai kaip tekste, p - atskiram paveiksleliu pslapy >--%
 \centering %--< lygiavimas >--%
@@ -602,6 +606,7 @@ Cortex-R4 periferijos i\v{s}\.ejimo lygmen\k{i} keit\.{e} kas 280ns. \k{I}\.ejim
 \label{vienas}
 \end{figure}
 Mikrovaldiklio Cortex-R4 \v{s}erdis maitinama 1.2V, periferijos 3.3V. Kadangi 3.3V maitinama ir kiti \k{i}renginiai esantys makete $($tokie kaip \v{s}viesos sesnosrius, akselerometras$)$ naudojama galia buvo skai\v{c}iuojama pagal formul\k{e} $P=I_{serdies} *1.2V$. Cortex-M4 maitinamas 3.3V, galia $P=I*3.3V$.
+%--------------------%
 \begin{figure}[H] %--< nustatymai kur bus paveiksliukas h - kaip tekste, t - puslapio virsuje, b - puslapio apacioje, H - tiksliai kaip tekste, p - atskiram paveiksleliu pslapy >--%
 \centering %--< lygiavimas >--%
 \includegraphics[scale=0.8]{pav/modes.jpg} %--< scale - dydis, {aplankas/pav.pavadinimas} >--%
@@ -635,6 +640,7 @@ Mikrovaldiklio Cortex-R4 \v{s}erdis maitinama 1.2V, periferijos 3.3V. Kadangi 3.
 \label{vienas}
 \end{figure}
 
+Cortex-M4 mikrovaldiklis buvo pad\.{e}tas po rentgeno lempa kurios \k{i}tampa bei srov\.{e} didinta laipsni\v{s}kai. Prie 19kV \k{i}tampa ir 19mA per 15min mikrovaldiklis nustojo veikti, ta\v{c}iau iki nustojimo veikti visus skai\v{c}iavumus atliko gerai. Mikrovaldiklis per 3h atsistat\.{e} \k{i} normal\k{u} darb\k{a}.
 \newpage
 \section{I\v{s}vados}
 
@@ -644,7 +650,7 @@ Mikrovaldiklio Cortex-R4 \v{s}erdis maitinama 1.2V, periferijos 3.3V. Kadangi 3.
 \item Du procesoriai esantys R4 stipriai padidina mikrovaldiklio naudojam\k{a} gali\k{a}
 \item RM48 mikrovaldiklio periferija dirba l\.{e}\v{c}iau nei stm32f4 esant 100MHz taktiniam da\v{z}niui.
 \item RM48 tr\=uki\k{u} sistema yra labai l\.{e}ta ir neefektyvi.
-\item Ma\v{z}iausia naudojama galia, kuri\k{a} pavyko pasiekti su RM48 yra 82 kartus didesn\.e nei ma\v{z}iausia vartojama galia, kuri\k{a} pavyko pasiekti su stm32f4 maketu.
+%\item Ma\v{z}iausia naudojama galia, kuri\k{a} pavyko pasiekti su RM48 yra 82 kartus didesn\.e nei ma\v{z}iausia vartojama galia, kuri\k{a} pavyko pasiekti su stm32f4 maketu.%
 \item Mikrovaldikliams atliekant skirtingus skai\v{c}iavimus naudojama galia labiausiai priklauso nuo taktinio da\v{z}nio ir tik ne\v{z}ymiai nuo procesoriaus apkrovos skai\v{c}iavimais.
 \end{enumerate}
 
@@ -716,6 +722,8 @@ DAI0033A_fixedpoint_appsnote.pdf\end{verbatim}
 \item Cortex-R4 energijos vartojimo optimizavimo apra\v{s}as.\begin{verbatim} http://www.ti.com/lit/an/spna172a/spna172a.pdf\end{verbatim}
 \item Cortex-R4 slankaus kablelio modulio savybi\k{u} apra\v{s}as. \begin{verbatim}http://infocenter.arm.com/help/index.jsp?topic=/
 com.arm.doc.dai0240a/index.html\end{verbatim}
+\item Cortex-R4 silicon errata. \begin{verbatim}
+http://www.ti.com/lit/er/spnz194b/spnz194b.pdf \end{verbatim}
 \item STM32F4-Discovery trumpas apra\v{s}as. \begin{verbatim}http://www.st.com/internet/com/TECHNICAL_RESOURCES/
 TECHNICAL_LITERATURE/DATA_BRIEF/DM00037955.pdf\end{verbatim}
 \item Detalus Cortex-M4 mikrovaldiklio apra\v{s}as. \begin{verbatim}http://www.st.com/internet/com/TECHNICAL_RESOURCES/TECHNICAL_LITERATURE/

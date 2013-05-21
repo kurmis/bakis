@@ -3,7 +3,7 @@ QtiPlot 0.9.8 project file
 <windows>	14
 <table>
 Tuscias	30	6	18/01/2013 23:23
-geometry	392	410	-1	-1	minimized	
+geometry	784	410	-1	-1	minimized	
 header	1[X]	3[Y]	4[Y]	5[Y]	6[Y]	7[Y]
 ColWidth	100	100	100	100	100	100	
 <com>
@@ -35,7 +35,7 @@ WindowLabel		2
 </table>
 <table>
 Sleep	30	5	18/01/2013 23:37
-geometry	392	386	649	220	minimized	
+geometry	588	410	-1	-1	minimized	
 header	1[X]	2[Y]	3[Y]	4[Y]	5[Y]
 ColWidth	100	100	100	100	100	
 <com>
@@ -67,7 +67,7 @@ WindowLabel		2
 </table>
 <table>
 binary	30	5	18/01/2013 23:47
-geometry	196	410	-1	-1	minimized	
+geometry	392	410	-1	-1	minimized	
 header	1[X]	2[Y]	3[Y]	4[Y]	5[Y]
 ColWidth	100	100	100	100	100	
 <com>
@@ -96,7 +96,7 @@ WindowLabel		2
 </table>
 <table>
 Table1	30	4	18/01/2013 23:53
-geometry	0	410	-1	-1	minimized	
+geometry	196	410	-1	-1	minimized	
 header	1[X]	2[Y]	3[Y]	4[Y]
 ColWidth	100	100	100	100	
 <com>
@@ -112,7 +112,7 @@ WindowLabel		2
 </table>
 <table>
 Table2	30	4	19/01/2013 04:11
-geometry	0	386	535	220	minimized	
+geometry	0	410	-1	-1	minimized	
 header	1[X]	2[Y]	3[Y]	4[Y]
 ColWidth	100	100	100	140	
 <com>
@@ -136,7 +136,7 @@ WindowLabel		2
 </table>
 <table>
 floatirint	30	13	22/01/2013 04:19
-geometry	-7	12	1019	281	active
+geometry	-7	12	1019	281	
 header	1[X]	2[Y]	3[Y]	4[Y]	5[Y]	6[Y]	7[Y]	8[Y]	9[Y]	10[Y]	11[Y]	12[Y]	13[Y]
 ColWidth	100	100	100	100	100	100	100	100	100	100	100	100	100	
 <com>
@@ -165,14 +165,14 @@ HiddenColumn	0	0	0	0	0	0	0	0	0	0	0	0	0
 Comments														
 WindowLabel		2
 <data>
-0	200	17.5	22.1	10.5	175	221	105						
-1	180	15.9	20.1	8.8	159	201	88						
+0	200	17.5	22.1	21.3	175	221	213						
+1	180	15.9	20.1	19.2	159	201	192						
 2	168							39.8	39.3	34.3	131.34	129.69	113.19
-3	160	14.7	18.4	7.9	147	184	79						
-4	130	12.2	15.3	6.8	122	153	68	27.8	27.7	24	91.74	91.41	79.2
-5	100	10	12.6	6.1	100	126	61	22.4	22.2	19.3	73.92	73.26	63.69
-6	70	7.5	9.4	5.4	75	94	54	16.6	16.4	14.5	54.78	54.12	47.85
-7	30	4.3	5.3	3.8	43	53	38	8.3	8.3	7.4	27.39	27.39	24.42
+3	160	14.7	18.4	17.6	147	184	176						
+4	130	12.2	15.3	14.7	122	153	147	27.8	27.7	24	91.74	91.41	79.2
+5	100	10	12.6	12.1	100	126	121	22.4	22.2	19.3	73.92	73.26	63.69
+6	70	7.5	9.4	9	75	94	90	16.6	16.4	14.5	54.78	54.12	47.85
+7	30	4.3	5.3	5.1	43	53	51	8.3	8.3	7.4	27.39	27.39	24.42
 </data>
 </table>
 <multiLayer>
@@ -265,7 +265,7 @@ EnabledTickLabels	1	1	1	1
 </multiLayer>
 <multiLayer>
 Graph2	1	1	18/01/2013 23:42
-geometry	196	386	517	453	minimized	
+geometry	588	434	517	453	minimized	
 WindowLabel		2
 Margins	5	5	5	5
 Spacing	5	5
@@ -275,7 +275,7 @@ Alignement	0	0
 <CommonAxes>0</CommonAxes>
 <graph>
 ggeometry	5	5	499	390
-<PageGeometry>0.00982318	0.0123457	0.980354	0.962963</PageGeometry>
+<PageGeometry>0.00980392	0.0121951	0.978431	0.95122</PageGeometry>
 PlotTitle		#000000	4228
 <Antialiasing>0</Antialiasing>
 <Autoscaling>1</Autoscaling>
@@ -331,7 +331,7 @@ EnabledTickLabels	1	1	1	1
 <x>5.9101654846336</x>
 <y>463.63636363636</y>
 <right>72.7513227513227</right>
-<bottom>435.064935064935</bottom>
+<bottom>87.012987012987</bottom>
 <attachTo>1</attachTo>
 <onTop>1</onTop>
 <visible>1</visible>
@@ -354,8 +354,8 @@ EnabledTickLabels	1	1	1	1
 <LineStyle>0</LineStyle>
 <x>5.9101654846336</x>
 <y>96.969696969697</y>
-<right>52.0094562647754</right>
-<bottom>84.5454545454545</bottom>
+<right>72.7513227513227</right>
+<bottom>87.012987012987</bottom>
 <attachTo>1</attachTo>
 <onTop>1</onTop>
 <visible>1</visible>
@@ -377,7 +377,7 @@ EnabledTickLabels	1	1	1	1
 </multiLayer>
 <multiLayer>
 Graph3	1	1	18/01/2013 23:50
-geometry	588	434	517	453	minimized	
+geometry	392	434	517	453	minimized	
 WindowLabel		2
 Margins	5	5	5	5
 Spacing	5	5
@@ -465,7 +465,7 @@ EnabledTickLabels	1	1	1	1
 </multiLayer>
 <multiLayer>
 Graph4	1	1	19/01/2013 00:03
-geometry	392	434	517	453	minimized	
+geometry	196	434	517	453	minimized	
 WindowLabel		2
 Margins	5	5	5	5
 Spacing	5	5
@@ -601,7 +601,7 @@ Cortex R4
 </multiLayer>
 <multiLayer>
 Graph5	1	1	19/01/2013 04:15
-geometry	784	410	503	453	minimized	
+geometry	0	434	503	453	minimized	
 WindowLabel		2
 Margins	5	5	5	5
 Spacing	5	5
@@ -611,7 +611,7 @@ Alignement	0	0
 <CommonAxes>0</CommonAxes>
 <graph>
 ggeometry	5	5	485	390
-<PageGeometry>0.010101	0.0123457	0.979798	0.962963</PageGeometry>
+<PageGeometry>0.00980392	0.0121951	0.95098	0.95122</PageGeometry>
 PlotTitle		#000000	4228
 <Antialiasing>0</Antialiasing>
 <Autoscaling>1</Autoscaling>
@@ -827,7 +827,7 @@ t<sub>M4</sub>/t<sub>R4</sub>=1.33
 </multiLayer>
 <multiLayer>
 Graph6	1	1	22/01/2013 04:29
-geometry	196	434	517	453	minimized	
+geometry	340	5	517	453	active
 WindowLabel		2
 Margins	5	5	5	5
 Spacing	5	5
@@ -837,7 +837,7 @@ Alignement	0	0
 <CommonAxes>0</CommonAxes>
 <graph>
 ggeometry	5	5	499	390
-<PageGeometry>0.00980392	0.0121951	0.978431	0.95122</PageGeometry>
+<PageGeometry>0.00982318	0.0123457	0.980354	0.962963</PageGeometry>
 PlotTitle		#000000	4228
 <Antialiasing>0</Antialiasing>
 <Autoscaling>1</Autoscaling>
@@ -894,7 +894,7 @@ EnabledTickLabels	1	1	1	1
 <x>6.265664160401</x>
 <y>516.65551839465</y>
 <right>72.7513227513227</right>
-<bottom>347.012987012987</bottom>
+<bottom>217.532467532468</bottom>
 <attachTo>1</attachTo>
 <onTop>1</onTop>
 <visible>1</visible>
@@ -919,7 +919,7 @@ EnabledTickLabels	1	1	1	1
 <x>5.9101654846336</x>
 <y>356.9696969697</y>
 <right>72.7513227513227</right>
-<bottom>347.012987012987</bottom>
+<bottom>217.532467532468</bottom>
 <attachTo>1</attachTo>
 <onTop>1</onTop>
 <visible>1</visible>
@@ -936,13 +936,38 @@ EnabledTickLabels	1	1	1	1
 <AutoUpdate>1</AutoUpdate>
 <TeXOutput>0</TeXOutput>
 </Legend>
+<Legend>
+<Frame>1</Frame>
+<Color>#000000</Color>
+<FrameWidth>1</FrameWidth>
+<LineStyle>0</LineStyle>
+<x>5.9101654846336</x>
+<y>242.42424242424</y>
+<right>64.4208037825059</right>
+<bottom>220.454545454545</bottom>
+<attachTo>1</attachTo>
+<onTop>1</onTop>
+<visible>1</visible>
+<Text>
+\l(1)Cortex R-4 float
+\l(2)Cortex R-4 int
+\l(3)Cortex R-4 while(1)
+</Text>
+<Font>Sans	9	50	0	0	0</Font>
+<TextColor>#000000</TextColor>
+<Background>#ffffff</Background>
+<Alpha>0</Alpha>
+<Angle>0</Angle>
+<AutoUpdate>1</AutoUpdate>
+<TeXOutput>0</TeXOutput>
+</Legend>
 </graph>
 <LinkXAxes>0</LinkXAxes>
 <ScaleLayers>1</ScaleLayers>
 </multiLayer>
 <multiLayer>
 Graph7	1	1	22/01/2013 04:30
-geometry	0	434	517	453	minimized	
+geometry	196	386	517	453	minimized	
 WindowLabel		2
 Margins	5	5	5	5
 Spacing	5	5
@@ -952,7 +977,7 @@ Alignement	0	0
 <CommonAxes>0</CommonAxes>
 <graph>
 ggeometry	5	5	499	390
-<PageGeometry>0.00980392	0.0121951	0.978431	0.95122</PageGeometry>
+<PageGeometry>0.00982318	0.0123457	0.980354	0.962963</PageGeometry>
 PlotTitle		#000000	4228
 <Antialiasing>0</Antialiasing>
 <Autoscaling>1</Autoscaling>
@@ -1032,7 +1057,7 @@ EnabledTickLabels	1	1	1	1
 </multiLayer>
 <multiLayer>
 Graph8	1	1	22/01/2013 05:09
-geometry	588	410	487	453	minimized	
+geometry	0	386	487	453	minimized	
 WindowLabel		2
 Margins	5	5	5	5
 Spacing	5	5
@@ -1102,4 +1127,5 @@ Standard Deviation = 47.8325783912550
 Median = 353.2500000000000
 Size = 10
 --------------------------------------------------------------------------------------
+
 </log>

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.1.13)  19 MAY 2013 23:55
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.1.13)  21 MAY 2013 21:09
 entering extended mode
  %&-line parsing enabled.
 **Kursinis.tex
@@ -3281,6 +3281,11 @@ Overfull \hbox (3.81013pt too wide) in paragraph at lines 198--202
 -bas realeame laike labai praverèia
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 212--219
+
+ []
+
 [3]
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10> on input line 227.
@@ -3327,7 +3332,7 @@ File: pav/M4galia.jpg Graphic file (type jpg)
  <use pav/M4galia.jpg>
 [15 <./pav/modes.jpg> <./pav/sleep.jpg>] [16 <./pav/R4galia.jpg> <./pav/M4galia
 .jpg>] [17] [18]
-Overfull \hbox (19.81876pt too wide) in paragraph at lines 747--750
+Overfull \hbox (19.81876pt too wide) in paragraph at lines 756--759
 []\L7x/lmr/m/n/12 Uþduotys ku-ri-oms reikia dide-lio patiki-mu-mo reikalau-ja s
 kaièi-av-i-mo dubliaci-jos. Mikrovaldik-
  []
@@ -3358,7 +3363,7 @@ e/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm
 nts/type1/public/lm/lmri12.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.p
 fb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/ty
 pe1/public/lm/lmtt12.pfb>
-Output written on Kursinis.pdf (19 pages, 700473 bytes).
+Output written on Kursinis.pdf (19 pages, 700870 bytes).
 PDF statistics:
  138 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
