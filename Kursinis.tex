@@ -532,7 +532,16 @@ int32_t testCfftQ31(void) {
 Naudojami maketai buvo paleisti veikti 100MHz grei\v{c}iu. Abu maketai keisdavo i\v{s}\.ejimo prievado vieno i\v{s} i\v{s}vad\k{u} login\k{i} lyg\k{i}, bei buvo \k{i}jungtas taimeris su tu\v{s}\v{c}ia paprograme. Osciloscopu matuotas i\v{s}vad\k{u} lygmen\k{u} kitimo laikas.
 \subsection{Srov\.es matavimai}
 STM32F4DISCOVERY makete srov\.e matuota tiesiogiai. TMDXRM48USB maketas netur\.ejo 
-trumpikli\k{u} tarp maitinimo ir mikrovaldiklio. Tarp maitinimo 3.3V i\v{s}\.ejimo ir mikrovaldiklio i\v{s}vad\k{u} maitinimo bei maitinimo 1.2V i\v{s}\.ejimo ir mikrovaldiklio logikos maitinimo buvo \k{i}terptos 0.12$\Omega$ var\v{z}os. Vis\k{u} matavim\k{u} metu 
+trumpikli\k{u} tarp maitinimo ir mikrovaldiklio. Tarp maitinimo 3.3V i\v{s}\.ejimo ir mikrovaldiklio i\v{s}vad\k{u} maitinimo bei maitinimo 1.2V i\v{s}\.ejimo ir mikrovaldiklio logikos maitinimo buvo \k{i}terptos 0.12$\Omega$ var\v{z}os. 
+\begin{figure}[H] %--< nustatymai kur bus paveiksliukas h - kaip tekste, t - puslapio virsuje, b - puslapio apacioje, H - tiksliai kaip tekste, p - atskiram paveiksleliu pslapy >--%
+\centering %--< lygiavimas >--%
+\includegraphics[scale=0.8]{pav/srovesc.jpeg} %--< scale - dydis, {aplankas/pav.pavadinimas} >--%
+\captionsetup{labelformat=numbfirst} %--< pries tai apibrezem kaip turi atrodyti tekstas po paveiksleliu >--%
+\captionsetup{labelseparator=tarpas}
+\caption{Cortex-R4 srov\.{e}s matavimo schema. R=0.12 $\Omega$.}
+\label{vienas}
+\end{figure}
+Vis\k{u} matavim\k{u} metu 
   i\v{s}vadai buvo nustatyti i\v{s}vesties re\v{z}ime ir 
   nustatyti nuliniame loginiame lygije. Buvo atlikti matavimai
   esant \v{s}ioms konfig\={u}racijoms:
@@ -565,21 +574,31 @@ trumpikli\k{u} tarp maitinimo ir mikrovaldiklio. Tarp maitinimo 3.3V i\v{s}\.eji
 \begin{itemize} %aprasyti sleep modey
 \item Cortex-R4:
 \begin{itemize}
+\item Flash atmintis automatinio miego re\v{z}ime
 \item sistema veikia taktavimo da\v{z}niu
-\item procesorius neatlieka skai\v{c}iavim\k{u}
+\item procesoriai laukimo re\v{z}ime
+\item periferija atjungta
 \end{itemize}
 \item Cortex-M4:
 \begin{itemize}
 \item sistema veikia pll taktavimo da\v{z}niu
-\item procesorius sustabdytas $($CPU$)$
+\item procesorius sustabdytas 
 \item i\v{s} re\v{z}imo galima i\v{s}eiti betkokio tr\=ukio pagalba
 \end{itemize}
 \end{itemize}
 \item esant skirtingiems taktavimo da\v{z}niams mikrovaldikliai atlikin\.ejo slankaus kablelio ir fiksuoto tikslumo aritmetikos testus, bei buvo paleisti veikti cikle: \begin{verbatim} while(1); \end{verbatim} 
 \end{itemize}
 \subsection{Radiacinis matavimas}
-Cortex-M4 ir Cortex-R4 mikrovaldikliai sujungti spi protokolu. Cortex-M4 nustatytas kaip master, Cortex-R4 kaip slave.
+Cortex-M4 ir Cortex-R4 mikrovaldikliai sujungti 4 laidu + \v{z}em\.{e} spi protokolu. Cortex-M4 nustatytas kaip master, Cortex-R4 kaip slave.
 Cortex-M4 atlikin\.{e}jo matematinius skai\v{c}iavimus ir siunt\.{e} rezultatus \k{i} Cortex-R4 mikrovaldikl\k{i} patikrinimui, kuris per UART jungt\k{i} juos siunt\.{e} \k{i} kompiuterio terminal\k{a}.  
+\begin{figure}[H] %--< nustatymai kur bus paveiksliukas h - kaip tekste, t - puslapio virsuje, b - puslapio apacioje, H - tiksliai kaip tekste, p - atskiram paveiksleliu pslapy >--%
+\centering %--< lygiavimas >--%
+\includegraphics[scale=0.6]{pav/raddiag.jpg} %--< scale - dydis, {aplankas/pav.pavadinimas} >--%
+\captionsetup{labelformat=numbfirst} %--< pries tai apibrezem kaip turi atrodyti tekstas po paveiksleliu >--%
+\captionsetup{labelseparator=tarpas}
+\caption{Radiacinio matavimo logikos diagrama.}
+\label{vienas}
+\end{figure}
 %------------------------------%
 \newpage
    
@@ -605,7 +624,7 @@ Cortex-R4 periferijos i\v{s}\.ejimo lygmen\k{i} keit\.{e} kas 280ns. \k{I}\.ejim
 \caption{Generuot\k{u} impuls\k{u} laikin\.e diagrama.}
 \label{vienas}
 \end{figure}
-Mikrovaldiklio Cortex-R4 \v{s}erdis maitinama 1.2V, periferijos 3.3V. Kadangi 3.3V maitinama ir kiti \k{i}renginiai esantys makete $($tokie kaip \v{s}viesos sesnosrius, akselerometras$)$ naudojama galia buvo skai\v{c}iuojama pagal formul\k{e} $P=I_{serdies} *1.2V$. Cortex-M4 maitinamas 3.3V, galia $P=I*3.3V$.
+Mikrovaldiklio Cortex-R4 \v{s}erdis maitinama 1.2V, periferijos 3.3V. Kadangi 3.3V maitinama ir kiti \k{i}renginiai esantys makete $($tokie kaip \v{s}viesos sesnosrius, akselerometras$)$ naudojama galia buvo skai\v{c}iuojama pagal formul\k{e} $P=I_{serdies} *1.2V$. Cortex-M4 maitinamas 3.3V. Skai\v{c}iuojant gali\k{a} daryta prielaida, kad i\v{s}jungus periferij\k{a} kit\k{u} \k{i}rengini\k{u} naudojama srov\.{e} yra apie 0mA. Cortex-M4 naudojama galia $P=I*3.3V$.
 %--------------------%
 \begin{figure}[H] %--< nustatymai kur bus paveiksliukas h - kaip tekste, t - puslapio virsuje, b - puslapio apacioje, H - tiksliai kaip tekste, p - atskiram paveiksleliu pslapy >--%
 \centering %--< lygiavimas >--%
@@ -652,6 +671,8 @@ Cortex-M4 mikrovaldiklis buvo pad\.{e}tas po rentgeno lempa kurios \k{i}tampa be
 \item RM48 tr\=uki\k{u} sistema yra labai l\.{e}ta ir neefektyvi.
 %\item Ma\v{z}iausia naudojama galia, kuri\k{a} pavyko pasiekti su RM48 yra 82 kartus didesn\.e nei ma\v{z}iausia vartojama galia, kuri\k{a} pavyko pasiekti su stm32f4 maketu.%
 \item Mikrovaldikliams atliekant skirtingus skai\v{c}iavimus naudojama galia labiausiai priklauso nuo taktinio da\v{z}nio ir tik ne\v{z}ymiai nuo procesoriaus apkrovos skai\v{c}iavimais.
+\item Cortex-R4 mikrovaldiklio periferija taisiklyngai nei\v{s}sijungia.
+\item Mikrovaldiklis ap\v{s}vie\v{c}iamas rentgeno spinduliais veikia gerai tol, kol jame ivyksta strukt\={u}riniai pakitimai, po kuri\k{u} jis i\v{s}vis nustoja veikti.
 \end{enumerate}
 
 \newpage
