@@ -21,6 +21,6 @@
 \contentsline {subsection}{\numberline {2.3}Srov\.es matavimai}{12}
 \contentsline {subsection}{\numberline {2.4}Radiacinis matavimas}{14}
 \contentsline {section}{\numberline {3}Rezultatai}{15}
-\contentsline {section}{\numberline {4}I\v {s}vados}{18}
-\contentsline {section}{Literat\={u}ros s\k {a}ra\v {s}as}{19}
-\contentsline {section}{Santrauka}{20}
+\contentsline {section}{\numberline {4}I\v {s}vados}{19}
+\contentsline {section}{Literat\={u}ros s\k {a}ra\v {s}as}{20}
+\contentsline {section}{Santrauka}{21}

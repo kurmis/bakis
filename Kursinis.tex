@@ -624,7 +624,37 @@ Cortex-R4 periferijos i\v{s}\.ejimo lygmen\k{i} keit\.{e} kas 280ns. \k{I}\.ejim
 \caption{Generuot\k{u} impuls\k{u} laikin\.e diagrama.}
 \label{vienas}
 \end{figure}
-Mikrovaldiklio Cortex-R4 \v{s}erdis maitinama 1.2V, periferijos 3.3V. Kadangi 3.3V maitinama ir kiti \k{i}renginiai esantys makete $($tokie kaip \v{s}viesos sesnosrius, akselerometras$)$ naudojama galia buvo skai\v{c}iuojama pagal formul\k{e} $P=I_{serdies} *1.2V$. Cortex-M4 maitinamas 3.3V. Skai\v{c}iuojant gali\k{a} daryta prielaida, kad i\v{s}jungus periferij\k{a} kit\k{u} \k{i}rengini\k{u} naudojama srov\.{e} yra apie 0mA. Cortex-M4 naudojama galia $P=I*3.3V$.
+Mikrovaldiklio Cortex-R4 periferija tirta atskirai. Maitinama 3.3V.
+\begin{itemize}
+\item Periferija nustatyta \v{z}emame loginiame lygije:
+\begin{itemize}
+\item Naudajama galia 371.5mW
+\end{itemize}
+\item Periferija i\v{s}jungta:
+\begin{itemize}
+\item Periferijos i\v{s}vaduose atsiranda loginis auk\v{s}tas lygis:
+\begin{itemize}
+\item SPI4nCS, SPI4nENA
+\item DMMnENA
+\item CAN3TX, CAN3RX
+\end{itemize}
+\item Naudojama galia 341mW
+\end{itemize}
+\item Nurodomas ma\v{z}os galios osciliatorius periferij\k{u} taktavimui. Periferija i\v{s}jungiama
+\begin{itemize}
+\item I\v{s}jungiant periferij\k{a} tur\.{e}t\k{u} b\={u}ti automati\v{s}kai atjungiami ir osciliatoriai
+\item Naudojama galia 283.25mW
+\item Procesoriaus naudojama galia minimali (4mW)
+\end{itemize} 
+\item I\v{s}jungiamos periferijos bei procesoriaus logika atsakinga u\v{z} periferijos valdym\k{a}
+\begin{itemize}
+\item Mikrovaldiklis nustoja vykdyti kitas komandas
+\item Naudojama periferijos galia 374mW
+\item Padid\.{e}ja procesoriaus naudojama galia (16mW)
+\end{itemize}
+\end{itemize}
+
+Mikrovaldiklio Cortex-R4 \v{s}erdis maitinama 1.2V. Kadangi 3.3V maitinama ir kiti \k{i}renginiai esantys makete $($tokie kaip \v{s}viesos sesnosrius, akselerometras$)$ naudojama galia buvo skai\v{c}iuojama pagal formul\k{e} $P=I_{serdies} *1.2V$. Cortex-M4 maitinamas 3.3V. Skai\v{c}iuojant gali\k{a} daryta prielaida, kad i\v{s}jungus periferij\k{a} kit\k{u} \k{i}rengini\k{u} naudojama srov\.{e} yra apie 0mA. Cortex-M4 naudojama galia $P=I*3.3V$.
 %--------------------%
 \begin{figure}[H] %--< nustatymai kur bus paveiksliukas h - kaip tekste, t - puslapio virsuje, b - puslapio apacioje, H - tiksliai kaip tekste, p - atskiram paveiksleliu pslapy >--%
 \centering %--< lygiavimas >--%
@@ -672,7 +702,7 @@ Cortex-M4 mikrovaldiklis buvo pad\.{e}tas po rentgeno lempa kurios \k{i}tampa be
 %\item Ma\v{z}iausia naudojama galia, kuri\k{a} pavyko pasiekti su RM48 yra 82 kartus didesn\.e nei ma\v{z}iausia vartojama galia, kuri\k{a} pavyko pasiekti su stm32f4 maketu.%
 \item Mikrovaldikliams atliekant skirtingus skai\v{c}iavimus naudojama galia labiausiai priklauso nuo taktinio da\v{z}nio ir tik ne\v{z}ymiai nuo procesoriaus apkrovos skai\v{c}iavimais.
 \item Cortex-R4 mikrovaldiklio periferija taisiklyngai nei\v{s}sijungia.
-\item Mikrovaldiklis ap\v{s}vie\v{c}iamas rentgeno spinduliais veikia gerai tol, kol jame ivyksta strukt\={u}riniai pakitimai, po kuri\k{u} jis i\v{s}vis nustoja veikti.
+\item Mikrovaldiklis ap\v{s}vie\v{c}iamas rentgeno spinduliais veikia gerai tol, kol jame ivyksta strukt\={u}riniai pakitimai, po kuri\k{u} jis nebegali atlikti joki\k{u} funkcij\k{u}.
 \end{enumerate}
 
 \newpage

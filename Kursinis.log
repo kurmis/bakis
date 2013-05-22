@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.1.13)  22 MAY 2013 01:43
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.1.13)  22 MAY 2013 03:15
 entering extended mode
  %&-line parsing enabled.
 **Kursinis.tex
@@ -3330,27 +3330,32 @@ File: pav/testai.jpg Graphic file (type jpg)
 <use pav/testai.jpg> <pav/trukiai.jpg, id=68, 752.8125pt x 361.35pt>
 File: pav/trukiai.jpg Graphic file (type jpg)
 
-<use pav/trukiai.jpg> <pav/modes.jpg, id=69, 383.18156pt x 304.88907pt>
+<use pav/trukiai.jpg> [15 <./pav/testai.jpg> <./pav/trukiai.jpg>]
+<pav/modes.jpg, id=72, 378.66469pt x 304.88907pt>
 File: pav/modes.jpg Graphic file (type jpg)
+ <use pav/modes.jpg>
+Overfull \hbox (4.93324pt too wide) in paragraph at lines 657--666
+[]\L7x/lmr/m/n/12 Mikrovaldiklio Cortex-R4 ðerdis maiti-na-ma 1.2V. Kadan-gi 3.
+3V maiti-na-ma ir ki-ti árengini-
+ []
 
-<use pav/modes.jpg> [15 <./pav/testai.jpg> <./pav/trukiai.jpg>]
 <pav/sleep.jpg, id=73, 383.18156pt x 304.88907pt>
 File: pav/sleep.jpg Graphic file (type jpg)
  <use pav/sleep.jpg>
 <pav/R4galia.jpg, id=74, 383.18156pt x 304.88907pt>
 File: pav/R4galia.jpg Graphic file (type jpg)
  <use pav/R4galia.jpg>
-<pav/M4galia.jpg, id=75, 383.18156pt x 304.88907pt>
+[16 <./pav/modes.jpg>] <pav/M4galia.jpg, id=78, 383.18156pt x 304.88907pt>
 File: pav/M4galia.jpg Graphic file (type jpg)
- <use pav/M4galia.jpg>
-[16 <./pav/modes.jpg> <./pav/sleep.jpg>] [17 <./pav/R4galia.jpg> <./pav/M4galia
-.jpg>] [18] [19]
-Overfull \hbox (19.81876pt too wide) in paragraph at lines 777--780
+
+<use pav/M4galia.jpg> [17 <./pav/sleep.jpg> <./pav/R4galia.jpg>] [18 <./pav/M4g
+alia.jpg>] [19] [20]
+Overfull \hbox (19.81876pt too wide) in paragraph at lines 807--810
 []\L7x/lmr/m/n/12 Uþduotys ku-ri-oms reikia dide-lio patiki-mu-mo reikalau-ja s
 kaièi-av-i-mo dubliaci-jos. Mikrovaldik-
  []
 
-[20] (./Kursinis.aux)
+[21] (./Kursinis.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -3376,9 +3381,9 @@ e/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm
 nts/type1/public/lm/lmri12.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.p
 fb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/ty
 pe1/public/lm/lmtt12.pfb>
-Output written on Kursinis.pdf (20 pages, 783711 bytes).
+Output written on Kursinis.pdf (21 pages, 816454 bytes).
 PDF statistics:
- 143 PDF objects out of 1000 (max. 8388607)
+ 146 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  51 words of extra memory for PDF output out of 10000 (max. 10000000)
 
