@@ -1,9 +1,9 @@
 QtiPlot 0.9.8 project file
 <scripting-lang>	muParser
-<windows>	14
+<windows>	15
 <table>
 Tuscias	30	6	18/01/2013 23:23
-geometry	784	410	-1	-1	minimized	
+geometry	784	434	445	220	minimized	
 header	1[X]	3[Y]	4[Y]	5[Y]	6[Y]	7[Y]
 ColWidth	100	100	100	100	100	100	
 <com>
@@ -35,7 +35,7 @@ WindowLabel		2
 </table>
 <table>
 Sleep	30	5	18/01/2013 23:37
-geometry	588	410	-1	-1	minimized	
+geometry	392	434	-1	-1	minimized	
 header	1[X]	2[Y]	3[Y]	4[Y]	5[Y]
 ColWidth	100	100	100	100	100	
 <com>
@@ -67,7 +67,7 @@ WindowLabel		2
 </table>
 <table>
 binary	30	5	18/01/2013 23:47
-geometry	392	410	-1	-1	minimized	
+geometry	196	434	-1	-1	minimized	
 header	1[X]	2[Y]	3[Y]	4[Y]	5[Y]
 ColWidth	100	100	100	100	100	
 <com>
@@ -96,8 +96,8 @@ WindowLabel		2
 </table>
 <table>
 Table1	30	4	18/01/2013 23:53
-geometry	196	410	-1	-1	minimized	
-header	1[X]	2[Y]	3[Y]	4[Y]
+geometry	50	50	445	220	
+header	1[X]	2[Y]	3[X]	4[Y]
 ColWidth	100	100	100	100	
 <com>
 </com>
@@ -107,12 +107,12 @@ HiddenColumn	0	0	0	0
 Comments					
 WindowLabel		2
 <data>
-0	1	1.815	1	149.25
+0	2	1.815	2	4
 </data>
 </table>
 <table>
 Table2	30	4	19/01/2013 04:11
-geometry	0	410	-1	-1	minimized	
+geometry	0	434	-1	-1	minimized	
 header	1[X]	2[Y]	3[Y]	4[Y]
 ColWidth	100	100	100	140	
 <com>
@@ -136,7 +136,7 @@ WindowLabel		2
 </table>
 <table>
 floatirint	30	13	22/01/2013 04:19
-geometry	-7	12	1019	281	
+geometry	588	434	1019	281	minimized	
 header	1[X]	2[Y]	3[Y]	4[Y]	5[Y]	6[Y]	7[Y]	8[Y]	9[Y]	10[Y]	11[Y]	12[Y]	13[Y]
 ColWidth	100	100	100	100	100	100	100	100	100	100	100	100	100	
 <com>
@@ -177,7 +177,7 @@ WindowLabel		2
 </table>
 <multiLayer>
 Graph1	1	1	18/01/2013 23:33
-geometry	784	434	517	453	minimized	
+geometry	196	386	517	453	minimized	
 WindowLabel		2
 Margins	5	5	5	5
 Spacing	5	5
@@ -187,7 +187,7 @@ Alignement	0	0
 <CommonAxes>0</CommonAxes>
 <graph>
 ggeometry	5	5	499	390
-<PageGeometry>0.00980392	0.0121951	0.978431	0.95122</PageGeometry>
+<PageGeometry>0.00982318	0.0123457	0.980354	0.962963</PageGeometry>
 PlotTitle		#000000	4228
 <Antialiasing>0</Antialiasing>
 <Autoscaling>1</Autoscaling>
@@ -265,7 +265,7 @@ EnabledTickLabels	1	1	1	1
 </multiLayer>
 <multiLayer>
 Graph2	1	1	18/01/2013 23:42
-geometry	588	434	517	453	minimized	
+geometry	0	410	517	453	minimized	
 WindowLabel		2
 Margins	5	5	5	5
 Spacing	5	5
@@ -275,7 +275,7 @@ Alignement	0	0
 <CommonAxes>0</CommonAxes>
 <graph>
 ggeometry	5	5	499	390
-<PageGeometry>0.00980392	0.0121951	0.978431	0.95122</PageGeometry>
+<PageGeometry>0.00982318	0.0123457	0.980354	0.962963</PageGeometry>
 PlotTitle		#000000	4228
 <Antialiasing>0</Antialiasing>
 <Autoscaling>1</Autoscaling>
@@ -377,7 +377,7 @@ EnabledTickLabels	1	1	1	1
 </multiLayer>
 <multiLayer>
 Graph3	1	1	18/01/2013 23:50
-geometry	392	434	517	453	minimized	
+geometry	196	410	517	453	minimized	
 WindowLabel		2
 Margins	5	5	5	5
 Spacing	5	5
@@ -387,7 +387,7 @@ Alignement	0	0
 <CommonAxes>0</CommonAxes>
 <graph>
 ggeometry	5	5	499	390
-<PageGeometry>0.00980392	0.0121951	0.978431	0.95122</PageGeometry>
+<PageGeometry>0.00982318	0.0123457	0.980354	0.962963</PageGeometry>
 PlotTitle		#000000	4228
 <Antialiasing>0</Antialiasing>
 <Autoscaling>1</Autoscaling>
@@ -465,7 +465,7 @@ EnabledTickLabels	1	1	1	1
 </multiLayer>
 <multiLayer>
 Graph4	1	1	19/01/2013 00:03
-geometry	196	434	517	453	minimized	
+geometry	392	386	517	453	minimized	
 WindowLabel		2
 Margins	5	5	5	5
 Spacing	5	5
@@ -475,7 +475,7 @@ Alignement	0	0
 <CommonAxes>0</CommonAxes>
 <graph>
 ggeometry	5	5	499	390
-<PageGeometry>0.00980392	0.0121951	0.978431	0.95122</PageGeometry>
+<PageGeometry>0.00982318	0.0123457	0.980354	0.962963</PageGeometry>
 PlotTitle		#000000	4228
 <Antialiasing>1</Antialiasing>
 <Autoscaling>1</Autoscaling>
@@ -505,10 +505,9 @@ AxesNumberColors	#1a1a1a	#1a1a1a	#1a1a1a	#1a1a1a
 AxesBaseline	0	0	0	0	
 CanvasBackground	#ffffff	0
 curve	Table1_1	Table1_2	3	1	#000000	0	1	7	0	#000000	#000000	1	#000000	0	50	-50	2	0	0	29	1
-curve	Table1_1	Table1_4	3	1	#000000	0	1	7	0	#ff0000	#ff0000	1	#ff0000	0	50	50	2	0	0	29	1
-scale	0	0	160	0	9	5	0	0
+scale	0	0.5	3	0	6	5	0	0
 scale	1	0	500	0	6	5	0	0
-scale	2	0.4	1.6	0	7	5	0	0
+scale	2	1	3	0	5	5	0	0
 scale	3	0.4	1.6	0	7	5	0	0
 LabelsFormat	0	6	0	6	0	6	0	6
 AxisType	0	0	0	0	
@@ -601,7 +600,7 @@ Cortex R4
 </multiLayer>
 <multiLayer>
 Graph5	1	1	19/01/2013 04:15
-geometry	0	434	503	453	minimized	
+geometry	392	410	503	453	minimized	
 WindowLabel		2
 Margins	5	5	5	5
 Spacing	5	5
@@ -611,7 +610,7 @@ Alignement	0	0
 <CommonAxes>0</CommonAxes>
 <graph>
 ggeometry	5	5	485	390
-<PageGeometry>0.00980392	0.0121951	0.95098	0.95122</PageGeometry>
+<PageGeometry>0.010101	0.0123457	0.979798	0.962963</PageGeometry>
 PlotTitle		#000000	4228
 <Antialiasing>0</Antialiasing>
 <Autoscaling>1</Autoscaling>
@@ -827,7 +826,7 @@ t<sub>M4</sub>/t<sub>R4</sub>=1.33
 </multiLayer>
 <multiLayer>
 Graph6	1	1	22/01/2013 04:29
-geometry	340	5	517	453	active
+geometry	588	410	517	453	minimized	
 WindowLabel		2
 Margins	5	5	5	5
 Spacing	5	5
@@ -943,8 +942,8 @@ EnabledTickLabels	1	1	1	1
 <LineStyle>0</LineStyle>
 <x>5.9101654846336</x>
 <y>242.42424242424</y>
-<right>64.4208037825059</right>
-<bottom>220.454545454545</bottom>
+<right>72.7513227513227</right>
+<bottom>217.532467532468</bottom>
 <attachTo>1</attachTo>
 <onTop>1</onTop>
 <visible>1</visible>
@@ -967,7 +966,7 @@ EnabledTickLabels	1	1	1	1
 </multiLayer>
 <multiLayer>
 Graph7	1	1	22/01/2013 04:30
-geometry	196	386	517	453	minimized	
+geometry	784	410	517	453	minimized	
 WindowLabel		2
 Margins	5	5	5	5
 Spacing	5	5
@@ -1067,7 +1066,7 @@ Alignement	0	0
 <CommonAxes>0</CommonAxes>
 <graph>
 ggeometry	5	5	469	390
-<PageGeometry>0.00980392	0.0121951	0.919608	0.95122</PageGeometry>
+<PageGeometry>0.0104384	0.0123457	0.979123	0.962963</PageGeometry>
 PlotTitle		#000000	4228
 <Antialiasing>0</Antialiasing>
 <Autoscaling>1</Autoscaling>
@@ -1118,6 +1117,142 @@ EnabledTickLabels	1	1	1	1
 <LinkXAxes>0</LinkXAxes>
 <ScaleLayers>1</ScaleLayers>
 </multiLayer>
+<multiLayer>
+Graph9	1	1	22/05/2013 02:20
+geometry	489	0	511	453	active
+WindowLabel		2
+Margins	5	5	5	5
+Spacing	5	5
+LayerCanvasSize	400	300
+Alignement	0	0
+<AlignPolicy>0</AlignPolicy>
+<CommonAxes>0</CommonAxes>
+<graph>
+ggeometry	5	5	493	390
+<PageGeometry>0.00994036	0.0123457	0.980119	0.962963</PageGeometry>
+PlotTitle	 	#000000	4228
+<Antialiasing>0</Antialiasing>
+<Autoscaling>1</Autoscaling>
+<ScaleFonts>1</ScaleFonts>
+<GridOnTop>0</GridOnTop>
+<MissingDataGap>1</MissingDataGap>
+Background	#ffffff	0
+Margin	0
+Border	0	#000000
+grid	0	0	1	1	#0000ff	0	0.5	#a0a0a4	2	0.4	#0000ff	0	0.5	#a0a0a4	2	0.4	0	0	2	0	0
+EnabledAxes	1	1	0	0	
+AxesTitles	%(?X)	P, mW		%(?Y)	
+AxesTitleColors	#000000	#000000	#000000	#000000	
+AxesTitleAlignment	5124	5124	4	4
+AxesTitleDistance	2	2	-1	-1
+TitleFont	Sans	11	75	0	0	0
+ScaleFont0	Sans	9	75	0	0	0
+ScaleFont1	Sans	9	75	0	0	0
+ScaleFont2	Sans	9	75	0	0	0
+ScaleFont3	Sans	9	75	0	0	0
+AxisFont0	Sans	9	50	0	0	0
+AxisFont1	Sans	9	50	0	0	0
+AxisFont2	Sans	9	50	0	0	0
+AxisFont3	Sans	9	50	0	0	0
+AxesColors	#000000	#000000	#000000	#000000
+AxesNumberColors	#1a1a1a	#1a1a1a	#1a1a1a	#1a1a1a
+AxesBaseline	0	0	0	0	
+CanvasBackground	#ffffff	0
+curve	Table1_1	Table1_2	3	1	#000000	0	1	7	0	#000000	#000000	1	#000000	0	50	-50	2	0	0	29	1
+curve	Table1_3	Table1_4	3	1	#000000	0	1	7	0	#ff0000	#ff0000	1	#ff0000	0	50	50	2	0	0	29	1
+scale	0	1.5	4	0	6	5	0	0
+scale	1	1.5	4	0	6	5	0	0
+scale	2	1	3	0	5	5	0	0
+scale	3	1	3	0	5	5	0	0
+LabelsFormat	0	6	0	6	0	6	0	6
+AxisType	0	0	0	0	
+MajorTicks	3	3	1	1
+MinorTicks	3	3	1	1
+TicksLength	5	9
+DrawAxesBackbone	1	1	1	1	1
+AxesLineWidth	1
+LabelsRotation	0	0	0	0
+LabelsPrefix				
+LabelsSuffix				
+TickLabelsSpace	4	4	4	4
+ShowTicksPolicy	0	0	0	0
+EnabledTickLabels	1	1	1	1
+<Legend>
+<Frame>1</Frame>
+<Color>#ff0000</Color>
+<FrameWidth>1</FrameWidth>
+<LineStyle>0</LineStyle>
+<x>0.43007518796992</x>
+<y>3.9163879598662</y>
+<right>0.72781954887218</right>
+<bottom>3.67391304347826</bottom>
+<attachTo>1</attachTo>
+<onTop>1</onTop>
+<visible>1</visible>
+<Text>
+\l(1)%(1)
+\l(2)%(2)
+</Text>
+<Font>Sans	9	50	0	0	0</Font>
+<TextColor>#000000</TextColor>
+<Background>#ffffff</Background>
+<Alpha>0</Alpha>
+<Angle>0</Angle>
+<AutoUpdate>1</AutoUpdate>
+<TeXOutput>0</TeXOutput>
+</Legend>
+<Legend>
+<Frame>0</Frame>
+<Color>#000000</Color>
+<FrameWidth>1</FrameWidth>
+<LineStyle>0</LineStyle>
+<x>1.2556390977444</x>
+<y>2.8888888888889</y>
+<right>1.66666666666667</right>
+<bottom>2.5968660968661</bottom>
+<attachTo>1</attachTo>
+<onTop>1</onTop>
+<visible>1</visible>
+<Text>
+Cortex-R4
+4mW
+</Text>
+<Font>Sans	9	50	0	0	0</Font>
+<TextColor>#000000</TextColor>
+<Background>#ffffff</Background>
+<Alpha>0</Alpha>
+<Angle>0</Angle>
+<AutoUpdate>0</AutoUpdate>
+<TeXOutput>0</TeXOutput>
+</Legend>
+<Legend>
+<Frame>0</Frame>
+<Color>#000000</Color>
+<FrameWidth>1</FrameWidth>
+<LineStyle>0</LineStyle>
+<x>2.2781954887218</x>
+<y>2.8817663817664</y>
+<right>2.68922305764411</right>
+<bottom>2.58974358974359</bottom>
+<attachTo>1</attachTo>
+<onTop>1</onTop>
+<visible>1</visible>
+<Text>
+Cortex-M4
+1.815mW
+</Text>
+<Font>Sans	9	50	0	0	0</Font>
+<TextColor>#000000</TextColor>
+<Background>#ffffff</Background>
+<Alpha>0</Alpha>
+<Angle>0</Angle>
+<AutoUpdate>0</AutoUpdate>
+<TeXOutput>0</TeXOutput>
+</Legend>
+</graph>
+<LinkXAxes>0</LinkXAxes>
+<ScaleLayers>1</ScaleLayers>
+</multiLayer>
 <open>1</open>
 <log>
 [19/05/2013 18:28 "Sleep"]
@@ -1127,5 +1262,6 @@ Standard Deviation = 47.8325783912550
 Median = 353.2500000000000
 Size = 10
 --------------------------------------------------------------------------------------
+
 
 </log>
