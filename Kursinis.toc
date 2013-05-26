@@ -1,7 +1,6 @@
 \select@language {lithuanian}
 \contentsline {section}{\k {I}vadas}{3}
 \contentsline {section}{\numberline {1}ARM architekt\={u}ra}{4}
-\contentsline {subsection}{\numberline {1.1}ARM procesori\k {u} \v {s}eimos}{5}
 \contentsline {section}{\numberline {2}Naudojamos \k {i}rangos ir programos}{5}
 \contentsline {subsection}{\numberline {2.1}xRM48L950 apra\v {s}as}{6}
 \contentsline {subsubsection}{\numberline {2.1.1}Procesorius}{6}
