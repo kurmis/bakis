@@ -219,7 +219,15 @@ Medicinoje:
 
 \newpage
 \section{ARM architekt\={u}ra}
-ARM architekt\={u}ra paremta RISC\footnote{RISC - reduced instruction set computing.} - paprastesni\k{u} komand\k{u} komnad\k{u} sistema. Paprastai kiekviena instrukcija atliekama per vien\k{a} takt\k{a}, bei komand\k{u} atkodavimas reikalauja ma\v{z}iau tranzistori\k{u}, nei mikroprocesoriams paremtiems sud\.{e}tingesni\k{u} komand\k{u} sistema $($pvz. CISC\footnote{CISC - complex instruction set computing}$)$
+ARM architekt\={u}ra paremta RISC\footnote{RISC - reduced instruction set computing.} - paprastesni\k{u} komand\k{u} sistema:
+\begin{itemize} 
+\item daug bendrosios paskirties registr\k{u}
+\item paprastai dirbama su registrais, o ne su atmintimi
+\item paprasti adresavimo re\v{z}imai
+\item vienodo fiksuoto ilgio instrukcijos
+\end{itemize} Paprastai kiekviena instrukcija atliekama per vien\k{a} takt\k{a}, tad yra nesunku nusp\.{e}ti programos vykdym\k{a} ir galima nesunkiai pritaikyti kaskadin\k{i} komand\k{u} vykdym\k{a}. Komand\k{u} atkodavimas reikalauja ma\v{z}iau tranzistori\k{u}, nei mikrovaldikliams paremtiems sud\.{e}tingesni\k{u} komand\k{u} sistema $($pvz. CISC\footnote{CISC - complex instruction set computing.}$)$ - kur viena komanda yra keli\k{u} instrukcij\k{u} rinkinys. Dabartiniai ARM mikrovaldikliai yra 32bit\k{u} instrukcijos ilgio, bei 32bit\k{u} adresavimo. Yra paruo\v{s}tos ir 64bit\k{u} virsijos. \\
+\indent ARM turi 31 bendrosios paskirties registrus. Betkuriuo metu galima matyti 16 j\k{u}. Kiti registrai yra naudojami pagreitinti i\v{s}im\v{c}i\k{u} apdorojimui pagreitinti. Visos intstrukcijos skirtos registrams gali naudoti betkur\k{i} i\v{s} 16 registr\k{u}. 
+
 
 \section{Naudojamos \k{i}rangos ir programos}
 Naudojamas TMDXRM48USB maketas. Jame yra:
