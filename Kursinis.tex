@@ -222,12 +222,37 @@ Medicinoje:
 ARM architekt\={u}ra paremta RISC\footnote{RISC - reduced instruction set computing.} - paprastesni\k{u} komand\k{u} sistema:
 \begin{itemize} 
 \item daug bendrosios paskirties registr\k{u}
-\item paprastai dirbama su registrais, o ne su atmintimi
+\item paprastai tiesiogiai dirbama su registrais, o ne su atmintimi
 \item paprasti adresavimo re\v{z}imai
 \item vienodo fiksuoto ilgio instrukcijos
-\end{itemize} Paprastai kiekviena instrukcija atliekama per vien\k{a} takt\k{a}, tad yra nesunku nusp\.{e}ti programos vykdym\k{a} ir galima nesunkiai pritaikyti kaskadin\k{i} komand\k{u} vykdym\k{a}. Komand\k{u} atkodavimas reikalauja ma\v{z}iau tranzistori\k{u}, nei mikrovaldikliams paremtiems sud\.{e}tingesni\k{u} komand\k{u} sistema $($pvz. CISC\footnote{CISC - complex instruction set computing.}$)$ - kur viena komanda yra keli\k{u} instrukcij\k{u} rinkinys. Dabartiniai ARM mikrovaldikliai yra 32bit\k{u} instrukcijos ilgio, bei 32bit\k{u} adresavimo. Yra paruo\v{s}tos ir 64bit\k{u} virsijos. \\
-\indent ARM turi 31 bendrosios paskirties registrus. Betkuriuo metu galima matyti 16 j\k{u}. Kiti registrai yra naudojami pagreitinti i\v{s}im\v{c}i\k{u} apdorojimui pagreitinti. Visos intstrukcijos skirtos registrams gali naudoti betkur\k{i} i\v{s} 16 registr\k{u}. 
-
+\end{itemize} 
+Taipat ARM architekt\={u}ra papildomai turi:
+\begin{itemize}
+\item tiesiogin\k{e} ALU\footnote{ALU - arithmetic logic unit} - aritmetinio loginio ir post\={u}mio \k{i}rengini\k{u} kontrol\.{e}
+\item automati\v{s}kai did\.{e}jan\v{c}ius ir automati\v{s}kai ma\v{z}\.{e}jan\v{c}ius adresavimo re\v{z}imus cikl\k{u} optimizavimui
+\item i\v{s} karto keli\k{u} instukcij\k{u} \k{i}k\.elimo ir pa\.{e}mimo komandas duomen\k{u} pralaidumo optimizavimui.
+\item beveik vis\k{u} komand\k{u} s\k{a}lygin\k{i} vykdim\k{a} vykdymo pralaidumui padidinti.
+\item Thumb instrukcij\k{u} prapl\.{e}tim\k{a}, kuris leid\v{z}ia vykdyti 16bit\k{u} komandas vietoje 32bit\k{u}. Tai leid\v{z}ia padidinti kodo tank{i} neilginant komand\k{u} atlikimo trukm\.{e}s
+\end{itemize}
+Paprastai kiekviena instrukcija atliekama per vien\k{a} takt\k{a}, tad yra nesunku nusp\.{e}ti programos vykdym\k{a} ir galima nesunkiai pritaikyti kaskadin\k{i} komand\k{u} vykdym\k{a}. Komand\k{u} atkodavimas reikalauja ma\v{z}iau tranzistori\k{u}, nei mikrovaldikliams paremtiems sud\.{e}tingesni\k{u} komand\k{u} sistema $($pvz. CISC\footnote{CISC - complex instruction set computing.}$)$ - kur viena komanda yra keli\k{u} instrukcij\k{u} rinkinys. Dabartiniai ARM mikrovaldikliai yra 32bit\k{u} instrukcijos ilgio, bei 32bit\k{u} adresavimo. Yra paruo\v{s}tos ir 64bit\k{u} virsijos. \\
+\indent ARM turi 31 bendrosios paskirties 32bit\k{u} ilgio registrus. Betkuriuo metu galima matyti 16 j\k{u}. Kiti registrai yra naudojami i\v{s}im\v{c}i\k{u} apdorojimui pagreitinti. Visos intstrukcijos skirtos registrams gali naudoti betkur\k{i} i\v{s} 16 registr\k{u}. I\v{s} 16 visad matom\k{u} registru keli turi specializuotas funkcijas:
+\begin{itemize}
+\item Rietuv\.{e}s rodykl\.{e} $($ang. stack pointer$)$ - paprastai 13 registras.
+\item Nuorodos registras $($ang. link register$)$ - 14 registras naudojamas kaip adresas \k{i} kur\k{i} einama funkcijos i\v{s}kvietimui pasibaigus. 14 registras gali b\={u}ti naudojamas kaip bendrosios paskirties registras.
+\item Programos skaitiklis $($ang. program counter$)$ - 15 registras. Naudojamas kaip nuoroda \k{i} adres\k{a} sekan\v{c}ios instrukcijos. 
+\end{itemize}
+Lik\k{e} 13 registr\k{u} speciali\k{u} funkcij\k{u} neatlieka. \\
+\indent ARM palaiko 7 r\={u}\v{s}i\k{u} i\v{s}imtis ir privilegijuot\k{a} apdorojimo re\v{z}im\k{a} kiekvienai i\v{s} j\k{u}:
+\begin{itemize}
+\item reset
+\item bandymas atlikti ne\v{z}inomos instrukcijos
+\item programos pertraukties instrukcijos $($SWI - software interupt instruction$)$ gali b\={u}ti naudojamos i\v{s}kviesti operacin\k{e} sistem\k{a}
+\item i\v{s}ankstinio duomen\k{u} pa\.{e}mimo at\v{s}aukimas $($ang. prefetch abort$)$
+\item normalus tr\={u}kis $($IRQ - interrupt request$)$
+\item greitas tr\={u}kis $($FIQ - fast interrupt request$)$
+\end{itemize}
+\k{I}vykus i\v{s}im\v{c}iai kaikurie standartiniai tr\={u}kiai yra pakei\v{c}iami registrais specifiniais tai i\v{s}im\v{c}iai. 14-tame registre laikomas adresas \k{i} kur\k{i} gri\v{z}tama po i\v{s}imties \k{i}vykdymo. 13 registras yra i\v{s}saugomas, kad i\v{s}imtis gal\.{e}t\k{u} naudotis savo rietuve, netrigdydama tolimesnio programos darbo. Greito tr\k{u}kio re\v{z}ime yra i\v{s}augomi registrai nuo 8 iki 12, kad nereik\.{e}t\k{u} j\k{u} saugoti atskirai ir b\={u}t\k{u} galima jais greitai naudotis. \\
+\indent \k{I}vykus i\v{s}im\v{c}iai \v{s}erdis sustabdo programos vykdyma apibr\.{e}ztu b\={u}du ir pereina prie i\v{s}imties vykdymo \k{i} viena i\v{s} fiksuot\k{u} adres\k{u} atmintyje, \v{z}inom\k{u} kaip i\v{s}imties vektoriai $($ang. exception vector$)$. Yra atskiras vektorius kiekvienai i\v{s}im\v{c}iai, \k{i}skaitant ir reset. Veikimas yra apibr\.{e}\v{z}tas normaliam programos darbui ir klaid\k{u} radimo re\v{z}imui. 
 
 \section{Naudojamos \k{i}rangos ir programos}
 Naudojamas TMDXRM48USB maketas. Jame yra:
