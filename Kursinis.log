@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.1.13)  26 MAY 2013 21:36
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.1.13)  26 MAY 2013 22:17
 entering extended mode
  %&-line parsing enabled.
 **Kursinis.tex
@@ -3305,56 +3305,56 @@ File: pav/orentacija.jpg Graphic file (type jpg)
 <use pav/orentacija.jpg> <pav/impl.jpg, id=24, 133.6995pt x 96.1191pt>
 File: pav/impl.jpg Graphic file (type jpg)
 
-<use pav/impl.jpg> [6 <./pav/orentacija.jpg> <./pav/impl.jpg>] [7] [8]
-LaTeX Font Info:    Try loading font information for L7x+lmtt on input line 396
+<use pav/impl.jpg> [6 <./pav/orentacija.jpg>] [7 <./pav/impl.jpg>] [8] [9]
+LaTeX Font Info:    Try loading font information for L7x+lmtt on input line 406
 .
 
 (/usr/share/texmf/tex/latex/lm/l7xlmtt.fd
 File: l7xlmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [9] [10] [11] [12]
-<pav/srovesc.jpeg, id=57, 575.14874pt x 300.12125pt>
+) [10] [11] [12] [13]
+<pav/srovesc.jpeg, id=61, 575.14874pt x 300.12125pt>
 File: pav/srovesc.jpeg Graphic file (type jpg)
  <use pav/srovesc.jpeg>
-[13]
-LaTeX Font Info:    Try loading font information for TS1+lmr on input line 590.
+[14]
+LaTeX Font Info:    Try loading font information for TS1+lmr on input line 600.
 
  (/usr/share/texmf/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [14 <./pav/srovesc.jpeg>]
-<pav/raddiag.jpg, id=66, 783.92876pt x 356.33125pt>
+) [15 <./pav/srovesc.jpeg>]
+<pav/raddiag.jpg, id=69, 783.92876pt x 356.33125pt>
 File: pav/raddiag.jpg Graphic file (type jpg)
  <use pav/raddiag.jpg>
-[15] [16 <./pav/raddiag.jpg>]
-<pav/testai.jpg, id=73, 372.64218pt x 304.88907pt>
+[16] [17 <./pav/raddiag.jpg>]
+<pav/testai.jpg, id=76, 372.64218pt x 304.88907pt>
 File: pav/testai.jpg Graphic file (type jpg)
  <use pav/testai.jpg>
-<pav/trukiai.jpg, id=74, 752.8125pt x 361.35pt>
+<pav/trukiai.jpg, id=77, 752.8125pt x 361.35pt>
 File: pav/trukiai.jpg Graphic file (type jpg)
- <use pav/trukiai.jpg> [17 <./pav/testai.jpg> <./pav/trukiai.jpg>]
-Overfull \hbox (7.32816pt too wide) in paragraph at lines 695--696
+ <use pav/trukiai.jpg> [18 <./pav/testai.jpg> <./pav/trukiai.jpg>]
+Overfull \hbox (7.32816pt too wide) in paragraph at lines 705--706
 []\L7x/lmr/m/n/12 Padidëja pro-ce-so-ri-aus nau-do-ja-ma galia (16mW) ly-gi-nan
 t su prieð tai at-lik-tu matavimu. 
  []
 
-<pav/modes.jpg, id=78, 378.66469pt x 304.88907pt>
+<pav/modes.jpg, id=81, 378.66469pt x 304.88907pt>
 File: pav/modes.jpg Graphic file (type jpg)
  <use pav/modes.jpg>
-Overfull \hbox (4.93324pt too wide) in paragraph at lines 699--708
+Overfull \hbox (4.93324pt too wide) in paragraph at lines 709--718
 []\L7x/lmr/m/n/12 Mikrovaldiklio Cortex-R4 ðerdis maiti-na-ma 1.2V. Kadan-gi 3.
 3V maiti-na-ma ir ki-ti árengini-
  []
 
-<pav/sleep.jpg, id=79, 383.18156pt x 304.88907pt>
+<pav/sleep.jpg, id=82, 383.18156pt x 304.88907pt>
 File: pav/sleep.jpg Graphic file (type jpg)
  <use pav/sleep.jpg>
-<pav/R4galia.jpg, id=80, 383.18156pt x 304.88907pt>
+<pav/R4galia.jpg, id=83, 383.18156pt x 304.88907pt>
 File: pav/R4galia.jpg Graphic file (type jpg)
  <use pav/R4galia.jpg>
-[18 <./pav/modes.jpg>] <pav/M4galia.jpg, id=84, 383.18156pt x 304.88907pt>
+[19 <./pav/modes.jpg>] <pav/M4galia.jpg, id=88, 383.18156pt x 304.88907pt>
 File: pav/M4galia.jpg Graphic file (type jpg)
 
-<use pav/M4galia.jpg> [19 <./pav/sleep.jpg> <./pav/R4galia.jpg>] [20 <./pav/M4g
-alia.jpg>] [21] [22] [23] (./Kursinis.aux)
+<use pav/M4galia.jpg> [20 <./pav/sleep.jpg> <./pav/R4galia.jpg>] [21 <./pav/M4g
+alia.jpg>] [22] [23] [24] (./Kursinis.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -3362,7 +3362,7 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  9905 strings out of 495061
  149145 string characters out of 1182621
- 196521 words of memory out of 3000000
+ 196522 words of memory out of 3000000
  12838 multiletter control sequences out of 15000+50000
  45591 words of font info for 52 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
@@ -3380,9 +3380,9 @@ e/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm
 nts/type1/public/lm/lmri12.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.p
 fb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/ty
 pe1/public/lm/lmtt12.pfb>
-Output written on Kursinis.pdf (23 pages, 823507 bytes).
+Output written on Kursinis.pdf (24 pages, 824528 bytes).
 PDF statistics:
- 152 PDF objects out of 1000 (max. 8388607)
+ 155 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  51 words of extra memory for PDF output out of 10000 (max. 10000000)
 

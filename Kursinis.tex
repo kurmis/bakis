@@ -226,12 +226,12 @@ ARM architekt\={u}ra paremta RISC\footnote{RISC - reduced instruction set comput
 \item paprasti adresavimo re\v{z}imai
 \item vienodo fiksuoto ilgio instrukcijos
 \end{itemize} 
-Taipat ARM architekt\={u}ra papildomai turi:
+Tai pat ARM architekt\={u}ra papildomai turi:
 \begin{itemize}
-\item tiesiogin\k{e} ALU\footnote{ALU - arithmetic logic unit} - aritmetinio loginio ir post\={u}mio \k{i}rengini\k{u} kontrol\.{e}
+\item tiesiogin\k{e} ALU\footnote{ALU - arithmetic logic unit} - aritmetinio loginio ir post\={u}mio \k{i}rengini\k{u} kontrol\k{e}
 \item automati\v{s}kai did\.{e}jan\v{c}ius ir automati\v{s}kai ma\v{z}\.{e}jan\v{c}ius adresavimo re\v{z}imus cikl\k{u} optimizavimui
-\item i\v{s} karto keli\k{u} instukcij\k{u} \k{i}k\.elimo ir pa\.{e}mimo komandas duomen\k{u} pralaidumo optimizavimui.
-\item beveik vis\k{u} komand\k{u} s\k{a}lygin\k{i} vykdim\k{a} vykdymo pralaidumui padidinti.
+\item i\v{s} karto keli\k{u} instukcij\k{u} \k{i}k\.elimo ir pa\.{e}mimo komandas duomen\k{u} pralaidumo optimizavimui
+\item beveik vis\k{u} komand\k{u} s\k{a}lygin\k{i} vykdim\k{a} vykdymo pralaidumui padidinti
 \item Thumb instrukcij\k{u} prapl\.{e}tim\k{a}, kuris leid\v{z}ia vykdyti 16bit\k{u} komandas vietoje 32bit\k{u}. Tai leid\v{z}ia padidinti kodo tank{i} neilginant komand\k{u} atlikimo trukm\.{e}s
 \end{itemize}
 Paprastai kiekviena instrukcija atliekama per vien\k{a} takt\k{a}, tad yra nesunku nusp\.{e}ti programos vykdym\k{a} ir galima nesunkiai pritaikyti kaskadin\k{i} komand\k{u} vykdym\k{a}. Komand\k{u} atkodavimas reikalauja ma\v{z}iau tranzistori\k{u}, nei mikrovaldikliams paremtiems sud\.{e}tingesni\k{u} komand\k{u} sistema $($pvz. CISC\footnote{CISC - complex instruction set computing.}$)$ - kur viena komanda yra keli\k{u} instrukcij\k{u} rinkinys. Dabartiniai ARM mikrovaldikliai yra 32bit\k{u} instrukcijos ilgio, bei 32bit\k{u} adresavimo. Yra paruo\v{s}tos ir 64bit\k{u} virsijos. \\
@@ -246,13 +246,22 @@ Lik\k{e} 13 registr\k{u} speciali\k{u} funkcij\k{u} neatlieka. \\
 \begin{itemize}
 \item reset
 \item bandymas atlikti ne\v{z}inomos instrukcijos
-\item programos pertraukties instrukcijos $($SWI - software interupt instruction$)$ gali b\={u}ti naudojamos i\v{s}kviesti operacin\k{e} sistem\k{a}
+\item programos pertraukties instrukcijos $($SWI - software interupt instruction$)$. Gali b\={u}ti naudojamos i\v{s}kviesti operacin\k{e} sistem\k{a}
 \item i\v{s}ankstinio duomen\k{u} pa\.{e}mimo at\v{s}aukimas $($ang. prefetch abort$)$
 \item normalus tr\={u}kis $($IRQ - interrupt request$)$
 \item greitas tr\={u}kis $($FIQ - fast interrupt request$)$
 \end{itemize}
-\k{I}vykus i\v{s}im\v{c}iai kaikurie standartiniai tr\={u}kiai yra pakei\v{c}iami registrais specifiniais tai i\v{s}im\v{c}iai. 14-tame registre laikomas adresas \k{i} kur\k{i} gri\v{z}tama po i\v{s}imties \k{i}vykdymo. 13 registras yra i\v{s}saugomas, kad i\v{s}imtis gal\.{e}t\k{u} naudotis savo rietuve, netrigdydama tolimesnio programos darbo. Greito tr\k{u}kio re\v{z}ime yra i\v{s}augomi registrai nuo 8 iki 12, kad nereik\.{e}t\k{u} j\k{u} saugoti atskirai ir b\={u}t\k{u} galima jais greitai naudotis. \\
-\indent \k{I}vykus i\v{s}im\v{c}iai \v{s}erdis sustabdo programos vykdyma apibr\.{e}ztu b\={u}du ir pereina prie i\v{s}imties vykdymo \k{i} viena i\v{s} fiksuot\k{u} adres\k{u} atmintyje, \v{z}inom\k{u} kaip i\v{s}imties vektoriai $($ang. exception vector$)$. Yra atskiras vektorius kiekvienai i\v{s}im\v{c}iai, \k{i}skaitant ir reset. Veikimas yra apibr\.{e}\v{z}tas normaliam programos darbui ir klaid\k{u} radimo re\v{z}imui. 
+\k{I}vykus i\v{s}im\v{c}iai kaikurie standartiniai registrai yra pakei\v{c}iami registrais specifiniais tai i\v{s}im\v{c}iai. 14-tame registre laikomas adresas \k{i} kur\k{i} gri\v{z}tama po i\v{s}imties \k{i}vykdymo. 13 registras yra i\v{s}saugomas, kad i\v{s}imtis gal\.{e}t\k{u} naudotis savo rietuve, netrigdydama tolimesnio programos darbo. Greito tr\k{u}kio re\v{z}ime yra i\v{s}augomi registrai nuo 8 iki 12, kad nereik\.{e}t\k{u} j\k{u} saugoti atskirai ir b\={u}t\k{u} galima jais greitai naudotis. \\
+\indent \k{I}vykus i\v{s}im\v{c}iai \v{s}erdis sustabdo programos vykdyma apibr\.{e}\v{z}tu b\={u}du ir pereina prie i\v{s}imties vykdymo \k{i} viena i\v{s} fiksuot\k{u} adres\k{u} atmintyje, \v{z}inom\k{u} kaip i\v{s}imties vektoriai $($ang. exception vector$)$. Yra atskiras vektorius kiekvienai i\v{s}im\v{c}iai, \k{i}skaitant ir reset. Veikimas yra apibr\.{e}\v{z}tas normaliam programos darbui ir klaid\k{u} radimo re\v{z}imui $($ang. debug mode$)$.  \\
+\indent Visa branduolio b\={u}kl\.{e} yra laikoma statuso registe vadinamu dabartin\.{e}s pragramos statuso registru $($CPSR - current program status register$)$, kuriame yra:
+\begin{itemize}
+\item keturios aritmetin\.{e}s v\.{e}lev\.{e}l\.{e}s $($neigiamas, nulis, perkelti ir perpildymo$)$
+\item 2 bitai tr\={u}ki\k{u} i\v{s}jungimui
+\item 5 bitai procesoriaus darbo re\v{z}imui
+\item 2 bitai nurodantys kuris instrukcij\k{u} rinkinys naudojamas: ARM, Thumb ar Jazelle  $($ naujesniuose procesoriuose palaikomas JAVA instrukcij\k{u} rinkinys$)$
+\end{itemize}
+\subsection{ARM procesori\k{u} \v{s}eimos}
+
 
 \section{Naudojamos \k{i}rangos ir programos}
 Naudojamas TMDXRM48USB maketas. Jame yra:
