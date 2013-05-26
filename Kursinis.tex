@@ -218,6 +218,8 @@ Medicinoje:
 %\indent Tolimesniame darbe b\=ut\k{u} idomu patikrinti veikim\k{a} esant ekstremaliam poveikui, galimyb\k{e} panaudoti vien\k{a} i\v{s} Hercules \v{s}eimos atstov\k{u} RM48 kosmose, kur jo u\v{z}duotis gal\.et\k{u} b\=uti navigacija, kuriai atlikti reikia slankaus formato ir skai\v{c}i\k{u} tikslumo.  %
 
 \newpage
+\section{ARM architekt\={u}ra}
+ARM architekt\={u}ra paremta RISC\footnote{RISC - reduced instruction set computing.} - paprastesni\k{u} komand\k{u} komnad\k{u} sistema. Paprastai kiekviena instrukcija atliekama per vien\k{a} takt\k{a}, bei komand\k{u} atkodavimas reikalauja ma\v{z}iau tranzistori\k{u}, nei mikroprocesoriams paremtiems sud\.{e}tingesni\k{u} komand\k{u} sistema $($pvz. CISC\footnote{CISC - complex instruction set computing}$)$
 
 \section{Naudojamos \k{i}rangos ir programos}
 Naudojamas TMDXRM48USB maketas. Jame yra:
@@ -227,19 +229,20 @@ Naudojamas TMDXRM48USB maketas. Jame yra:
 \item Du 32-bitu ARM Cortex-R4F procesoriai, veikiantys kartu\footnote{lockstep - kartu atlieka tas pa\v{c}ias komandas}
 \item 3MB flash, 256kB RAM
 \item \v{S}erdies taktinis da\v{z}nis 200MHz
-\item neslankaus(32bitu) ir dvigubo tikslumo (64bitu) slankaus kablelio aritmetikos modulis
+\item fiksuoto tikslumo (32bitu) ir dvigubo tikslumo (64bitu) slankaus kablelio aritmetikos modulis
 \end{itemize} 
 \item Integruotas XDS100v2 emuliatorius programavimui per usb
 \item LED'ai, temperat\=uros sensorius, \v{s}viesos sensorius, akselerometras
 \end{itemize}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Palyginimui pasirinktas STM32F4DISCOVERY maketas. Jis pasirinktas d\.{e}l 
 \begin{itemize}
 \item mikrovaldiklis STM32F407VGT:
 \begin{itemize}
 \item 32-bitu ARM Cortex-M4F procesorius
 \item 1MB flash, 192 kB RAM 
-\item greitis iki 168MHz 
-\item neslankaus (32bitu) ir slankaus (32bitu) kablelio aritmetikos modulis
+\item taktinis da\v{z}nis iki 168MHz 
+\item fiksuoto tikslumo (32bitu) ir slankaus (32bitu) kablelio aritmetikos modulis
 \end{itemize}
 \item Integruotas ST-LINK/V2 emuliatorius programavimui per usb
 \item LED'ai, akselerometras, skaitmeninis mikrofonas
@@ -269,7 +272,7 @@ Procesori\k{u} i\v{s}\.ejimo signalai palyginami atskirame modulyje.
 \caption{Dviej\k{u} branduoli\k{u} \k{i}gyvendinimas}
 \label{vienas}
 \end{figure}
-\k{I}renginys palaiko sav\k{e}s testavim\k{a}. Jo metu galima priversti procesori\k{u} i\v{s}\.ejimo signal\k{u} nesutapim\k{a}, taip patikrinama ar veikia procesori\k{u} palyginimo modulis ir ar \k{i}renginys sugeba atpa\v{z}inti klaidas. Procesoriai maitinami 1.2V \k{i}tampa. 
+\k{I}renginys palaiko sav\k{e}s testavim\k{a}. Jo metu galima priversti branduoli\k{u} i\v{s}\.ejimo signal\k{u} nesutapim\k{a}, taip patikrinama ar veikia branduoli\k{u} palyginimo modulis ir ar \k{i}renginys sugeba atpa\v{z}inti klaidas. \v{S}erdys maitinamos 1.2V \k{i}tampa. 
 
 
 \subsubsection{Atmintys}
@@ -592,8 +595,8 @@ Vis\k{u} matavim\k{u} metu
 \end{itemize}
 \subsection{Radiacinis matavimas}
 Siekiant patikrinti mikrovaldiklio veikim\k{a} ekstremaliam poveikiui. Buvo i\v{s}kelta hipotez\.{e}, kad ap\v{s}vie\v{c}iant jonizuojan\v{c}i\k{a}j\k{a} spinduliuote gali b\={u}ti sutrigdoma normali mikrovaldiklio veika:
-\enumerate{itemize}
-\item pa\v{z}eid\v{z}iant flash atmint\k{i} sutrigdoma programa, d\.{e}l ko mikrovaldiklis pradeda vykdyti neteisingas u\v{z}duotis arba j\k{u} i\v{s}vis nevykdyti.
+\begin{itemize}
+\item pa\v{z}eid\v{z}iant flash atmint\k{i} sutrigdoma programa, d\.{e}l ko mikrovaldiklis pradeda vykdyti neteisingas u\v{z}duotis arba j\k{u} i\v{s}vis nevykdyti
 \item pa\v{z}eid\v{z}iant RAM atmint\k{i} gali b\={u}ti i\v{s}kraipomi skai\v{c}iavim\k{u} duomenys
 \item sutrigdant \v{s}erdies atliekam\k{a} darb\k{a} gali b\={u}ti generuojamos skai\v{c}iavim\k{u}, logikos ir valdymo klaidos.
 \end{itemize} 
@@ -617,10 +620,9 @@ Cortex-R4 mikrovaldiklis beveik visus skai\v{c}iavimo testus atliko grei\v{c}iau
 \includegraphics[scale=0.8]{pav/testai.jpg} %--< scale - dydis, {aplankas/pav.pavadinimas} >--%
 \captionsetup{labelformat=numbfirst} %--< pries tai apibrezem kaip turi atrodyti tekstas po paveiksleliu >--%
 \captionsetup{labelseparator=tarpas}
-\caption{Skai\v{c}iavimo algoritm\k{u} laikai. 1 - dvigubo tikslumo slankaus kablelio testas $($$($2.1.1$)$ algoritmas$)$. 2 - slankaus kablelio testas $($$($2.1.1$)$ antras algoritmas$)$. 3 - fiksuoto tikslumo kintam\k{u}j\{u} testas $($$($2.1.2$)$ algoritmas$)$. 4 - logini\k{u} funkcij\k{u} testas $($$($2.1.3$)$ algoritmas$)$. 5 - Furij\.e slankaus kablelio $($$($2.1.4$)$ algoritmas$)$. 6 - Furij\.e fiksuoto tikslumo kintam\k{u}j\k{u} testas$($$($2.1.4$)$ antras algoritmas$)$.}
+\caption{Skai\v{c}iavimo algoritm\k{u} laikai. 1 - dvigubo tikslumo slankaus kablelio testas $($$($2.1.1$)$ algoritmas$)$. 2 - slankaus kablelio testas $($$($2.1.1$)$ antras algoritmas$)$. 3 - fiksuoto tikslumo kintam\k{u}j\k{u} testas $($$($2.1.2$)$ algoritmas$)$. 4 - logini\k{u} funkcij\k{u} testas $($$($2.1.3$)$ algoritmas$)$. 5 - Furij\.e slankaus kablelio $($$($2.1.4$)$ algoritmas$)$. 6 - Furij\.e fiksuoto tikslumo kintam\k{u}j\k{u} testas$($$($2.1.4$)$ antras algoritmas$)$.}
 \label{vienas}
 \end{figure}
-
 
 Tirtas periferijos perjungimo greitis ir \k{i}\.ejimo i\v{s}\.ejimo i tu\v{s}\v{c}i\k{a} tr\=ukio paprogram\k{e} laikas esant 100MHz taktavimo da\v{z}niui.  
 Cortex-R4 periferijos i\v{s}\.ejimo lygmen\k{i} keit\.{e} kas 280ns. \k{I}\.ejimo \k{i} tr\=uk\k{i} ir i\v{s}\.ejimo laikas 730ns. Skirtumo tarp IRQ ir FIQ tr\=uki\k{u} laiko nebuvo. Cortex-M4 periferikos i\v{s}vado login\k{i} lygmen\k{i} keit\.e kas 150ns. \k{I}\.ejimo \k{i} tr\=uk\k{i} ir i\v{s}\.ejimo laikas 200ns.
@@ -814,9 +816,9 @@ DATASHEET/DM00037051.pdf\end{verbatim}
 
 \end{center}
 
-U\v{z}duotys kurioms reikia didelio patikimumo reikalauja skai\v{c}iavimo dubliacijos. Mikrovaldiklis RM48 turi integruot\k{a} skai\v{c}iavimo ir kontrol\.es dubliavim\k{a}, ta\v{c}iau neai\v{s}ku kaip tai yra energeti\v{s}kai naudinga. \\
+U\v{z}duotys kurioms reikia didelio patikimumo reikalauja skai\v{c}iavim\k{u} patikrinimo. Cortex-R4 turi integruot\k{a} skai\v{c}iavimo ir kontrol\.es dubliavim\k{a}, ta\v{c}iau neai\v{s}ku kaip tai yra energeti\v{s}kai naudinga. \\
 \indent
-\v{S}iame darbe buvo pabandyta i\v{s}siai\v{s}kinti Hercules \v{s}eimos atstovo RM48 mikrovaldiklio energetin\k{i} efektyvum\k{a} ir bandyta palyginti su kitu \k{i}prastesniu mikrovaldikliu. Taip pat susipa\v{z}inta su 32 bit\k{u} Cortex \v{s}eimos programavimo ypatyb\.emis.
+\v{S}iame darbe buvo pabandyta i\v{s}siai\v{s}kinti Hercules \v{s}eimos atstovo RM48 mikrovaldiklio energetin\k{i} efektyvum\k{a}, bei veikimo ypatybes esant jonizuojan\v{c}iajai spinduliuotei.
 
 
 
