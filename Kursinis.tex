@@ -260,6 +260,58 @@ Lik\k{e} 13 registr\k{u} speciali\k{u} funkcij\k{u} neatlieka. \\
 \item 5 bitai procesoriaus darbo re\v{z}imui
 \item 2 bitai nurodantys kuris instrukcij\k{u} rinkinys naudojamas: ARM, Thumb ar Jazelle  $($ naujesniuose procesoriuose palaikomas JAVA instrukcij\k{u} rinkinys$)$
 \end{itemize}
+\subsection{ARM Cortex-A architekt\={u}ra}
+Mikrovaldikliai skirti dirbti su operacin\.{e}mis sistemomis tokiomis kaip Linux, Android, Microsoft Windows. \v{S}ios klas\.{e}s mikrovaldikliai turi atminties valdymo \k{i}taisa, kuris padeda valdyti atmint\k{i} operacin\.{e}ms sistemoms ir \k{i}galina parsiuntim\k{a} ir paleidim\k{a} kit\k{u} program\k{u}. Galimi panaudojimai:
+\begin{itemize}
+\item i\v{s}manieji telefonai
+\item plan\v{s}etiniai kompiuteriai
+\item skaitmenin\.{e}je televizijoje
+\item navigacin\.{e}je sistemoje
+\item protinguose spauzdintuvuose
+\end{itemize}
+
+\subsection{ARM Cortex-R architekt\={u}ra}
+ARM integruoti realaus laiko apdorojimo mikrovaldikliai. Turi didel\k{i} taktin\k{i} da\v{z}n\k{i}, ilg\k{a} kaskadin\k{e} linij\k{a}. Da\v{z}niausiai \v{s}ie mikrovaldikliai naudoja realaus laiko operacin\k{e} sistem\k{a} $($RTOS - real-time operating system$)$ kartu su vartotojo sukurta programa, kuriai u\v{z}tenka atminties apsaugos \k{i}renginio. Taikymas:
+\begin{itemize}
+\item automobili\k{u} kontrol\.{e}s sistemose
+\item bevieli\k{u} ir laidini\k{u} sensori\k{u} tinkluose
+\item spauzdintuvuose
+\item tinklo \k{i}rangoje
+\end{itemize}
+\subsubsection{Cortex-R4}
+Paremtas ARMv7-R architekt\={u}ra. 8 pakop\k{u} kaskadin\.{e} linija su i\v{s}ankstiniu duomen\k{u} nuskaitymu ir \v{s}akojimosi nusp\.{e}jimu. Palaiko ARM ir Thumb-2 instrukcijas. Harvardo instrukcij\k{u} ir duomen\k{u} atskyrimas. Atminties apsaugos \k{i}renginys. Dvi \v{s}erdys dubliuojan\v{c}ios skai\v{c}iavimus.  
+\subsubsection{Cortex-R5}
+8 pakop\k{u} kaskadin\.{e} linija. Palaiko ARM ir Thumb-2 instrukcijas. Harvardo instrukcij\k{u} ir duomen\k{u} atskyrimas. Slankaus kablelio \k{i}renginys. Ma\v{z}o delsimo periferijos prievadai. Prapl\.{e}sta atminties apsauga apsaugo ir periferij\k{a}. Dvi \v{s}erdys veikian\v{c}ios kartu arba atskirai.
+\subsubsection{Cortex-R7}
+Pa\v{z}angiausias Cortex-R \v{s}eimoje. 11 pakop\k{u} kaskadin\.{e} linija su nei\v{s}eil\.{e}s instrukcij\k{u} vykdimo galimybe. Dvi \v{s}erdys gali veikti dubliuoto skai\v{c}iavimo, simetrinio ir asimetrinio darbo re\v{z}imais. Pasirinktinas slankaus kablelio \k{i}renginys.  
+
+\subsection{ARM Cortex-M architekt\={u}ra}
+Mikrovaldikliai skirti integruotiems \k{i}rengiriams. Pasi\v{z}ymi ma\v{z}omis enegrijos s\k{a}naudomis. Architekt\={u}rinis miego r\.{e}\v{z}im\k{u} palaikymas. \\
+Mikrovaldikliai:
+\begin{itemize}
+\item ARM Cortex-M0:
+\begin{itemize}
+\item 8/16 bit\k{u} programoms
+\item pigus ir paprastas
+\end{itemize}
+\item ARM Cortex-M0+
+\begin{itemize}
+\item 8/16 bit\k{u} programoms
+\item pigus ir energeti\v{s}kai efektiviausias
+\end{itemize}
+\item ARM Cortex-M3
+\begin{itemize}
+\item 16/32 bit\k{u} programoms
+\item greitas bendros paskirties mikrovaldiklis
+\end{itemize}
+\item ARM Cortex-M4
+\begin{itemize}
+\item 32 bit\k{u} programoms
+\item efektyvus skaitmenini\k{u} signal\k{u} valdiklis
+\end{itemize}
+
+\end{itemize}
+
 %--<
 %\subsection{ARM mikrovaldikli\k{u} architekt\={u}ros \v{s}eimos}
 %ARM sukurt\k{u} mikrovaldikli\k{u} \v{s}eimos, architekt\k{u}ros ir trumpi apra\v{s}ai:
