@@ -121,7 +121,7 @@ ir naudojam formules citavimui \ref{formule_label}
 
 \newcommand{\studentas}{Mindaugas Kurmauskas} %--< cia irasyti savo varda pavarde (toliau kitus duomenis) ir nebereikes tekste >--%
 \newcommand{\vadovas}{dr. Mindaugas Vil\={u}nas}
-\newcommand{\recenzentas}{dr. Recenzentas}
+\newcommand{\recenzentas}{dr. Gytis Sliau\v{z}ys}
 \newcommand{\vedejas}{dr.(HP) K\k{e}stutis Arlauskas}
 \newcommand{\pavadinimas}{Cortex R4 architekt\={u}ros mikrovaldiklio savybi\k{u} tyrimas} %--< cia irasyti darbo pavadinima >--%
 
@@ -244,7 +244,7 @@ Paprastai kiekviena instrukcija atliekama per vien\k{a} takt\k{a}, tad yra nesun
 \item Programos skaitiklis $($ang. program counter$)$ - 15 registras. Naudojamas kaip nuoroda \k{i} adres\k{a} sekan\v{c}ios instrukcijos. 
 \end{itemize}
 Lik\k{e} 13 registr\k{u} speciali\k{u} funkcij\k{u} neatlieka. \\
-\indent ARM7 palaiko 7 r\={u}\v{s}i\k{u} i\v{s}imtis ir privilegijuot\k{a} apdorojimo re\v{z}im\k{a} kiekvienai i\v{s} j\k{u}:
+\indent ARM7 ir naujesn\.{e}s architekt\={u}ros palaiko 7 r\={u}\v{s}i\k{u} i\v{s}imtis ir privilegijuot\k{a} apdorojimo re\v{z}im\k{a} kiekvienai i\v{s} j\k{u}:
 \begin{itemize}
 \item reset
 \item bandymas atlikti ne\v{z}inomos instrukcijos
@@ -299,7 +299,7 @@ Mikrovaldikliai:
 \item ARM Cortex-M0+
 \begin{itemize}
 \item 8/16 bit\k{u} programoms
-\item pigus ir energeti\v{s}kai efektiviausias
+\item pigus ir energeti\v{s}kai efektyviausias
 \end{itemize}
 \item ARM Cortex-M3
 \begin{itemize}
@@ -452,9 +452,9 @@ Palaikomos periferijos:
 \section{Naudoti testavimo algoritmai ir j\k{u} apra\v{s}ai}
 %\addcontentsline{toc}{section}{Praktin\.{e}\ dalis} % prideda
 \subsection{Matematini\k{u} funkcij\k{u} skai\v{c}iavimo grei\v{c}i\k{u} \k{i}vertinimo algoritmai}
-\v{S}iame paragrafe apra\v{s}ytiems algoritmams buvo naudojamas laiko tr\=ukis, kurio pagalba buvo ska\v{c}iuojamas algoritmo atlikimo greitis 1ms tikslumu. Abu maketai buvo nustatyti veikti 100MHz grei\v{c}iu. \v{S}iais matavimais siekta patikrinti Cortex-R4F 64bit\k{u} slankaus kablelio \k{i}tak\k{a} skai\v{c}iavimo grei\v{c}iui. Algoritmai buvo leisti 100 kart\k{u} ir fiksuoti u\v{z}duoties atlikimo laikai suvidurkinti. Tik\.{e}tasi, kad Cortex-R4 mikrovaldiklis dvigubo tikslumo slankaus kablelio kintam\k{u}j\k{u} algoritmus atliks grei\v{c}iau nei Cortex-M4 mikrovaldiklis, bet kit\k{u} skai\v{c}iavum\k{u} atlikimo laikai b\={u}t\k{u} pana\v{s}\={u}s.
+\v{S}iame paragrafe apra\v{s}ytiems algoritmams buvo naudojamas laiko tr\=ukis, kurio pagalba buvo ska\v{c}iuojamas algoritmo atlikimo greitis 1ms tikslumu. Abu maketai buvo nustatyti veikti 100MHz grei\v{c}iu. \v{S}iais matavimais siekta patikrinti Cortex-R4 64bit\k{u} slankaus kablelio \k{i}taiso \k{i}tak\k{a} skai\v{c}iavimo grei\v{c}iui. Algoritmai buvo leisti 100 kart\k{u} ir fiksuoti u\v{z}duoties atlikimo laikai suvidurkinti. Tik\.{e}tasi, kad Cortex-R4 mikrovaldiklis dvigubo tikslumo slankaus kablelio kintam\k{u}j\k{u} algoritmus atliks grei\v{c}iau nei Cortex-M4 mikrovaldiklis, bet kit\k{u} skai\v{c}iavum\k{u} atlikimo laikai b\={u}t\k{u} pana\v{s}\={u}s.
 \subsubsection{Slankaus kablelio algoritmai}
-Slankaus kablelio Gauss Legendre algoritmas $\pi$ skai\v{c}iavimui\^{$[$1$]$}:
+Slankaus kablelio Gauss Legendre algoritmas $\pi$ skai\v{c}iavimui$[$1$]$:
 \begin{equation*}\label{xx}
 a_{0}=1\;b_{0}=\frac{1}{\sqrt{2}}\;t_{0}=\frac{1}{4}\;p_{0}=1\\
 \end{equation*}
@@ -599,7 +599,7 @@ int32_t testCfftFloat(void) {
   return 0;
 } 
 \end{verbatim}  
-Fiksuoto tikslumo Furij\.e transformacijai naudoti ARM Q31 fiksuoto kablelio kintamieji. I\v{s} slankaus kablelio paversti \k{i} Q31 formato kintamuosius naudota funkcija:
+Fiksuoto tikslumo Furij\.e transformacijai naudoti ARM Q31 fiksuoto kablelio kintamieji. I\v{s} slankaus kablelio paversti \k{i} Q31 formato kintamuosius naudota funkcija$[$2$]$:
 \begin{equation}
 Q31(x)= ((int)\; ((x)*(float)(1<<31))\; )
 \end{equation}   
@@ -649,8 +649,10 @@ int32_t testCfftQ31(void) {
 }
 \end{verbatim}
 \subsection{\k{I}\.ejimo ir i\v{s}\.ejimo \k{i} tr\=uk\k{i} algoritmo apra\v{s}ymas}
-Naudojami maketai buvo paleisti veikti 100MHz grei\v{c}iu. Abu maketai keisdavo i\v{s}\.ejimo prievado vieno i\v{s} i\v{s}vad\k{u} login\k{i} lyg\k{i}, bei buvo \k{i}jungtas taimeris su tu\v{s}\v{c}ia paprograme. Osciloscopu matuotas i\v{s}vad\k{u} lygmen\k{u} kitimo laikas.
+Nor\.{e}ta palyginti laikus per kur\k{i} mikrovaldikliai gali duoti atsak\k{a} \k{i} i\v{s}orin\k{i} ar vidin\k{i} signal\k{a}. 
+Naudojami maketai buvo paleisti veikti 100MHz grei\v{c}iu. Abu maketai keisdavo i\v{s}\.ejimo prievado vieno i\v{s} i\v{s}vad\k{u} login\k{i} lyg\k{i}, bei buvo \k{i}jungtas taimeris su tu\v{s}\v{c}ia paprograme. Osciloscopu matuotas i\v{s}vad\k{u} lygmen\k{u} kitimo laikas. Tik\.{e}tasi, kad Cortex-M4 mikrovaldiklis bus greitesnis.
 \subsection{Srov\.es matavimai}
+Nor\.{e}ta palyginti mikrovaldikli\k{u} naudojamas galias esant \k{i}vairiems darbo re\v{z}imams.
 STM32F4DISCOVERY makete srov\.e matuota tiesiogiai. TMDXRM48USB maketas netur\.ejo 
 trumpikli\k{u} tarp maitinimo ir mikrovaldiklio. Tarp maitinimo 3.3V i\v{s}\.ejimo ir mikrovaldiklio i\v{s}vad\k{u} maitinimo bei maitinimo 1.2V i\v{s}\.ejimo ir mikrovaldiklio logikos maitinimo buvo \k{i}terptos 0.12$\Omega$ var\v{z}os. 
 \begin{figure}[H] %--< nustatymai kur bus paveiksliukas h - kaip tekste, t - puslapio virsuje, b - puslapio apacioje, H - tiksliai kaip tekste, p - atskiram paveiksleliu pslapy >--%
@@ -786,7 +788,7 @@ Mikrovaldiklio Cortex-R4 \v{s}erdis maitinama 1.2V. Kadangi 3.3V maitinama ir ki
 \includegraphics[scale=0.8]{pav/modes.jpg} %--< scale - dydis, {aplankas/pav.pavadinimas} >--%
 \captionsetup{labelformat=numbfirst} %--< pries tai apibrezem kaip turi atrodyti tekstas po paveiksleliu >--%
 \captionsetup{labelseparator=tarpas}
-\caption{Mikrovaldikliai stanby re\v{z}ime.}
+\caption{Mikrovaldikliai stanby re\v{z}ime. Cortex-R4 logikos naudojama galia ir Cortex-M4 naudojama galia.}
 \label{vienas}
 \end{figure}
 \begin{figure}[H] %--< nustatymai kur bus paveiksliukas h - kaip tekste, t - puslapio virsuje, b - puslapio apacioje, H - tiksliai kaip tekste, p - atskiram paveiksleliu pslapy >--%
@@ -813,7 +815,7 @@ Mikrovaldiklio Cortex-R4 \v{s}erdis maitinama 1.2V. Kadangi 3.3V maitinama ir ki
 \caption{STM32F4 mikrovaldiklio naudojamos galios priklausomyb\.e nuo taktinio da\v{z}nio atliekant slankaus kablelio, neslankaus kablelio ir b\=unant tu\v{s}\v{c}iame cikle.}
 \label{vienas}
 \end{figure}
-Mikrovaldiklis Cortex-M4 buvo 1h \v{s}vitinamas 1.176MeV gama spinduliais $($\^{137}Cs$)$. Joki\k{u} nukripim\k{u} nuo normalaus mikrovaldiklio darbo neu\v{z}fiksuota.
+Mikrovaldiklis Cortex-M4 buvo 1h \v{s}vitinamas 1.176MeV gama spinduliais $($137Cs$)$. Joki\k{u} nukripim\k{u} nuo normalaus mikrovaldiklio darbo neu\v{z}fiksuota.
 Pereita prie \v{s}vitinimo rentgeno spinduliuote. Mikrovaldiklis buvo pad\.{e}tas po rentgeno lempa kurios \k{i}tampa bei srov\.{e} didinta laipsni\v{s}kai. Prie 19kV \k{i}tampa ir 19mA per 15min mikrovaldiklis nustojo veikti, ta\v{c}iau iki nustojimo veikti visus skai\v{c}iavumus atliko gerai. Mikrovaldiklis per 3h atsistat\.{e} ir v\.{e}l prad\.{e}jo atlikin\.{e}ti skai\v{c}iavimus.
 \newpage
 \section{I\v{s}vados}
@@ -827,7 +829,7 @@ Pereita prie \v{s}vitinimo rentgeno spinduliuote. Mikrovaldiklis buvo pad\.{e}ta
 %\item Ma\v{z}iausia naudojama galia, kuri\k{a} pavyko pasiekti su RM48 yra 82 kartus didesn\.e nei ma\v{z}iausia vartojama galia, kuri\k{a} pavyko pasiekti su stm32f4 maketu.%
 \item Mikrovaldikliams atliekant skirtingus skai\v{c}iavimus naudojama galia labiausiai priklauso nuo taktinio da\v{z}nio ir tik ne\v{z}ymiai nuo procesoriaus apkrovos skai\v{c}iavimais.
 \item RM48 mikrovaldiklio periferija taisiklyngai nei\v{s}sijungia.
-\item Su prieinamais jonizuojan\v{c}ios spinduliuot\.{e}s \v{s}altiniais atliekant matavimus net su vienguba \v{s}erdimi nepavyko pasiekti duomen\k{u} pa\v{z}eidim programos vykdymo metu. Keliant intensyvum\k{a} prasid\.{e}jo i\v{s}liekantys procesoriaus funkcionalumo pa\v{z}eidimai.
+\item Su prieinamais jonizuojan\v{c}ios spinduliuot\.{e}s \v{s}altiniais atliekant matavimus net su vienguba \v{s}erdimi nepavyko pasiekti duomen\k{u} pa\v{z}eidim\k{u} programos vykdymo metu. Keliant intensyvum\k{a} prasid\.{e}jo i\v{s}liekantys procesoriaus funkcionalumo pa\v{z}eidimai.
 \end{enumerate}
 
 %Su prieinamai jonizuojančios spinduliuotės šaltiniais: ......... net su vienguba šerdimi nepavyko pasiekti duomenų pažeidimo programos vykdymo metu. Keliant intensyvumą pirma prasidėjo išliekantys procesoriaus funkcionalumo pažeidimai.
@@ -899,8 +901,7 @@ DAI0033A_fixedpoint_appsnote.pdf\end{verbatim}
 \item TMDXRM48USB trumpas apra\v{s}as. \begin{verbatim}http://processors.wiki.ti.com/images/5/5c/RM48_USB_QUICK_START.pdf\end{verbatim}
 \item Detalus Cortex-R4 apra\v{s}as. \begin{verbatim}http://www.ti.com/lit/ds/spns177a/spns177a.pdf\end{verbatim}
 \item Cortex-R4 energijos vartojimo optimizavimo apra\v{s}as.\begin{verbatim} http://www.ti.com/lit/an/spna172a/spna172a.pdf\end{verbatim}
-\item Cortex-R4 slankaus kablelio modulio savybi\k{u} apra\v{s}as. \begin{verbatim}http://infocenter.arm.com/help/index.jsp?topic=/
-com.arm.doc.dai0240a/index.html\end{verbatim}
+\item ARM architekt\={u}r\k{u} apra\v{s}ai. \begin{verbatim}http://www.arm.com/products/index.php\end{verbatim}
 \item Cortex-R4 silicon errata. \begin{verbatim}
 http://www.ti.com/lit/er/spnz194b/spnz194b.pdf \end{verbatim}
 \item STM32F4-Discovery trumpas apra\v{s}as. \begin{verbatim}http://www.st.com/internet/com/TECHNICAL_RESOURCES/
@@ -933,25 +934,31 @@ DATASHEET/DM00037051.pdf\end{verbatim}
 
 U\v{z}duotys kurioms reikia didelio patikimumo reikalauja skai\v{c}iavim\k{u} patikrinimo. Cortex-R4 turi integruot\k{a} skai\v{c}iavimo ir kontrol\.es dubliavim\k{a}, ta\v{c}iau neai\v{s}ku kaip tai yra energeti\v{s}kai naudinga. \\
 \indent
-\v{S}iame darbe buvo pabandyta i\v{s}siai\v{s}kinti Hercules \v{s}eimos atstovo RM48 mikrovaldiklio energetin\k{i} efektyvum\k{a}, bei veikimo ypatybes esant jonizuojan\v{c}iajai spinduliuotei.
+\v{S}iame darbe buvo pabandyta i\v{s}siai\v{s}kinti Hercules \v{s}eimos atstovo RM48 mikrovaldiklio energetin\k{i} efektyvum\k{a}, matematini\k{u} veiksm\k{u} su \k{i}vairiais kintamaisiais algoritm\k{u} atlikimo spart\k{a}, \k{i}\.{e}jimo ir i\v{s}\.{e}jimo \k{i} tr\={u}ki laikus ir palyginant su kitu populiariu mikrovaldikliu. Bandyta patikrinti ir mikrovaldikli\k{u} veikimo ypatybes veikiant jonizuojan\v{c}i\k{a}ja spinduliuote. \\
+\indent
+Rezultatai rodo, kad Cortex-R4 mikrovaldiklis matematinius algoritmus atlieka grei\v{c}iau nei Cortex-M4 mikrovaldiklis, ta\v{c}iau jam nusileid\v{z}ia tr\={u}ki\k{u} sistemos ir energetiniu efektyvumu. Radiaciniai matavimai rodo, kad mikrovaldikliai gerai veikia tol, kol atsiranda i\v{s}liekantys funkcionalumo pa\v{z}eidimai.  
 
 
 
 %\newpage
 
-%\section*{Summary}
+\section*{Summary}
 
-%\addcontentsline{toc}{section}{Summary}
+\addcontentsline{toc}{section}{Summary}
 
-%\begin{center}
+\begin{center}
 
 %\studentas \\[12pt]
 
-%\MakeUppercase{,,Title''}\\
+\MakeUppercase{,,Analysis of Cortex-R4 Architecture Microcontroller Properties''}\\
 
 
-%\end{center}
+\end{center}
 
+Tasks that require high reliability need computation verification. Cortex-R4 has an integrated computing mirroring of calculation and control, but it is unclear how energeticaly efficent it is. \\
+\indent In this paper, an attempt was made to find out energy efficiency, speed of execution of mathematical algorithms with different variables, time of getting in and out of an interrupt of Hercules family representative xRM48 microcontroller and to compare it with another popular microcontroller. Also an attempt was made to check operation properties of microcontroller under ionizing radiation. \\
+\indent
+The rezults show that the Cortex-R4 microcontroller performs faster computations, but fades in comparison to Cortex-M4 in interrupt times and energy efficiency. Raidation mesurements show that the microcontrollers work well until persistent functional damage stops their work.
 %Text
 
 \end{onehalfspacing}
