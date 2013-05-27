@@ -218,8 +218,10 @@ Medicinoje:
 %\indent Tolimesniame darbe b\=ut\k{u} idomu patikrinti veikim\k{a} esant ekstremaliam poveikui, galimyb\k{e} panaudoti vien\k{a} i\v{s} Hercules \v{s}eimos atstov\k{u} RM48 kosmose, kur jo u\v{z}duotis gal\.et\k{u} b\=uti navigacija, kuriai atlikti reikia slankaus formato ir skai\v{c}i\k{u} tikslumo.  %
 
 \newpage
+
 \section{ARM architekt\={u}ra}
-ARM architekt\={u}ra paremta RISC\footnote{RISC - reduced instruction set computing.} - paprastesni\k{u} komand\k{u} sistema:
+ARM $($advanced RISC mashines$)$ Holdings ank\v{s}\v{c}iau buvusi Acorn Computers. Acorn Computers prad\.{e}jo savo versl\k{a} kaip mikrovaldikli\k{u} gamintojas. ARM Holdings pati nebamina mikrovaldikli\k{u}, bet pardavin\.{e}ja architekt\={u}ros dizainus puslaidininkini\k{u} \k{i}tais\k{u} gamintojams. ARM licenzijuoti 32 bit\k{u} architekt\={u}ros mikrovaldikliai yra pirmaujantys pasaulyje pagal pagaminimimo kiek\k{i}. \v{S}iai s\.{e}kmei didel\k{e} \k{i}tak\k{a} turi geras grei\v{c}io ir vartojamos galios santykis, kas leid\v{z}ia juos patogiai naudoti ne\v{s}iojamuose \k{i}renginiuose.    \\
+\indent ARM architekt\={u}ra paremta RISC\footnote{RISC - reduced instruction set computing.} - paprastesni\k{u} komand\k{u} sistema:
 \begin{itemize} 
 \item daug bendrosios paskirties registr\k{u}
 \item paprastai tiesiogiai dirbama su registrais, o ne su atmintimi
@@ -235,14 +237,14 @@ Tai pat ARM architekt\={u}ra papildomai turi:
 \item Thumb instrukcij\k{u} prapl\.{e}tim\k{a}, kuris leid\v{z}ia vykdyti 16bit\k{u} komandas vietoje 32bit\k{u}. Tai leid\v{z}ia padidinti kodo tank{i} neilginant komand\k{u} atlikimo trukm\.{e}s
 \end{itemize}
 Paprastai kiekviena instrukcija atliekama per vien\k{a} takt\k{a}, tad yra nesunku nusp\.{e}ti programos vykdym\k{a} ir galima nesunkiai pritaikyti kaskadin\k{i} komand\k{u} vykdym\k{a}. Komand\k{u} atkodavimas reikalauja ma\v{z}iau tranzistori\k{u}, nei mikrovaldikliams paremtiems sud\.{e}tingesni\k{u} komand\k{u} sistema $($pvz. CISC\footnote{CISC - complex instruction set computing.}$)$ - kur viena komanda yra keli\k{u} instrukcij\k{u} rinkinys. Dabartiniai ARM mikrovaldikliai yra 32bit\k{u} instrukcijos ilgio, bei 32bit\k{u} adresavimo. Yra paruo\v{s}tos ir 64bit\k{u} virsijos. \\
-\indent ARM turi 31 bendrosios paskirties 32bit\k{u} ilgio registrus. Betkuriuo metu galima matyti 16 j\k{u}. Kiti registrai yra naudojami i\v{s}im\v{c}i\k{u} apdorojimui pagreitinti. Visos intstrukcijos skirtos registrams gali naudoti betkur\k{i} i\v{s} 16 registr\k{u}. I\v{s} 16 visad matom\k{u} registru keli turi specializuotas funkcijas:
+\indent ARM turi 31 bendrosios paskirties 32bit\k{u} ilgio registrus. Betkuriuo metu galima matyti 16 j\k{u}. Kiti registrai yra naudojami i\v{s}im\v{c}i\k{u} apdorojimui pagreitinti. Visos intstrukcijos skirtos registrams gali naudoti betkur\k{i} i\v{s} 16 registr\k{u}. I\v{s} 16 visad matom\k{u} registru keli turi specializuotas funkcijas yprastas visoms architekt\k{u}roms:
 \begin{itemize}
 \item Rietuv\.{e}s rodykl\.{e} $($ang. stack pointer$)$ - paprastai 13 registras.
 \item Nuorodos registras $($ang. link register$)$ - 14 registras naudojamas kaip adresas \k{i} kur\k{i} einama funkcijos i\v{s}kvietimui pasibaigus. 14 registras gali b\={u}ti naudojamas kaip bendrosios paskirties registras.
 \item Programos skaitiklis $($ang. program counter$)$ - 15 registras. Naudojamas kaip nuoroda \k{i} adres\k{a} sekan\v{c}ios instrukcijos. 
 \end{itemize}
 Lik\k{e} 13 registr\k{u} speciali\k{u} funkcij\k{u} neatlieka. \\
-\indent ARM palaiko 7 r\={u}\v{s}i\k{u} i\v{s}imtis ir privilegijuot\k{a} apdorojimo re\v{z}im\k{a} kiekvienai i\v{s} j\k{u}:
+\indent ARM7 palaiko 7 r\={u}\v{s}i\k{u} i\v{s}imtis ir privilegijuot\k{a} apdorojimo re\v{z}im\k{a} kiekvienai i\v{s} j\k{u}:
 \begin{itemize}
 \item reset
 \item bandymas atlikti ne\v{z}inomos instrukcijos
@@ -450,9 +452,9 @@ Palaikomos periferijos:
 \section{Naudoti testavimo algoritmai ir j\k{u} apra\v{s}ai}
 %\addcontentsline{toc}{section}{Praktin\.{e}\ dalis} % prideda
 \subsection{Matematini\k{u} funkcij\k{u} skai\v{c}iavimo grei\v{c}i\k{u} \k{i}vertinimo algoritmai}
-\v{S}iame paragrafe apra\v{s}ytiems algoritmams buvo naudojamas laiko tr\=ukis, kurio pagalba buvo ska\v{c}iuojamas algoritmo atlikimo greitis 1ms tikslumu. Abu maketai buvo nustatyti veikti 100MHz grei\v{c}iu. Algoritmai buvo leisti 100 kart\k{u} ir fiksuoti u\v{z}duoties atlikimo laikai suvidurkinti.
+\v{S}iame paragrafe apra\v{s}ytiems algoritmams buvo naudojamas laiko tr\=ukis, kurio pagalba buvo ska\v{c}iuojamas algoritmo atlikimo greitis 1ms tikslumu. Abu maketai buvo nustatyti veikti 100MHz grei\v{c}iu. \v{S}iais matavimais siekta patikrinti Cortex-R4F 64bit\k{u} slankaus kablelio \k{i}tak\k{a} skai\v{c}iavimo grei\v{c}iui. Algoritmai buvo leisti 100 kart\k{u} ir fiksuoti u\v{z}duoties atlikimo laikai suvidurkinti. Tik\.{e}tasi, kad Cortex-R4 mikrovaldiklis dvigubo tikslumo slankaus kablelio kintam\k{u}j\k{u} algoritmus atliks grei\v{c}iau nei Cortex-M4 mikrovaldiklis, bet kit\k{u} skai\v{c}iavum\k{u} atlikimo laikai b\={u}t\k{u} pana\v{s}\={u}s.
 \subsubsection{Slankaus kablelio algoritmai}
-Slankaus kablelio Gauss Legendre algoritmas $\pi$ skai\v{c}iavimui:
+Slankaus kablelio Gauss Legendre algoritmas $\pi$ skai\v{c}iavimui\^{$[$1$]$}:
 \begin{equation*}\label{xx}
 a_{0}=1\;b_{0}=\frac{1}{\sqrt{2}}\;t_{0}=\frac{1}{4}\;p_{0}=1\\
 \end{equation*}
@@ -709,7 +711,7 @@ Vis\k{u} matavim\k{u} metu
 \subsection{Radiacinis matavimas}
 Siekiant patikrinti mikrovaldiklio veikim\k{a} ekstremaliam poveikiui. Buvo i\v{s}kelta hipotez\.{e}, kad ap\v{s}vie\v{c}iant jonizuojan\v{c}i\k{a}j\k{a} spinduliuote gali b\={u}ti sutrigdoma normali mikrovaldiklio veika:
 \begin{itemize}
-\item pa\v{z}eid\v{z}iant flash atmint\k{i} sutrigdoma programa, d\.{e}l ko mikrovaldiklis pradeda vykdyti neteisingas u\v{z}duotis arba j\k{u} i\v{s}vis nevykdyti
+\item pa\v{z}eid\v{z}iant flash atmint\k{i} sutrikdoma programa, d\.{e}l ko mikrovaldiklis pradeda vykdyti neteisingas u\v{z}duotis arba j\k{u} i\v{s}vis nevykdyti
 \item pa\v{z}eid\v{z}iant RAM atmint\k{i} gali b\={u}ti i\v{s}kraipomi skai\v{c}iavim\k{u} duomenys
 \item sutrigdant \v{s}erdies atliekam\k{a} darb\k{a} gali b\={u}ti generuojamos skai\v{c}iavim\k{u}, logikos ir valdymo klaidos.
 \end{itemize} 
@@ -891,6 +893,7 @@ Pereita prie \v{s}vitinimo rentgeno spinduliuote. Mikrovaldiklis buvo pad\.{e}ta
 \section*{Literat\={u}ros s\k{a}ra\v{s}as}
 \addcontentsline{toc}{section}{Literat\={u}ros s\k{a}ra\v{s}as}
 \begin{enumerate}
+\item $\pi$ skai\v{c}iavimo algoritmas. \begin{verbatim}http://en.wikipedia.org/wiki/Gauss-Legendre_algorithm\end{verbatim}
 \item  Q formatai ir konvertavimas. \begin{verbatim}http://infocenter.arm.com/help/topic/com.arm.doc.dai0033a/
 DAI0033A_fixedpoint_appsnote.pdf\end{verbatim}
 \item TMDXRM48USB trumpas apra\v{s}as. \begin{verbatim}http://processors.wiki.ti.com/images/5/5c/RM48_USB_QUICK_START.pdf\end{verbatim}
@@ -906,7 +909,6 @@ TECHNICAL_LITERATURE/DATA_BRIEF/DM00037955.pdf\end{verbatim}
 DATASHEET/DM00037051.pdf\end{verbatim}
 \item Cortex-M4 slankaus kablelio modulio sovybi\k{u} apra\v{s}as. \begin{verbatim}http://www.st.com/internet/com/TECHNICAL_RESOURCES/TECHNICAL_LITERATURE/
 DATASHEET/DM00037051.pdf\end{verbatim}
-\item $\pi$ skai\v{c}iavimo algoritmas. \begin{verbatim}http://en.wikipedia.org/wiki/Gauss-Legendre_algorithm\end{verbatim}
 \end{enumerate}
 
 %\bibliography{Kursinis.bbl} %--< skliausteliuose turi buti nurodamas literaturos saraso failo pavadinimas >--%

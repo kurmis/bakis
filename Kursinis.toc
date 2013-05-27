@@ -1,12 +1,12 @@
 \select@language {lithuanian}
 \contentsline {section}{\k {I}vadas}{3}
 \contentsline {section}{\numberline {1}ARM architekt\={u}ra}{4}
-\contentsline {subsection}{\numberline {1.1}ARM Cortex-A architekt\={u}ra}{5}
+\contentsline {subsection}{\numberline {1.1}ARM Cortex-A architekt\={u}ra}{6}
 \contentsline {subsection}{\numberline {1.2}ARM Cortex-R architekt\={u}ra}{6}
 \contentsline {subsubsection}{\numberline {1.2.1}Cortex-R4}{6}
 \contentsline {subsubsection}{\numberline {1.2.2}Cortex-R5}{6}
-\contentsline {subsubsection}{\numberline {1.2.3}Cortex-R7}{6}
-\contentsline {subsection}{\numberline {1.3}ARM Cortex-M architekt\={u}ra}{6}
+\contentsline {subsubsection}{\numberline {1.2.3}Cortex-R7}{7}
+\contentsline {subsection}{\numberline {1.3}ARM Cortex-M architekt\={u}ra}{7}
 \contentsline {section}{\numberline {2}Naudojamos \k {i}rangos ir programos}{7}
 \contentsline {subsection}{\numberline {2.1}xRM48L950 apra\v {s}as}{8}
 \contentsline {subsubsection}{\numberline {2.1.1}Procesorius}{8}
