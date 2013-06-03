@@ -220,7 +220,7 @@ Medicinoje:
 \newpage
 
 \section{ARM architekt\={u}ra}
-ARM $($advanced RISC mashines$)$ Holdings ank\v{s}\v{c}iau buvusi Acorn Computers. Acorn Computers prad\.{e}jo savo versl\k{a} kaip mikrovaldikli\k{u} gamintojas. ARM Holdings pati nebegamina mikrovaldikli\k{u}, bet pardavin\.{e}ja architekt\={u}ros dizainus puslaidininkini\k{u} \k{i}tais\k{u} gamintojams. ARM licenzijuoti 32 bit\k{u} architekt\={u}ros mikrovaldikliai yra pirmaujantys pasaulyje pagal pagaminimimo kiek\k{i}. \v{S}iai s\.{e}kmei didel\k{e} \k{i}tak\k{a} turi geras grei\v{c}io ir vartojamos galios santykis, kas leid\v{z}ia juos patogiai naudoti ne\v{s}iojamuose \k{i}renginiuose.    \\
+ARM $($advanced RISC mashines$)$ Holdings ank\v{s}\v{c}iau buvusi Acorn Computers. Acorn Computers 1990m. prad\.{e}jo savo versl\k{a} kaip mikrovaldikli\k{u} gamintojas. ARM Holdings pati nebegamina mikrovaldikli\k{u}, bet pardavin\.{e}ja architekt\={u}ros dizainus puslaidininkini\k{u} \k{i}tais\k{u} gamintojams. ARM technologija yra naudojama 95\% i\v{s}mani\k{u}j\k{u} telefon\k{u}, 80\% skaitmenini\k{u} kamer\k{u} ir 35\% vis\k{u} elektronini\k{u} \k{i}rengini\k{u}. \v{S}iai s\.{e}kmei didel\k{e} \k{i}tak\k{a} turi geras grei\v{c}io ir vartojamos galios santykis.    \\
 \indent ARM architekt\={u}ra paremta RISC\footnote{RISC - reduced instruction set computing.} - paprastesni\k{u} komand\k{u} sistema:
 \begin{itemize} 
 \item daug bendrosios paskirties registr\k{u}
@@ -237,22 +237,14 @@ Tai pat ARM architekt\={u}ra papildomai turi:
 \item Thumb instrukcij\k{u} prapl\.{e}tim\k{a}, kuris leid\v{z}ia vykdyti 16bit\k{u} komandas vietoje 32bit\k{u}. Tai leid\v{z}ia padidinti kodo tank\k{i} neilginant komand\k{u} atlikimo trukm\.{e}s
 \end{itemize}
 Paprastai kiekviena instrukcija atliekama per vien\k{a} takt\k{a}, tad yra nesunku nusp\.{e}ti programos vykdym\k{a} ir galima nesunkiai pritaikyti kaskadin\k{i} komand\k{u} vykdym\k{a}. Komand\k{u} atkodavimas reikalauja ma\v{z}iau tranzistori\k{u}, nei mikrovaldikliams paremtiems sud\.{e}tingesni\k{u} komand\k{u} sistema $($pvz. CISC\footnote{CISC - complex instruction set computing.}$)$ - kur viena komanda yra keli\k{u} instrukcij\k{u} rinkinys. Dabartiniai ARM mikrovaldikliai yra 32bit\k{u} instrukcijos ilgio, bei 32bit\k{u} adresavimo. Yra paruo\v{s}tos ir 64bit\k{u} virsijos. \\
-\indent ARM turi 31 bendrosios paskirties 32bit\k{u} ilgio registrus. Betkuriuo metu galima matyti 16 j\k{u}. Kiti registrai yra naudojami i\v{s}im\v{c}i\k{u} apdorojimui pagreitinti. Visos intstrukcijos skirtos registrams gali naudoti betkur\k{i} i\v{s} 16 registr\k{u}. I\v{s} 16 visad matom\k{u} registru keli turi specializuotas funkcijas \k{i}prastas visoms architekt\={u}roms:
+\indent ARM turi 31 bendrosios paskirties 32bit\k{u} ilgio registrus. Bet kuriuo metu galima matyti 16 j\k{u}. Kiti registrai yra naudojami i\v{s}im\v{c}i\k{u} apdorojimui pagreitinti. Visos intstrukcijos skirtos registrams gali naudoti betkur\k{i} i\v{s} 16 registr\k{u}. I\v{s} 16 visad matom\k{u} registr\k{u} keli turi specializuotas funkcijas \k{i}prastas visoms architekt\={u}roms:
 \begin{itemize}
 \item Rietuv\.{e}s rodykl\.{e} $($ang. stack pointer$)$ - paprastai 13 registras.
 \item Nuorodos registras $($ang. link register$)$ - 14 registras naudojamas kaip adresas \k{i} kur\k{i} einama funkcijos i\v{s}kvietimui pasibaigus. 14 registras gali b\={u}ti naudojamas kaip bendrosios paskirties registras.
 \item Programos skaitiklis $($ang. program counter$)$ - 15 registras. Naudojamas kaip nuoroda \k{i} adres\k{a} sekan\v{c}ios instrukcijos. 
 \end{itemize}
 Lik\k{e} 13 registr\k{u} speciali\k{u} funkcij\k{u} neatlieka. \\
-\indent ARM7 ir naujesn\.{e}s architekt\={u}ros palaiko 7 r\={u}\v{s}i\k{u} i\v{s}imtis ir privilegijuot\k{a} apdorojimo re\v{z}im\k{a} kiekvienai i\v{s} j\k{u}:
-\begin{itemize}
-\item reset
-\item bandymas atlikti ne\v{z}inom\k{a} instrukcij\k{a}
-\item programos pertraukties instrukcijos $($SWI - software interupt instruction$)$. Gali b\={u}ti naudojamos i\v{s}kviesti operacin\k{e} sistem\k{a}
-\item i\v{s}ankstinio duomen\k{u} pa\.{e}mimo at\v{s}aukimas $($ang. prefetch abort$)$
-\item normalus tr\={u}kis $($IRQ - interrupt request$)$
-\item greitas tr\={u}kis $($FIQ - fast interrupt request$)$
-\end{itemize}
+\indent 
 \k{I}vykus i\v{s}im\v{c}iai kaikurie standartiniai registrai yra pakei\v{c}iami registrais specifiniais tai i\v{s}im\v{c}iai. 14-tame registre laikomas adresas \k{i} kur\k{i} gri\v{z}tama po i\v{s}imties \k{i}vykdymo. 13 registras yra i\v{s}saugomas, kad i\v{s}imtis gal\.{e}t\k{u} naudotis savo rietuve, netrigdydama tolimesnio programos darbo. Greito tr\={u}kio re\v{z}ime yra i\v{s}saugomi registrai nuo 8 iki 12, kad nereik\.{e}t\k{u} j\k{u} saugoti atskirai ir b\={u}t\k{u} galima jais greitai naudotis. \\
 \indent \k{I}vykus i\v{s}im\v{c}iai \v{s}erdis sustabdo programos vykdym\k{a} apibr\.{e}\v{z}tu b\={u}du ir pereina prie i\v{s}imties vykdymo \k{i} viena i\v{s} fiksuot\k{u} adres\k{u} atmintyje, \v{z}inom\k{u} kaip i\v{s}imties vektoriai $($ang. exception vector$)$. Yra atskiras vektorius kiekvienai i\v{s}im\v{c}iai, \k{i}skaitant ir reset. Veikimas yra apibr\.{e}\v{z}tas normaliam programos darbui ir klaid\k{u} radimo re\v{z}imui $($ang. debug mode$)$.  \\
 \indent Visa branduolio b\={u}kl\.{e} yra laikoma statuso registe vadinamu dabartin\.{e}s pragramos statuso registru $($CPSR - current program status register$)$, kuriame yra:
@@ -262,8 +254,9 @@ Lik\k{e} 13 registr\k{u} speciali\k{u} funkcij\k{u} neatlieka. \\
 \item 5 bitai procesoriaus darbo re\v{z}imui
 \item 2 bitai nurodantys kuris instrukcij\k{u} rinkinys naudojamas: ARM, Thumb ar Jazelle  $($ naujesniuose procesoriuose palaikomas JAVA instrukcij\k{u} rinkinys$)$
 \end{itemize}
-\subsection{ARM Cortex-A architekt\={u}ra}
-Mikrovaldikliai skirti dirbti su operacin\.{e}mis sistemomis tokiomis kaip Linux, Android, Microsoft Windows. \v{S}ios klas\.{e}s mikrovaldikliai turi atminties valdymo \k{i}tais\k{a}, kuris padeda valdyti atmint\k{i} operacin\.{e}ms sistemoms ir \k{i}galina parsiuntim\k{a} ir paleidim\k{a} kit\k{u} program\k{u}. Galimi panaudojimai:
+\subsection{ARMv7A architekt\={u}ra}
+Mikrovaldikli\k{u} \v{s}eima kodiniu pavadinimu Cortex-A.
+\v{S}ie mikrovaldikliai skirti dirbti su operacin\.{e}mis sistemomis tokiomis kaip Linux, Android, Microsoft Windows. \v{S}ios klas\.{e}s mikrovaldikliai turi atminties valdymo \k{i}tais\k{a}, kuris padeda valdyti atmint\k{i} operacin\.{e}ms sistemoms ir \k{i}galina parsiuntim\k{a} ir paleidim\k{a} kit\k{u} program\k{u}. Cortex-A5, Cortex-A7, Cortex-A9, Cortex-A12 ir Cortex-A15 palaiko iki 4 branduoli\k{u} su simetriniu arba asimetriniu skai\v{c}iavimu. Galimi panaudojimai:
 \begin{itemize}
 \item i\v{s}manieji telefonai
 \item plan\v{s}etiniai kompiuteriai
@@ -272,8 +265,8 @@ Mikrovaldikliai skirti dirbti su operacin\.{e}mis sistemomis tokiomis kaip Linux
 \item protinguose spauzdintuvuose
 \end{itemize}
 
-\subsection{ARM Cortex-R architekt\={u}ra}
-ARM integruoti realaus laiko apdorojimo mikrovaldikliai. Turi didel\k{i} taktin\k{i} da\v{z}n\k{i}, ilg\k{a} kaskadin\k{e} linij\k{a}. Da\v{z}niausiai \v{s}ie mikrovaldikliai naudoja realaus laiko operacin\k{e} sistem\k{a} $($RTOS - real-time operating system$)$ kartu su vartotojo sukurta programa, kuriai u\v{z}tenka atminties apsaugos \k{i}renginio. Taikymas:
+\subsection{ARMv7-R architekt\={u}ra}
+ARM integruoti realaus laiko apdorojimo mikrovaldikliai. Kodiniu pavadinimu Cortex-R. Turi didel\k{i} taktin\k{i} da\v{z}n\k{i}, ilg\k{a} kaskadin\k{e} linij\k{a}. Da\v{z}niausiai \v{s}ie mikrovaldikliai naudoja realaus laiko operacin\k{e} sistem\k{a} $($RTOS - real-time operating system$)$ kartu su vartotojo sukurta programa, kuriai u\v{z}tenka atminties apsaugos \k{i}renginio. Taikymas:
 \begin{itemize}
 \item automobili\k{u} kontrol\.{e}s sistemose
 \item bevieli\k{u} ir laidini\k{u} jutikli\k{u} tinkluose
@@ -281,38 +274,48 @@ ARM integruoti realaus laiko apdorojimo mikrovaldikliai. Turi didel\k{i} taktin\
 \item tinklo \k{i}rangoje
 \end{itemize}
 \subsubsection{Cortex-R4}
-Paremtas ARMv7-R architekt\={u}ra. 8 pakop\k{u} kaskadin\.{e} linija su i\v{s}ankstiniu duomen\k{u} nuskaitymu ir \v{s}akojimosi nusp\.{e}jimu. Palaiko ARM ir Thumb-2 instrukcijas. Harvardo instrukcij\k{u} ir duomen\k{u} atskyrimas. Atminties apsaugos \k{i}renginys. Dvi \v{s}erdys dubliuojan\v{c}ios skai\v{c}iavimus.  
+8 pakop\k{u} kaskadin\.{e} linija su i\v{s}ankstiniu duomen\k{u} nuskaitymu ir \v{s}akojimosi nusp\.{e}jimu. Palaiko ARM ir Thumb-2 instrukcijas. Harvardo instrukcij\k{u} ir duomen\k{u} atskyrimas. Atminties apsaugos \k{i}renginys. Dvi \v{s}erdys dubliuojan\v{c}ios skai\v{c}iavimus.  
 \subsubsection{Cortex-R5}
 8 pakop\k{u} kaskadin\.{e} linija. Palaiko ARM ir Thumb-2 instrukcijas. Harvardo instrukcij\k{u} ir duomen\k{u} atskyrimas. Slankaus kablelio \k{i}renginys. Ma\v{z}o delsimo periferijos prievadai. Prapl\.{e}sta atminties apsauga apsaugo ir periferij\k{a}. Dvi \v{s}erdys veikian\v{c}ios kartu arba atskirai.
 \subsubsection{Cortex-R7}
 Pa\v{z}angiausias Cortex-R \v{s}eimoje. 11 pakop\k{u} kaskadin\.{e} linija su nei\v{s}eil\.{e}s instrukcij\k{u} vykdimo galimybe. Dvi \v{s}erdys gali veikti dubliuoto skai\v{c}iavimo, simetrinio ir asimetrinio darbo re\v{z}imais. Pasirinktinas slankaus kablelio \k{i}renginys.  
 
-\subsection{ARM Cortex-M architekt\={u}ra}
-Mikrovaldikliai skirti integruotiems \k{i}rengiriams. Pasi\v{z}ymi ma\v{z}omis enegrijos s\k{a}naudomis. Architekt\={u}rinis miego re\v{z}im\k{u} palaikymas. \\
+\subsection{ARMv6-M ir ARMv7-M architekt\={u}ra}
+\v{S}eima pavadinta Cortex-M.
+Mikrovaldikliai skirti integruotiems \k{i}rengiriams. Pasi\v{z}ymi ma\v{z}omis enegrijos s\k{a}naudomis. Architekt\={u}rinis miego re\v{z}im\k{u} palaikymas. Automatinis tr\=ukio tr\=kyje palaikymas. \\
 Mikrovaldikliai:
+\begin{itemize}
+\item ARMv6-M architekt\=uros:
 \begin{itemize}
 \item ARM Cortex-M0:
 \begin{itemize}
 \item 8/16 bit\k{u} programoms
 \item pigus ir paprastas
 \end{itemize}
-\item ARM Cortex-M0+
+\item ARM Cortex-M0+:
 \begin{itemize}
 \item 8/16 bit\k{u} programoms
 \item pigus ir energeti\v{s}kai efektyviausias
 \end{itemize}
-\item ARM Cortex-M3
+\end{itemize}
+\end{itemize}
+\begin{itemize}
+\item ARMv7-M architekt\=uros:
+\begin{itemize}
+
+\item ARM Cortex-M3:
 \begin{itemize}
 \item 16/32 bit\k{u} programoms
 \item greitas bendros paskirties mikrovaldiklis
 \end{itemize}
-\item ARM Cortex-M4
+\item ARM Cortex-M4:
 \begin{itemize}
 \item 32 bit\k{u} programoms
 \item efektyvus skaitmenini\k{u} signal\k{u} valdiklis
 \end{itemize}
-
 \end{itemize}
+\end{itemize}
+
 
 %--<
 %\subsection{ARM mikrovaldikli\k{u} architekt\={u}ros \v{s}eimos}
@@ -828,8 +831,8 @@ Pereita prie \v{s}vitinimo rentgeno spinduliuote. Mikrovaldiklis buvo pad\.{e}ta
 \item Cortex-R4 tr\=uki\k{u} sistema lyginant su Cortex-M4 yra labai l\.{e}ta ir neefektyvi.
 %\item Ma\v{z}iausia naudojama galia, kuri\k{a} pavyko pasiekti su RM48 yra 82 kartus didesn\.e nei ma\v{z}iausia vartojama galia, kuri\k{a} pavyko pasiekti su stm32f4 maketu.%
 \item Mikrovaldikliams atliekant skirtingus skai\v{c}iavimus naudojama galia labiausiai priklauso nuo taktinio da\v{z}nio ir tik ne\v{z}ymiai nuo procesoriaus apkrovos skai\v{c}iavimais.
-\item RM48 mikrovaldiklio periferija taisiklyngai nei\v{s}sijungia.
-\item Su prieinamais jonizuojan\v{c}ios spinduliuot\.{e}s \v{s}altiniais atliekant matavimus net su vienguba \v{s}erdimi nepavyko pasiekti duomen\k{u} pa\v{z}eidim\k{u} programos vykdymo metu. Keliant intensyvum\k{a} prasid\.{e}jo i\v{s}liekantys procesoriaus funkcionalumo pa\v{z}eidimai.
+\item RM48 mikrovaldiklio periferijos i\v{s}sijungimas neatitinka specifikacijos.
+\item Su prieinamais jonizuojan\v{c}ios spinduliuot\.{e}s \v{s}altiniais $($1.176MeV gama ir iki 19keV rentgeno$)$ atliekant matavimus net su vienguba \v{s}erdimi nepavyko pasiekti duomen\k{u} pa\v{z}eidim\k{u} programos vykdymo metu. Keliant rentgeno spinduliuot\.es intensyvum\k{a} prasid\.{e}jo i\v{s}liekantys mikrovaldiklio funkcionalumo pa\v{z}eidimai.
 \end{enumerate}
 
 %Su prieinamai jonizuojančios spinduliuotės šaltiniais: ......... net su vienguba šerdimi nepavyko pasiekti duomenų pažeidimo programos vykdymo metu. Keliant intensyvumą pirma prasidėjo išliekantys procesoriaus funkcionalumo pažeidimai.
@@ -955,10 +958,10 @@ Rezultatai rodo, kad Cortex-R4 mikrovaldiklis matematinius algoritmus atlieka gr
 
 \end{center}
 
-Tasks that require high reliability need computation verification. Cortex-R4 has an integrated computing mirroring of calculation and control, but it is unclear how energeticaly efficent it is. \\
-\indent In this paper, an attempt was made to find out energy efficiency, speed of execution of mathematical algorithms with different variables, time of getting in and out of an interrupt of Hercules family representative xRM48 microcontroller and to compare it with another popular microcontroller. Also an attempt was made to check operation properties of microcontroller under ionizing radiation. \\
+Tasks that require high reliability need computation verification. Cortex-R4 has an integrated mirrored computation for calculation and control, but it is unclear how energy efficent it is. \\
+\indent In this paper, an attempt was made to find out energy efficiency, speed of execution of mathematical algorithms with different variables, time of getting in and out of an interrupt of Hercules family representative xRM48 microcontroller and to compare it with another popular microcontroller. Also an attempt was made to check how a microcontroller operates under ionizing radiation. \\
 \indent
-The rezults show that the Cortex-R4 microcontroller performs faster computations, but fades in comparison to Cortex-M4 in interrupt times and energy efficiency. Raidation mesurements show that the microcontrollers work well until persistent functional damage stops their work.
+The rezults show that the Cortex-R4 microcontroller performs faster computations, but fades in comparison to Cortex-M4 in interrupt times and energy efficiency. Radation mesurements show that the microcontrollers work well until persistent functional damage stops their work.
 %Text
 
 \end{onehalfspacing}
