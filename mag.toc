@@ -1,0 +1,9 @@
+\select@language {lithuanian}
+\contentsline {subsection}{\numberline {0.1}Tyrimo objektas}{3}
+\contentsline {subsection}{\numberline {0.2}Darbo tikslai ir u\v {z}daviniai}{3}
+\contentsline {subsubsection}{\numberline {0.2.1}Tyrimo aktualumas}{3}
+\contentsline {subsubsection}{\numberline {0.2.2}Tyrimo metodika}{4}
+\contentsline {subsection}{\numberline {0.3}Laukiami rezultatai}{4}
+\contentsline {section}{Literat\={u}ros s\k {a}ra\v {s}as}{5}
+\contentsline {section}{Santrauka}{6}
+\contentsline {section}{Summary}{7}

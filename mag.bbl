@@ -1,0 +1,30 @@
+\newcommand{\etalchar}[1]{$^{#1}$}
+\begin{thebibliography}{LBG{\etalchar{+}}10}
+
+\bibitem[LBG{\etalchar{+}}10]{Longchamp2010}
+Valentin Longchamp, Michael Bonani, Paolo Germano, Hannes Bleuler, and
+  Francesco Mondada.
+\newblock {through the Co-Design of Hardware and Methodology}.
+\newblock pages 5395--5401, 2010.
+
+\bibitem[NHS07]{Nguyen2007}
+Viet Nguyen, Ahad Harati, and Roland Siegwart.
+\newblock {A lightweight SLAM algorithm using Orthogonal planes for indoor
+  mobile robotics}.
+\newblock {\em 2007 IEEE/RSJ International Conference on Intelligent Robots and
+  Systems}, pages 658--663, October 2007.
+
+\bibitem[VEL10]{Vincke2010a}
+B~Vincke, A~Elouardi, and A~Lambert.
+\newblock {Multiprocessing Improvements on a Low-cost System Based Simultaneous
+  Localization and Mapping}.
+\newblock (1), 2010.
+
+\bibitem[ZP11]{Zikos2011}
+Nikos Zikos and Vassilios Petridis.
+\newblock {L-SLAM: Reduced dimensionality FastSLAM with unknown data
+  association}.
+\newblock {\em 2011 IEEE International Conference on Robotics and Automation},
+  (1):4074--4079, May 2011.
+
+\end{thebibliography}
