@@ -196,7 +196,7 @@ ir naudojam formules citavimui \ref{formule_label}
 
 Tyrimo objektas yra ketursraigt\v{c}io sraigtasparnio lokalizacijos ir \v{z}em\.elapio sudarymas, esant ribotiems skai\v{c}iavimo resursams.
 \\
-\indent Paprastas ketursraigtis sraigtasparnis n\.era paj\.egus su savimi skraidinti modernaus kompiuterio atlikti sud\.etingiems skai\v{c}iavimams. Skai\v{c}iavimams supaprastinti taipat galima naudoti ir paprastenius sensorius tokius kaip lazerin\k{i} atstumo matuokl\k{i}, kuris pasi\v{z}ymi dideliu tikslumu, tav\v{c}iau yra gan\.{e}tinai brangus. Kaip u\v{z}tikrinti  realaus laiko sraigtasparnio lokalizacij\k{a} ir \v{z}em\.elapio sudarym\k{a} esant ribotiems skai\v{c}iavimo resursams naudojant paprastus sensorius ir yra \v{s}io tyrimo objektas. 
+\indent Paprastas ketursraigtis sraigtasparnis n\.era paj\.egus su savimi skraidinti modernaus kompiuterio atlikti dabar naudojamiems lokalizacijos ir \v{z}em\.elapio sudarymo algoritm\k{u} skai\v{c}iavimams realiu laiku. Skai\v{c}iavimams supaprastinti galima naudoti paprastenius sensorius tokius kaip lazerin\k{i} atstumo matuokl\k{i}, kuris pasi\v{z}ymi dideliu tikslumu, tav\v{c}iau yra gan\.{e}tinai brangus ir turi siaur\k{a} matavimo spindul\k{i}. Kaip u\v{z}tikrinti  realaus laiko sraigtasparnio lokalizacij\k{a} ir \v{z}em\.elapio sudarym\k{a} esant ribotiems skai\v{c}iavimo resursams naudojant paprastus sensorius ir yra \v{s}io tyrimo objektas. 
 
 \section{Darbo tikslai ir u\v{z}daviniai}
 Darbo tikslas yra sukurti ketursraigt\k{i} sraigtasparn\k{i} ir naudojantis jame esan\v{c}iu kompiuteriu atlikti realaus laiko sinchronin\k{i} lokalizavim\k{a} ir \v{z}em\.elapio sudarym\k{a}.
@@ -212,18 +212,19 @@ Darbo tikslas yra sukurti ketursraigt\k{i} sraigtasparn\k{i} ir naudojantis jame
   
 \section{Tyrimo aktualumas}
 Ketursraig\v{c}iai sraigtasparniai pasi\v{z}ymi stabilumu, bei d\.el ma\v{z}ai
- judan\v{c}i\k{u} daliu patvarumu ir paprastumu. Jie gali patekti \k{i} \v{z}mon\.ems
+ judan\v{c}i\k{u} dali\k{u} patvarumu ir paprastumu. Jie gali patekti \k{i} \v{z}mon\.ems
   sunkiai prieinamas vietas bei gali skraidinti nedidelius krovinius tokius kaip pirmosios
    pagalbos priemones, tod\.el jie turi didel\k{i} potencial\k{a} pasitarnauti nutikus 
    nelaimei. Dabar paprastai jie yra valdomi nuotiliniu b\=udu ant \v{z}em\.es esan\v{c}io
     piloto. Pilotus ruo\v{s}ti yra sud\.etinga, bei vienas pilotas gali valdyti tik 
     vien\k{a} sraigtasparn\k{i} vienu metu, tod\.el yra verta kurti 
-    autonominius sraigtasparnius.
-\\
-\indent Pramon\.eje yra svarbu ne tik patikimumas, bet ir pagaminimo ka\v{s}tai. Dabar naudojami sprendimai susideda i\v{s} brangi\k{u} akumuliatori\k{u}, galing\k{u} mikro kompiuteri\k{u}, stereoskopini\k{u} kamer\k{u} ir lazerini\k{u} atstumo matuokli\k{u}\cite{Nguyen2007}. Paprastai tokia \k{i}ranga b\=una karinio lygio, o biud\v{z}etiniai variantai konstruojami universitetuose ant va\v{z}in\.ejan\v{c}i\k{u} platform\k{u}\cite{Vincke2010a}\cite{Longchamp2010}, o skrendantys aparatai paprastai naudoja ant \v{z}em\.es sumontuotas duomen\k{u} apdorojimo stoteles bei infraraudonuosius sensorius sraigtasparnio pozicijai nustatyti. 
+    autonominius sraigtasparnius.\\
+    \indent Neseniai kompanijos Amazon ir UPS paskelb\.e, kad naudos sraigtasparnius krovini\k{u} gabenimui. Pramon\.eje yra svarbu ne tik patikimumas, bet ir pagaminimo ka\v{s}tai. Dabar naudojami sprendimai susideda i\v{s} brangi\k{u} akumuliatori\k{u}, galing\k{u} kompiuteri\k{u}, stereoskopini\k{u} kamer\k{u} ir lazerini\k{u} atstumo matuokli\k{u}\cite{Nguyen2007}. Kolkas biud\v{z}etiniai variantai konstruojami universitetuose ant va\v{z}in\.ejan\v{c}i\k{u} platform\k{u}\cite{Vincke2010a}\cite{Longchamp2010}, o skrendantys aparatai paprastai naudoja ant \v{z}em\.es sumontuotas duomen\k{u} apdorojimo stoteles bei i\v{s}orinius infraraudonuosius sensorius sraigtasparnio lakalizacijai.
+    \\
+    \indent Pasirinktas FastSLAM algoritmas pagal skaitytus straipsnius labiausiai atitinka norimus pasiekti tikslus. Lyginant su prapl\.estu Kalmano filtro (EKF), suspaustu prapl\.estu Kalmano filtru (CEKF) bei bekvapiu Kalmano filtru (unscented Kalman filter UKF)\cite{6389151} SLAM algoritmais FastSLAM n\.era toks tikslus, ta\v{c}iau jam atlikti u\v{z}tenka paprastesn\.es aparat\=uros\cite{Zikos2011}. 
+
 
 \section{Tyrimo metodika}
-
 Darbo eigoje bus parinkti konkret\=us sensoriai, bei \k{i}vertinus numatom\k{a} algoritmo sudetingum\k{a} parinktas mikro valdiklis. Skryd\v{z}io metu bus fiksuojama mikro valdiklio apkrova skai\v{c}iavimais bei naudojama energija. Atsi\v{z}velgiant \k{i} \v{s}iuos duomenis bus koreguojami \v{z}em\.elapio sudarymo detalumas ir sensori\k{u} nuskaitymo da\v{z}nis. Atlikus korekcijas bus tikrinama sraigtasparnio lokalizacijos tikslumas.
 
 \section{Laukiami rezultatai}

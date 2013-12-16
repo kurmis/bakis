@@ -1,5 +1,5 @@
 \newcommand{\etalchar}[1]{$^{#1}$}
-\begin{thebibliography}{LBG{\etalchar{+}}10}
+\begin{thebibliography}{TGGVM12}
 
 \bibitem[LBG{\etalchar{+}}10]{Longchamp2010}
 Valentin Longchamp, Michael Bonani, Paolo Germano, Hannes Bleuler, and
@@ -13,6 +13,13 @@ Viet Nguyen, Ahad Harati, and Roland Siegwart.
   mobile robotics}.
 \newblock {\em 2007 IEEE/RSJ International Conference on Intelligent Robots and
   Systems}, pages 658--663, October 2007.
+
+\bibitem[TGGVM12]{6389151}
+G.~Tuna, K.~Gulez, V.C. Gungor, and T.~Veli~Mumcu.
+\newblock Evaluations of different simultaneous localization and mapping (slam)
+  algorithms.
+\newblock In {\em IECON 2012 - 38th Annual Conference on IEEE Industrial
+  Electronics Society}, pages 2693--2698, 2012.
 
 \bibitem[VEL10]{Vincke2010a}
 B~Vincke, A~Elouardi, and A~Lambert.

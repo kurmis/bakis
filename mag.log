@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.12.11)  16 DEC 2013 02:10
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.12.11)  17 DEC 2013 00:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1175,35 +1175,35 @@ LaTeX Font Info:    Failed loading font information for L7x+cmr. on input line
 LaTeX Font Info:    Failed loading font information for L7x+cmr. on input line 
 225.
 LaTeX Font Info:    Failed loading font information for L7x+cmr. on input line 
-228.
-LaTeX Font Info:    Failed loading font information for L7x+cmr. on input line 
-228.
+225.
  [1]
 LaTeX Font Info:    Failed loading font information for L7x+cmr. on input line 
-229.
+227.
+LaTeX Font Info:    Failed loading font information for L7x+cmr. on input line 
+230.
 
 (./mag.bbl
 LaTeX Font Info:    Failed loading font information for L7x+cmr. on input line 
 2.
 )
 LaTeX Font Info:    Failed loading font information for L7x+cmr. on input line 
-284.
+285.
 LaTeX Font Info:    Failed loading font information for L7x+cmr. on input line 
-284.
+285.
  [2] (./mag.aux) ) 
 Here is how much of TeX's memory you used:
- 11606 strings out of 493485
- 188885 string characters out of 3143525
- 250057 words of memory out of 3000000
- 14697 multiletter control sequences out of 15000+200000
+ 11607 strings out of 493485
+ 188894 string characters out of 3143525
+ 250066 words of memory out of 3000000
+ 14698 multiletter control sequences out of 15000+200000
  16973 words of font info for 34 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
- 38i,5n,38p,662b,244s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 38i,5n,38p,721b,244s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-l7x.enc}</usr/share/t
 exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf/fon
 ts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb
 ></usr/share/texmf/fonts/type1/public/lm/lmri12.pfb>
-Output written on mag.pdf (3 pages, 90197 bytes).
+Output written on mag.pdf (3 pages, 92171 bytes).
 PDF statistics:
  31 PDF objects out of 1000 (max. 8388607)
  21 compressed objects within 1 object stream
