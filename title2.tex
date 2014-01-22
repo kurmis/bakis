@@ -1,0 +1,87 @@
+\begin{titlepage}
+
+\begin{center}
+
+
+% Upper part of the page
+
+\MakeUppercase{\normalsize \textbf{Vilniaus universitetas}}\\
+\MakeUppercase{\normalsize \textbf{Matematikos ir informatikos fakultetas}}\\
+\MakeUppercase{\normalsize \textbf{\katedra}}\\[180pt]
+%\normalsize \studentas \\ [24pt]
+
+% Title
+
+\MakeUppercase{{ \normalsize \pavadinimas}}\\[24pt]
+\MakeUppercase{{ \normalsize \engpavadinimas}}\\[24pt]
+
+\normalsize \darbas \\ [24pt]
+%(studij\k{u} programa -- \MakeUppercase{\normalsize \studprog)}\\ [130pt]
+
+\linespread{1.3}
+% Author and supervisor
+%\begin{minipage}{1.7\textwidth}
+%\begin{flushleft} \normalsize
+
+%Studentas \\  %--< nekeiciam >--%
+%Darbo vadovas \\ %--< nekeiciam >--%
+%Recenzentas\\ %--< nekeiciam >--%
+%\end{flushleft}
+%\end{minipage}
+%\begin{minipage}{0.2\textwidth}
+%\begin{flushleft} \normalsize
+%Atliko:\studentas \\
+%Darbo vadovas:\\\vadovas \\
+%Recenzentas:\\\recenzentas \\
+%\end{flushleft}
+%\end{minipage}
+\vfill
+
+\newcommand{\signature}[3][3ex]{%
+  \par % end the current paragraph (if necessary)
+  \nopagebreak % don't break a page here
+  \vspace{#1}% spaaaaaace before the signature
+  \noindent\makebox[#2]{\dotfill}% make the dotted line
+  \\* % go to a new line without any page break
+  \noindent#3% signature
+  \par % end the paragraph
+  \vspace{#1}% spaaaaaace below the signature
+}
+\def\mydots{\leavevmode\xleaders\hbox to 0.25em{\hfil.\hfil}\hfill\kern0pt}
+\newcommand\tline[2]{
+$\underset{\text{#1}}{\text{\underline{\hspace{#2}}}}$
+}
+
+\newcommand\tdot[2]
+{
+	$\underset{
+				\text{#1}
+			}
+			{\mydots}
+			$
+}
+
+\begin{flushright}
+\begin{tabular}{ | l |}
+Atliko:\studentas  \tline{$($para\v{s}as$)$}{3cm} \\
+Darbo vadovas:\\\vadovas \tdot{$($para\v{s}as$)$}{3cm}\\
+Recenzentas:\\\recenzentas \tline{$($para\v{s}as$)$}{3cm}\\
+\end{tabular}
+\end{flushright}
+\usepackage{VUMIF}
+\author{
+    4 kurso 1 grupÄ—s studentas \\
+    Vardenis Pavardenis
+}
+
+\supervisor{doc. dr. D. D—stytojas}
+\reviewer{prof. hab. dr. K. D—stytojas}
+
+\vfill
+
+% Bottom of the page
+{\normalsize Vilnius \the\year}
+
+\end{center}
+
+\end{titlepage} 
